@@ -1287,8 +1287,10 @@ Andiamo ad analizzare nel dettaglio come avviene la comunicazione rispetto agli 
 	\item Event Generator, a seguito della creazione di un evento, richiama l'entry di Event Manager per poterne passare i parametri;
 	\item Event Manager riceve i parametri e sulla base di questi genera l'evento creando una nuova istanza del tipo generico Basic Event;
 	\item richiamando il metodo generico Create che rimanda al metodo specializzato del figlio appropriato;
-	\item ******* l'accesso dell'evento appena creato viene trasmesso alla coda attraverso 
-	\item *****
+	\item ******* l'accesso dell'evento appena creato viene trasmesso alla coda attraverso un'apposita procedura Push chiamata in remoto rispetto alla classe Queuer
+	\item l'operazione incrementa un contatore apposito che funziona da variabile di controllo per l'accesso alla coda protetta al fine di effettuare la Pop degli eventi contenuti
+	\item quando il display rileva la variazione della variabile lancia la Pop, anch'essa in modalit\`a remota per svuotare la coda
+	\item 
 \end{enumerate}
 
 
