@@ -1,0 +1,154 @@
+V "GNAT Lib v2011"
+A -O3
+A -gnatp
+A -gnatwu
+P SS ZX
+R nnnnnnnnnvvnnnnnnnnnnnnnnvnnvnnvnnnnnnnnnnvnvnnnnnnvnnnnnnnnnnnvnnvnnnv1nv2nnnnnv1+nn
+
+U manager_package%b	manager_package.adb	6fb81b79 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W system%s		system.ads		system.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+U manager_package%s	manager_package.ads	59e0c5d0 EE OO PK
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W field_package%s	field_package.adb	field_package.ali
+W player_package%s	player_package.adb	player_package.ali
+W system%s		system.ads		system.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+D ada.ads		20110419093133 3ffc8e18
+D a-except.ads		20110419093131 4759ecee
+D a-finali.ads		20110419093131 b333d305
+D a-fihema.ads		20110419093131 1940728a
+D a-ioexce.ads		20110419093131 8b9de6cd
+D a-reatim.ads		20110419093132 63f07669
+D a-retide.ads		20110419093132 081cdaa4
+D a-stream.ads		20110419093132 2ca4ee37
+D a-tags.ads		20110419093132 7b33f560
+D a-textio.ads		20110419093132 386df5d4
+D a-unccon.ads		20110419093133 f9eb8f06
+D ball_package.ads	20120314205118 23fcee3b
+D field_package.ads	20120306201725 b9f4e4e6
+D interfac.ads		20110419093135 f77d8799
+D i-c.ads		20110419093135 5421119b
+D i-cstrea.ads		20110419093135 1bd72c32
+D manager_package.ads	20120319213409 cdb8ebbf
+D manager_package.adb	20120322183822 f99d737b
+D player_package.ads	20120314200514 2dacca89
+D system.ads		20110419093140 3703e6a6
+D s-atacco.ads		20110419093136 1dc856ad
+D s-crtl.ads		20110419093137 ac77b159
+D s-exctab.ads		20110419093137 66e51330
+D s-ficobl.ads		20110419093137 443b9d66
+D s-finroo.ads		20110419093137 2dd85ce2
+D s-multip.ads		20110419093137 38ac9f73
+D s-oscons.ads		20110419172511 4e3d0927
+D s-osinte.ads		20110419093137 fcf50fe1
+D s-parame.ads		20110419093138 03aa3b01
+D s-pooglo.ads		20110419093138 542f33d0
+D s-secsta.ads		20110419093138 eea35a36
+D s-soflin.ads		20110419093138 607487c5
+D s-stache.ads		20110419093138 596fc1b4
+D s-stausa.ads		20110419093138 017a0a05
+D s-stalib.ads		20110419093138 f78bcf95
+D s-stoele.ads		20110419093138 facd7d98
+D s-stoele.adb		20110419093138 afc5dc80
+D s-stopoo.ads		20110419093138 5c51faf9
+D s-tasinf.ads		20110419093139 e120e23a
+D s-taspri.ads		20110419093139 af44aca8
+D s-taprop.ads		20110419093139 07f79e46
+D s-taskin.ads		20110419093139 b2eaee08
+D s-taprob.ads		20110419093139 502249e3
+D s-tpoben.ads		20110419093139 e8374469
+D s-tasren.ads		20110419093139 86fa7427
+D s-tassta.ads		20110419093139 e88ef99e
+D s-traent.ads		20110419093139 5221ee41
+D s-unstyp.ads		20110419093139 6ae15c76
+D s-wchcon.ads		20110419093139 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 18|1r6 1r65 2r6 2r61
+X 6 a-reatim.ads
+39K13*Real_Time 139e18 18|1w10 1r69
+41O9*Time 18|73r30
+46O9*Time_Span 18|72r34
+53V13*Clock{41O9} 18|73s38
+55V13*"+"{41O9} 18|73s44 134s50
+85V13*Milliseconds{46O9} 18|72s47
+X 10 a-textio.ads
+49K13*Text_IO 471e16 18|2w10 2r65
+263U14*Put_Line 18|8s17
+X 13 field_package.ads
+9K9*Field_Package 134e18 17|8w6 8r45
+17n23*STK{17E14} 18|57r48
+17n28*LFW{17E14} 18|20r48 32r48 43r48
+17n33*CFW{17E14} 18|44r48
+17n38*RFW{17E14} 18|21r48 33r48 45r48
+17n43*LMF{17E14} 18|16r48 27r48 39r48 52r48
+17n48*CMF{17E14} 18|17r48 18r48 28r48 29r48 30r48 40r48 41r48 53r48 54r48
+. 55r48
+17n53*RMF{17E14} 18|19r48 31r48 42r48 56r48
+17n58*LDF{17E14} 18|12r48 24r48 36r48 48r48
+17n63*CDF{17E14} 18|13r48 14r48 25r48 37r48 49r48 50r48
+17n68*RDF{17E14} 18|15r48 26r48 38r48 51r48
+105V26 GetScore{integer} 18|87s33 88s33
+132P14*Field_Access(42W24) 17|23r32
+X 17 manager_package.ads
+11K9*Manager_Package 35l5 35e20 18|4b14 141l5 141t20
+13E14*Strategy 13e51
+13n27*Attack{13E14}
+13n35*Middle{13E14}
+13n43*Defense{13E14}
+15E14*Module 15e56 17r40 18|6r41
+15n25*Mod442{15E14} 18|10r30 102r63 113r63
+15n33*Mod352{15E14} 18|22r30
+15n41*Mod343{15E14} 18|34r30 96r63 107r63
+15n49*Mod451{15E14} 18|46r30 99r63 110r63
+17U19*ChangeModule 17>32 17>48 18|6b19 61l13 61t25 96s49 99s49 102s49 107s49
+. 110s49 113s49
+17e32 Md{15E14} 18|6b33 9r22
+17p48 Pr{19|41P14} 18|6b49 12r33 13r33 14r33 15r33 16r33 17r33 18r33 19r33
+. 20r33 21r33 24r33 25r33 26r33 27r33 28r33 29r33 30r33 31r33 32r33 33r33
+. 36r33 37r33 38r33 39r33 40r33 41r33 42r33 43r33 44r33 45r33 48r33 49r33
+. 50r33 51r33 52r33 53r33 54r33 55r33 56r33 57r33
+23T19*Manager 23d28 23d46 23d63 23d87 23d102 31l13 31e20 33r39 18|69b19 139l13
+. 139t20
+23p28 F{13|132P14} 18|87r31 88r31
+23p46 T{19|17P14}
+23p63 Pr{19|41P14} 18|96r71 99r71 102r71 107r71 110r71 113r71
+23i87 Dir{integer} 18|93r37
+23i102 S{integer} 18|72r60
+25Y23 Start 18|80b24
+27Y23 Stop 18|125b40
+33P14*Manager_Access(23T19)
+X 18 manager_package.adb
+72o17 Current_Period{6|46O9} 73r46 134r52
+73o17 Next_Cycle{6|41O9} 134m25 134r39 135r37
+75i17 InitR1{integer} 82m17 92r35 117m33
+75i25 InitR2{integer} 83m17 92r51 118m33
+75i33 R1{integer} 87m25 92r29 94r45 97r49 105r50 108r54 117r43
+75i37 R2{integer} 88m25 92r45 94r50 97r54 105r45 108r49 118r43
+X 19 player_package.ads
+11K9*Player_Package 17|9w6 9r37 19|111e19
+14A14*Team
+17P14*Team_Access(14A14) 17|23r50
+22U27 SetRole 18|12s40 13s40 14s40 15s40 16s40 17s40 18s40 19s40 20s40 21s40
+. 24s40 25s40 26s40 27s40 28s40 29s40 30s40 31s40 32s40 33s40 36s40 37s40
+. 38s40 39s40 40s40 41s40 42s40 43s40 44s40 45s40 48s40 49s40 50s40 51s40
+. 52s40 53s40 54s40 55s40 56s40 57s40
+37P14*Props_Access(19W24)
+39A14*PropsArray(37P14)<integer>
+41P14*PropsArray_Access(39A14) 17|17r53 23r68 18|6r54
+

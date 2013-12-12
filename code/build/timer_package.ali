@@ -1,0 +1,150 @@
+V "GNAT Lib v2011"
+A -O3
+A -gnatp
+A -gnatwu
+P SS ZX
+R vnnnnnnnnvnnnnnnnnvvnvnnnnnnvnnvnnnnvnnnnnnnvnnnnnnvnnnnnnnnnnnvnnvnv1nnnv1nnnnnv1+nn
+
+U timer_package%b	timer_package.adb	54378245 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W system%s		system.ads		system.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
+W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+U timer_package%s	timer_package.ads	a4094b86 EE OO PF PK
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.finalization.heap_management%s  a-fihema.adb  a-fihema.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.discrete_random%s
+W ada.numerics.elementary_functions%s  a-nuelfu.ads  a-nuelfu.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ball_package%s	ball_package.adb	ball_package.ali
+W manager_package%s	manager_package.adb	manager_package.ali
+W player_package%s	player_package.adb	player_package.ali
+W system%s		system.ads		system.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+D ada.ads		20110419093133 3ffc8e18
+D a-except.ads		20110419093131 4759ecee
+D a-finali.ads		20110419093131 b333d305
+D a-fihema.ads		20110419093131 1940728a
+D a-numeri.ads		20110419093132 bb51c45a
+D a-nudira.ads		20110419093132 2fef2912
+D a-nuelfu.ads		20110419093132 03e83d1c
+D a-ngelfu.ads		20110419093132 47731de9
+D a-reatim.ads		20110419093132 63f07669
+D a-retide.ads		20110419093132 081cdaa4
+D a-stream.ads		20110419093132 2ca4ee37
+D a-tags.ads		20110419093132 7b33f560
+D a-unccon.ads		20110419093133 f9eb8f06
+D ball_package.ads	20120314205118 23fcee3b
+D field_package.ads	20120306201725 b9f4e4e6
+D interfac.ads		20110419093135 f77d8799
+D i-c.ads		20110419093135 5421119b
+D manager_package.ads	20120319213409 cdb8ebbf
+D player_package.ads	20120314200514 2dacca89
+D system.ads		20110419093140 3703e6a6
+D s-atacco.ads		20110419093136 1dc856ad
+D s-exctab.ads		20110419093137 66e51330
+D s-finroo.ads		20110419093137 2dd85ce2
+D s-multip.ads		20110419093137 38ac9f73
+D s-oscons.ads		20110419172511 4e3d0927
+D s-osinte.ads		20110419093137 fcf50fe1
+D s-parame.ads		20110419093138 03aa3b01
+D s-pooglo.ads		20110419093138 542f33d0
+D s-rannum.ads		20110419093138 5eb33f0a
+D s-secsta.ads		20110419093138 eea35a36
+D s-soflin.ads		20110419093138 607487c5
+D s-stache.ads		20110419093138 596fc1b4
+D s-stausa.ads		20110419093138 017a0a05
+D s-stalib.ads		20110419093138 f78bcf95
+D s-stoele.ads		20110419093138 facd7d98
+D s-stoele.adb		20110419093138 afc5dc80
+D s-stopoo.ads		20110419093138 5c51faf9
+D s-tasinf.ads		20110419093139 e120e23a
+D s-taspri.ads		20110419093139 af44aca8
+D s-taprop.ads		20110419093139 07f79e46
+D s-taskin.ads		20110419093139 b2eaee08
+D s-taprob.ads		20110419093139 502249e3
+D s-tpoben.ads		20110419093139 e8374469
+D s-tpobop.ads		20110419093139 5f548bb3
+D s-tasren.ads		20110419093139 86fa7427
+D s-tassta.ads		20110419093139 e88ef99e
+D s-traent.ads		20110419093139 5221ee41
+D s-unstyp.ads		20110419093139 6ae15c76
+D timer_package.ads	20120314210647 4be69085
+D timer_package.adb	20120314210701 7c2164a9
+X 1 ada.ads
+16K9*Ada 19e8 49|11r6 12r6 13r6 50|1r6 1r37
+X 5 a-numeri.ads
+16K13*Numerics 32e17 49|11r10 12r10 13r10
+X 6 a-nudira.ads
+44k22*Discrete_Random 73e33 49|11w19
+X 7 a-nuelfu.ads
+18K22*Elementary_Functions[8|19] 49|12w19 13r19
+X 9 a-reatim.ads
+39K13*Real_Time 139e18 50|1w10 1r41
+41O9*Time 50|31r30
+46O9*Time_Span 50|30r34
+53V13*Clock{41O9} 50|31s38
+55V13*"+"{41O9} 50|31s44 67s50
+85V13*Milliseconds{46O9} 50|30s47
+X 14 ball_package.ads
+11K9*Ball_Package 54e17 49|10w6 10r45
+46Y23 Start 50|38s19
+48Y23 Stop 50|54s35
+52P14*TaskBall_Access(42T19) 49|37r99
+X 18 manager_package.ads
+11K9*Manager_Package 35e20 49|9w6 9r37
+25Y23 Start 50|39s20 40s20
+27Y23 Stop 50|55s36 56s36
+33P14*Manager_Access(23T19) 49|37r79
+X 19 player_package.ads
+11K9*Player_Package 111e19 49|8w6 8r37
+14A14*Team
+17P14*Team_Access(14A14) 49|37r57
+49Y23 Start 50|42s31 43s31
+51Y23 Stop 50|58s47 59s47
+X 49 timer_package.ads
+15K9*Timer_Package 48l5 48e18 50|3b14 74l5 74t18
+17W24*TimeCount 32l13 32e22 35r41 50|5b24 26l13 26t22
+19Y23 Increment 50|8b23 12l21 12t30 49s35
+22V26 GetTime{integer} 50|15b26 18l21 18t28 52s31
+25V26 GetTotalTime{integer} 50|21b26 24l21 24t33 46s31 52s44
+29i25 TotalTime{integer} 50|23r32
+30i25 Timing{integer} 50|9r30 11r25 11r35 17r32
+35P14*TimeCount_Access(17W24) 37r30
+37T19*Timer 37d26 37d48 37d52 37d70 37d74 37d95 43l13 43e18 46r37 50|28b19
+. 72l13 72t18
+37p26 T{35P14} 50|46r29 49r33 52r29 52r42
+37p48 T1{19|17P14} 50|42r25 58r41
+37p52 T2{19|17P14} 50|43r25 59r41
+37p70 M1{18|33P14} 50|39r17 55r33
+37p74 M2{18|33P14} 50|40r17 56r33
+37p95 B{14|52P14} 50|38r17 54r33
+41Y23 Start 50|35b24
+46P14*Timer_Access(37T19)
+X 50 timer_package.adb
+30o17 Current_Period{9|46O9} 31r46 67r52
+31o17 Next_Cycle{9|41O9} 67m25 67r39 68r37
+41i21 i{integer} 42r28 43r28
+46i21 i{integer} 48r29
+57i37 i{integer} 58r44 59r44
+

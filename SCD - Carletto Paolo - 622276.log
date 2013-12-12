@@ -1,0 +1,675 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.9.26)  12 DEC 2013 11:43
+entering extended mode
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"/media/PENDRIVE/Relazione/SCD - Carletto Paolo - 622276.tex"
+(/media/PENDRIVE/Relazione/SCD - Carletto Paolo - 622276.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texmf-texlive/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count88
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
+)
+(/usr/share/texmf-texlive/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks17
+\verbatim@line=\toks18
+\verbatim@in@stream=\read1
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks19
+\ex@=\dimen105
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks20
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks21
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks22
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/share/texmf-texlive/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip46
+)
+(/var/lib/texmf/tex/generic/babel/babel.sty
+Package: babel 2008/07/06 v3.8l The Babel package
+
+(/usr/share/texmf-texlive/tex/generic/babel/italian.ldf
+Language: italian 2008/03/14 v1.2t Italian support from the babel system
+
+(/usr/share/texmf-texlive/tex/generic/babel/babel.def
+File: babel.def 2008/07/06 v3.8l Babel common definitions
+\babel@savecnt=\count101
+\U@D=\dimen114
+)
+Package babel Info: Making " an active character on input line 94.
+))
+(/usr/share/texmf-texlive/tex/latex/listings/listings.sty
+\lst@mode=\count102
+\lst@gtempboxa=\box30
+\lst@token=\toks24
+\lst@length=\count103
+\lst@currlwidth=\dimen115
+\lst@column=\count104
+\lst@pos=\count105
+\lst@lostspace=\dimen116
+\lst@width=\dimen117
+\lst@newlines=\count106
+\lst@lineno=\count107
+\lst@maxwidth=\dimen118
+
+(/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count108
+\lst@skipnumbers=\count109
+\lst@framebox=\box31
+)
+(/usr/share/texmf-texlive/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(/usr/share/texmf-texlive/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/share/texmf-texlive/tex/latex/caption/caption.sty
+Package: caption 2009/10/09 v3.1k Customizing captions (AR)
+
+(/usr/share/texmf-texlive/tex/latex/caption/caption3.sty
+Package: caption3 2009/10/09 v3.1k caption3 kernel (AR)
+\captionmargin=\dimen119
+\captionmargin@=\dimen120
+\captionwidth=\dimen121
+\caption@indent=\dimen122
+\caption@parindent=\dimen123
+\caption@hangindent=\dimen124
+)
+\c@ContinuedFloat=\count110
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+)
+\c@KVtest=\count111
+\sf@farskip=\skip47
+\sf@captopadj=\dimen125
+\sf@capskip=\skip48
+\sf@nearskip=\skip49
+\c@subfigure=\count112
+\c@subfigure@save=\count113
+\c@lofdepth=\count114
+\c@subtable=\count115
+\c@subtable@save=\count116
+\c@lotdepth=\count117
+\sf@top=\skip50
+\sf@bottom=\skip51
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+
+(/usr/share/texmf-texlive/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+(/usr/share/texmf-texlive/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2009/10/09 v6.79a Hypertext links for LaTeX
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode detected.
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texmf-texlive/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2009/01/23 v0.5 Provides ifxetex conditional
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/hycolor.sty
+Package: hycolor 2009/10/02 v1.5 Code for color options of hyperref/bookmark (H
+O)
+
+(/usr/share/texmf-texlive/tex/latex/oberdiek/xcolor-patch.sty
+Package: xcolor-patch 2009/10/02 xcolor patch
+))
+\@linkdim=\dimen126
+\Hy@linkcounter=\count118
+\Hy@pagecounter=\count119
+
+(/usr/share/texmf-texlive/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2009/10/09 v6.79a Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2007/12/12 v1.2 Prefix for e-TeX command names (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)
+(/usr/share/texmf-texlive/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2009/08/13 v3.4 Keyval support for LaTeX options (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2009/07/30 v1.5 Key value parser with default handler suppor
+t (HO)
+))
+Package hyperref Info: Hyper figures OFF on input line 2975.
+Package hyperref Info: Link nesting OFF on input line 2980.
+Package hyperref Info: Hyper index ON on input line 2983.
+Package hyperref Info: Plain pages OFF on input line 2990.
+Package hyperref Info: Backreferencing OFF on input line 2995.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 3191.
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 3428.
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bitset.sty
+Package: bitset 2007/09/28 v1.0 Data type bit set (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/intcalc.sty
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bigintcalc.sty
+Package: bigintcalc 2007/11/11 v1.1 Expandable big integer calculations (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2009/09/23 v0.6 LuaTeX support for pdfTeX utility functions
+ (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2009/04/17 v1.2 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2009/08/05 v1.0 Some LaTeX kernel commands for general use (HO
+)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+)))
+\Fld@menulength=\count120
+\Field@Width=\dimen127
+\Fld@charsize=\dimen128
+\Field@toks=\toks25
+Package hyperref Info: Hyper figures OFF on input line 4377.
+Package hyperref Info: Link nesting OFF on input line 4382.
+Package hyperref Info: Hyper index ON on input line 4385.
+Package hyperref Info: backreferencing OFF on input line 4392.
+Package hyperref Info: Link coloring OFF on input line 4397.
+Package hyperref Info: Link coloring with OCG OFF on input line 4402.
+Package hyperref Info: PDF/A mode OFF on input line 4407.
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
+)
+\Hy@abspage=\count121
+\c@Item=\count122
+\c@Hfootnote=\count123
+)
+*hyperref using driver hpdftex*
+(/usr/share/texmf-texlive/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2009/10/09 v6.79a Hyperref driver for pdfTeX
+\Fld@listcount=\count124
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 51.
+
+(/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+)
+
+LaTeX Warning: Unused global option(s):
+    [aps].
+
+(./SCD - Carletto Paolo - 622276.aux)
+\openout1 = `"SCD - Carletto Paolo - 622276.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 103.
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 103.
+
+
+(/usr/share/texmf-texlive/tex/latex/cbfonts/lgrcmr.fd
+File: lgrcmr.fd 2008/01/04 v1.0 Greek Computer Modern
+)
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count125
+\scratchdimen=\dimen129
+\scratchbox=\box32
+\nofMPsegments=\count126
+\nofMParguments=\count127
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count128
+\MPscratchDim=\dimen130
+\MPnumerator=\count129
+\everyMPtoPDFconversion=\toks27
+)
+\c@lstlisting=\count130
+Package caption Info: Begin \AtBeginDocument code.
+Package caption3 Info: subfig package 1.2 or 1.3 is loaded.
+LaTeX Info: Redefining \subref on input line 103.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring ON on input line 103.
+ (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
+
+(/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
+Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
+)
+\c@section@level=\count131
+)
+LaTeX Info: Redefining \ref on input line 103.
+LaTeX Info: Redefining \pageref on input line 103.
+
+(./SCD - Carletto Paolo - 622276.out) (./SCD - Carletto Paolo - 622276.out)
+\@outlinefile=\write3
+\openout3 = `"SCD - Carletto Paolo - 622276.out"'.
+
+\AtBeginShipoutBox=\box33
+
+<images/soccerball.png, id=247, 274.626pt x 274.626pt>
+File: images/soccerball.png Graphic file (type png)
+
+<use images/soccerball.png>
+<images/unipd-logo.png, id=248, 943.525pt x 949.5475pt>
+File: images/unipd-logo.png Graphic file (type png)
+
+<use images/unipd-logo.png> [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/soccerball.png> <
+./images/unipd-logo.png>]
+(./SCD - Carletto Paolo - 622276.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.49 ...umberline {6}Distribuzione}{41}{section.6}
+                                                   [1])
+\tf@toc=\write4
+\openout4 = `"SCD - Carletto Paolo - 622276.toc"'.
+
+ [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 149.
+
+
+(/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 149.
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¨ in font cmr10!
+Missing character: There is no ï in font cmr10!
+Missing character: There is no ¿ in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+Missing character: There is no ï in font cmr10!
+Missing character: There is no ¿ in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+ [3] [4]
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no ¨ in font cmr8!
+
+<images/field.pdf, id=343, 372.39125pt x 276.03125pt>
+File: images/field.pdf Graphic file (type pdf)
+ <use images/field.pdf>
+[5] <images/field-web.pdf, id=355, 371.3875pt x 276.03125pt>
+File: images/field-web.pdf Graphic file (type pdf)
+
+<use images/field-web.pdf> [6 <./images/field.pdf> <./images/field-web.pdf>]
+<images/player1.pdf, id=402, 37.13875pt x 37.13875pt>
+File: images/player1.pdf Graphic file (type pdf)
+ <use images/player1.pdf>
+<images/player2.pdf, id=403, 37.13875pt x 37.13875pt>
+File: images/player2.pdf Graphic file (type pdf)
+ <use images/player2.pdf>
+[7 <./images/player1.pdf> <./images/player2.pdf>]
+<images/ball.pdf, id=430, 37.13875pt x 37.13875pt>
+File: images/ball.pdf Graphic file (type pdf)
+ <use images/ball.pdf>
+<images/ball-player1.pdf, id=431, 39.14626pt x 39.14626pt>
+File: images/ball-player1.pdf Graphic file (type pdf)
+
+<use images/ball-player1.pdf>
+<images/ball-player2.pdf, id=432, 39.14626pt x 39.14626pt>
+File: images/ball-player2.pdf Graphic file (type pdf)
+
+<use images/ball-player2.pdf>
+<images/movement.pdf, id=433, 193.72375pt x 193.72375pt>
+File: images/movement.pdf Graphic file (type pdf)
+
+<use images/movement.pdf> [8 <./images/ball.pdf> <./images/ball-player1.pdf> <.
+/images/ball-player2.pdf>]
+<images/defense.pdf, id=469, 370.38374pt x 273.02pt>
+File: images/defense.pdf Graphic file (type pdf)
+ <use images/defense.pdf>
+<images/middle.pdf, id=470, 370.38374pt x 273.02pt>
+File: images/middle.pdf Graphic file (type pdf)
+ <use images/middle.pdf>
+[9 <./images/movement.pdf> <./images/defense.pdf>]
+<images/attack.pdf, id=516, 370.38374pt x 273.02pt>
+File: images/attack.pdf Graphic file (type pdf)
+ <use images/attack.pdf>
+[10 <./images/middle.pdf> <./images/attack.pdf>] [11]
+<images/vision.pdf, id=577, 173.64874pt x 171.64125pt>
+File: images/vision.pdf Graphic file (type pdf)
+ <use images/vision.pdf>
+[12 <./images/vision.pdf>]
+<images/vision1.pdf, id=598, 188.705pt x 186.6975pt>
+File: images/vision1.pdf Graphic file (type pdf)
+ <use images/vision1.pdf>
+[13 <./images/vision1.pdf>] [14]
+<images/vision2.pdf, id=625, 181.67876pt x 210.7875pt>
+File: images/vision2.pdf Graphic file (type pdf)
+
+<use images/vision2.pdf>
+<images/vision3.pdf, id=626, 174.6525pt x 171.64125pt>
+File: images/vision3.pdf Graphic file (type pdf)
+
+<use images/vision3.pdf> [15 <./images/vision2.pdf>] [16 <./images/vision3.pdf>
+] <images/vision4.pdf, id=692, 173.64874pt x 171.64125pt>
+File: images/vision4.pdf Graphic file (type pdf)
+
+<use images/vision4.pdf> [17 <./images/vision4.pdf>]
+<images/unmark.pdf, id=707, 108.405pt x 109.40875pt>
+File: images/unmark.pdf Graphic file (type pdf)
+ <use images/unmark.pdf>
+<images/contrast.pdf, id=710, 102.3825pt x 101.37875pt>
+File: images/contrast.pdf Graphic file (type pdf)
+
+<use images/contrast.pdf> [18 <./images/unmark.pdf>]
+
+LaTeX Warning: Reference `contrasto' on page 19 undefined on input line 655.
+
+<images/return.pdf, id=734, 174.6525pt x 171.64125pt>
+File: images/return.pdf Graphic file (type pdf)
+ <use images/return.pdf>
+[19 <./images/contrast.pdf> <./images/return.pdf>]
+<images/keeper.pdf, id=764, 135.50626pt x 171.64125pt>
+File: images/keeper.pdf Graphic file (type pdf)
+ <use images/keeper.pdf>
+<images/keep-contrast.pdf, id=765, 135.50626pt x 171.64125pt>
+File: images/keep-contrast.pdf Graphic file (type pdf)
+
+<use images/keep-contrast.pdf> [20 <./images/keeper.pdf>]
+<images/save.pdf, id=781, 135.50626pt x 171.64125pt>
+File: images/save.pdf Graphic file (type pdf)
+ <use images/save.pdf>
+[21 <./images/keep-contrast.pdf> <./images/save.pdf>] [22]
+<images/relations-class-schema.pdf, id=820, 483.8075pt x 213.79875pt>
+File: images/relations-class-schema.pdf Graphic file (type pdf)
+
+<use images/relations-class-schema.pdf>
+<images/timer-class.pdf, id=821, 428.60126pt x 175.65625pt>
+File: images/timer-class.pdf Graphic file (type pdf)
+
+<use images/timer-class.pdf> [23 <./images/relations-class-schema.pdf>]
+<images/field-class.pdf, id=871, 300.12125pt x 153.57375pt>
+File: images/field-class.pdf Graphic file (type pdf)
+
+<use images/field-class.pdf> [24 <./images/timer-class.pdf>] [25 <./images/fiel
+d-class.pdf>] <images/referee-sequence.pdf, id=989, 486.81876pt x 290.08376pt>
+File: images/referee-sequence.pdf Graphic file (type pdf)
+
+<use images/referee-sequence.pdf> [26] [27 <./images/referee-sequence.pdf>]
+<images/manager-class.pdf, id=1055, 608.2725pt x 186.6975pt>
+File: images/manager-class.pdf Graphic file (type pdf)
+
+<use images/manager-class.pdf>
+<images/manager-sequence.pdf, id=1056, 529.98pt x 309.155pt>
+File: images/manager-sequence.pdf Graphic file (type pdf)
+
+<use images/manager-sequence.pdf> [28 <./images/manager-class.pdf>]
+<images/team-class.pdf, id=1134, 428.60126pt x 175.65625pt>
+File: images/team-class.pdf Graphic file (type pdf)
+
+<use images/team-class.pdf> [29 <./images/manager-sequence.pdf>] [30 <./images/
+team-class.pdf>]
+<images/sequence-player.pdf, id=1276, 383.4325pt x 255.95625pt>
+File: images/sequence-player.pdf Graphic file (type pdf)
+
+<use images/sequence-player.pdf>
+<images/player-state.pdf, id=1277, 603.25375pt x 120.45pt>
+File: images/player-state.pdf Graphic file (type pdf)
+
+<use images/player-state.pdf>
+<images/player-action.pdf, id=1278, 592.2125pt x 283.0575pt>
+File: images/player-action.pdf Graphic file (type pdf)
+
+<use images/player-action.pdf> [31 <./images/sequence-player.pdf> <./images/pla
+yer-state.pdf>]
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no   in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¨ in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¬ in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¹ in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¹ in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¹ in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¹ in font cmr10!
+ <images/player-schema.pdf, id=1379, 409.53pt x 279.0425pt>
+File: images/player-schema.pdf Graphic file (type pdf)
+
+<use images/player-schema.pdf> [32 <./images/player-action.pdf>]
+<images/ball-movement.pdf, id=1452, 607.26875pt x 263.98625pt>
+File: images/ball-movement.pdf Graphic file (type pdf)
+
+<use images/ball-movement.pdf> [33 <./images/player-schema.pdf>] [34 <./images/
+ball-movement.pdf>] [35]
+<images/concurrent-game-state.pdf, id=1550, 578.16pt x 245.91875pt>
+File: images/concurrent-game-state.pdf Graphic file (type pdf)
+
+<use images/concurrent-game-state.pdf> [36 <./images/concurrent-game-state.pdf>
+] [37] [38] [39] [40]
+<images/distributed-system.pdf, id=1633, 448.67625pt x 294.09875pt>
+File: images/distributed-system.pdf Graphic file (type pdf)
+
+<use images/distributed-system.pdf> [41]
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¨ in font cmr10!
+ [42 <./images/distributed-system.pdf>] [43] [44] (/usr/share/texmf-texlive/tex
+/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(/usr/share/texmf-texlive/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2004/09/05 1.3 listings language file
+)
+(/usr/share/texmf-texlive/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2004/09/05 1.3 listings language file
+)
+(./code/Field_Package.ads [45] [46]) [47] (./code/Referee_Package.ads) [48]
+(./code/Manager_Package.ads) [49] (./code/Player_Package.ads [50] [51])
+[52] (./code/Ball_Package.ads) [53] [54] [55]
+(./SCD - Carletto Paolo - 622276.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 9828 strings out of 493848
+ 144119 string characters out of 1152823
+ 763772 words of memory out of 3000000
+ 12334 multiletter control sequences out of 15000+50000
+ 12457 words of font info for 48 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 44i,10n,58p,1146b,1848s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-texlive/fonts/
+type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-texlive/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
+/cm/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.p
+fb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/typ
+e1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/ams
+fonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr9
+.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-
+texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "SCD - Carletto Paolo - 622276.pdf" (56 pages, 1251066 bytes)
+.
+PDF statistics:
+ 2322 PDF objects out of 2487 (max. 8388607)
+ 566 named destinations out of 1000 (max. 500000)
+ 679 words of extra memory for PDF output out of 10000 (max. 10000000)
+

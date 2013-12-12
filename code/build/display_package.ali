@@ -1,0 +1,439 @@
+V "GNAT Lib v2011"
+A -O3
+A -gnatp
+A -gnatwu
+P SS ZX
+R nnvvnnnnnnnvvnnnnnvnnvnnnvvnnnnvnnnnnnnnnnnnvnnnnnnnnnnnnnvnnvnvvnvnnnnnnnnnnnv1+nn
+
+U display_package%b	display_package.adb	bb4a16a7 OO PF PK
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.finalization.heap_management%s  a-fihema.adb  a-fihema.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W double_buffer%s	double_buffer.adb	double_buffer.ali
+W gdk%s			gdk.ads			gdk.ali
+W gdk.color%s		gdk-color.adb		gdk-color.ali
+W gdk.drawable%s	gdk-drawable.adb	gdk-drawable.ali
+W gdk.gc%s		gdk-gc.adb		gdk-gc.ali
+W gtk%s			gtk.ads			gtk.ali
+W gtk.box%s		gtk-box.adb		gtk-box.ali
+W gtk.button%s		gtk-button.adb		gtk-button.ali
+W gtk.handlers%s	gtk-handlers.adb	gtk-handlers.ali  EA
+W gtk.hbutton_box%s	gtk-hbutton_box.adb	gtk-hbutton_box.ali
+W gtk.label%s		gtk-label.adb		gtk-label.ali
+W gtk.main%s		gtk-main.adb		gtk-main.ali  AD
+W gtk.style%s		gtk-style.adb		gtk-style.ali
+W pango%s		pango.ads		pango.ali
+W pango.font%s		pango-font.adb		pango-font.ali
+W system%s		system.ads		system.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+
+U display_package%s	display_package.ads	c82dbca0 EE OO PF PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.finalization.heap_management%s  a-fihema.adb  a-fihema.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ball_package%s	ball_package.adb	ball_package.ali
+W field_package%s	field_package.adb	field_package.ali
+W gdk%s			gdk.ads			gdk.ali
+W glib%s		glib.adb		glib.ali
+W gtk%s			gtk.ads			gtk.ali
+W gtk.button%s		gtk-button.adb		gtk-button.ali
+W gtk.drawing_area%s	gtk-drawing_area.adb	gtk-drawing_area.ali
+W gtk.enums%s		gtk-enums.adb		gtk-enums.ali
+W gtk.widget%s		gtk-widget.adb		gtk-widget.ali
+W gtk.window%s		gtk-window.adb		gtk-window.ali
+W system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W timer_package%s	timer_package.adb	timer_package.ali
+
+D ada.ads		20110419093133 3ffc8e18
+D a-except.ads		20110419093131 4759ecee
+D a-finali.ads		20110419093131 b333d305
+D a-fihema.ads		20110419093131 1940728a
+D a-ioexce.ads		20110419093131 8b9de6cd
+D a-numeri.ads		20110419093132 bb51c45a
+D a-nudira.ads		20110419093132 2fef2912
+D a-nuelfu.ads		20110419093132 03e83d1c
+D a-ngelfu.ads		20110419093132 47731de9
+D a-reatim.ads		20110419093132 63f07669
+D a-stream.ads		20110419093132 2ca4ee37
+D a-tags.ads		20110419093132 7b33f560
+D a-textio.ads		20110419093132 386df5d4
+D a-unccon.ads		20110419093133 f9eb8f06
+D a-uncdea.ads		20110419093133 f15a5ed1
+D ball_package.ads	20120314205118 23fcee3b
+D display_package.ads	20120304130519 c44e5035
+D display_package.adb	20120307200019 f04fe136
+D double_buffer.ads	20120220232131 e9a47377
+D field_package.ads	20120306201725 b9f4e4e6
+D gdk.ads		20070623021945 f909352d
+D gdk-bitmap.ads	20070623021932 a30f71c4
+D gdk-color.ads		20070623021919 8aa593ee
+D gdk-cursor.ads	20070623021924 d92b2ac1
+D gdk-display.ads	20070915021650 f1fc98fd
+D gdk-drawable.ads	20080301093424 15e54888
+D gdk-event.ads		20080211164737 8e0f7bb6
+D gdk-font.ads		20070623021944 46e43fa8
+D gdk-gc.ads		20070623021916 a96f1ba5
+D gdk-pixbuf.ads	20090714160440 8572dcfc
+D gdk-pixmap.ads	20070623021909 677b62c0
+D gdk-rectangle.ads	20070623021926 624e1b5d
+D gdk-region.ads	20070623021911 ff429b15
+D gdk-rgb.ads		20070915021640 724abbe3
+D gdk-types.ads		20070623021946 cf900faf
+D gdk-visual.ads	20070623021923 615e934c
+D gdk-window.ads	20091208165229 a3dbaa81
+D glib.ads		20100713213133 0f441d83
+D glib-error.ads	20070623021922 e055fabe
+D glib-generic_properties.ads  20080125143136 a1807006
+D glib-glist.ads	20070623021904 65a6e1be
+D glib-gslist.ads	20070623021858 8fe7d6f1
+D glib-object.ads	20080529082324 1ad03bfb
+D glib-properties.ads	20100629165003 48c8d9fb
+D glib-values.ads	20090114134118 37b4897e
+D gtk.ads		20070623021947 81513fe2
+D gtk-accel_group.ads	20090727180449 f9fc93a0
+D gtk-adjustment.ads	20090727180449 f310a8ee
+D gtk-bin.ads		20070623021945 165e94a3
+D gtk-box.ads		20090727180449 f244aaf1
+D gtk-button.ads	20090727180449 7edbc04b
+D gtk-button_box.ads	20070623021939 da5fe657
+D gtk-container.ads	20100629172600 93cfa083
+D gtk-drawing_area.ads	20070623021913 2f063f47
+D gtk-enums.ads		20100808195629 7b68cff3
+D gtk-handlers.ads	20091229091052 f87aa660
+D gtk-handlers.adb	20080211164737 ab37ef08
+D gtk-hbutton_box.ads	20070623021903 c039583f
+D gtk-label.ads		20100629172600 d8ad8698
+D gtk-main.ads		20070623021934 2fc048ca
+D gtk-main.adb		20080204155705 628bb881
+D gtk-marshallers.ads	20091229091052 6c3cad4d
+D gtk-marshallers.adb	20091229091052 3763b331
+D gtk-misc.ads		20070623021858 672d6109
+D gtk-notebook.ads	20100715155308 7f34e780
+D gtk-object.ads	20070915021651 cc35880a
+D gtk-style.ads		20100629165003 1c4cbc80
+D gtk-tree_model.ads	20101220110330 c173923c
+D gtk-widget.ads	20100719184436 d412373d
+D gtk-window.ads	20100720192553 d56759a1
+D gtkada.ads		20070623021929 57aea1c7
+D gtkada-types.ads	20070915021654 b7bc0c77
+D interfac.ads		20110419093135 f77d8799
+D i-c.ads		20110419093135 5421119b
+D i-cstrin.ads		20110419093135 341d0ddf
+D i-cstrea.ads		20110419093135 1bd72c32
+D manager_package.ads	20120319213409 cdb8ebbf
+D pango.ads		20070623021918 d3c8e76d
+D pango-attributes.ads	20070623021911 34135516
+D pango-context.ads	20070623021942 a00383e5
+D pango-enums.ads	20090317155136 8ef2dddf
+D pango-font.ads	20100830173038 375007f3
+D pango-layout.ads	20070623021924 0814381c
+D pango-tabs.ads	20070623021942 1dd550ef
+D player_package.ads	20120314200514 2dacca89
+D system.ads		20110419093140 3703e6a6
+D s-atacco.ads		20110419093136 1dc856ad
+D s-assert.ads		20110419093136 a3a4e6ab
+D s-crtl.ads		20110419093137 ac77b159
+D s-exctab.ads		20110419093137 66e51330
+D s-ficobl.ads		20110419093137 443b9d66
+D s-finroo.ads		20110419093137 2dd85ce2
+D s-imgint.ads		20110419093137 02dbe0c2
+D s-multip.ads		20110419093137 38ac9f73
+D s-oscons.ads		20110419172511 4e3d0927
+D s-osinte.ads		20110419093137 fcf50fe1
+D s-parame.ads		20110419093138 03aa3b01
+D s-pooglo.ads		20110419093138 542f33d0
+D s-rannum.ads		20110419093138 5eb33f0a
+D s-secsta.ads		20110419093138 eea35a36
+D s-soflin.ads		20110419093138 607487c5
+D s-stache.ads		20110419093138 596fc1b4
+D s-stausa.ads		20110419093138 017a0a05
+D s-stalib.ads		20110419093138 f78bcf95
+D s-stoele.ads		20110419093138 facd7d98
+D s-stoele.adb		20110419093138 afc5dc80
+D s-stopoo.ads		20110419093138 5c51faf9
+D s-stratt.ads		20110419093138 aedef97e
+D s-tasinf.ads		20110419093139 e120e23a
+D s-taspri.ads		20110419093139 af44aca8
+D s-taprop.ads		20110419093139 07f79e46
+D s-taskin.ads		20110419093139 b2eaee08
+D s-taprob.ads		20110419093139 502249e3
+D s-tpoben.ads		20110419093139 e8374469
+D s-tasren.ads		20110419093139 86fa7427
+D s-tassta.ads		20110419093139 e88ef99e
+D s-traent.ads		20110419093139 5221ee41
+D s-unstyp.ads		20110419093139 6ae15c76
+D s-wchcon.ads		20110419093139 bfeb2e3d
+D timer_package.ads	20120314210647 4be69085
+D unchconv.ads		20110419093141 ca2f9e18
+D unchdeal.ads		20110419093141 214516a4
+X 1 ada.ads
+16K9*Ada 19e8 18|15r6 15r37
+X 13 a-textio.ads
+49K13*Text_IO 471e16 18|15w10 15r41
+X 16 ball_package.ads
+11K9*Ball_Package 54e17 17|9w6 9r37
+28V26 GetOwner{integer} 18|77s46 83s46
+40P14*Ball_Access(16W24) 17|37r58 18|26r16 154r58
+X 17 display_package.ads
+20K9*Display_Package 42l5 42e20 18|17b14 285l5 285t20
+22P14*Gtk_Drawing_Area(54|61R9)
+25U19*Draw_Content 25>33 18|40b19 90l13 90t25 99s17
+25p33 Pixmap{21|47P9} 18|40b33 46r39 47r45 50r45 51r40 54r45 55r45 58r45
+. 59r45 62r45 63r45 66r39 70r39 76r55 78r63 82r55 84r63
+28V18*Draw_Buffer{boolean} 28>31 18|95b18 102l13 102t24 279r45
+28p31 Area{54|63P9} 18|95b31 96r98
+31U19*Quitter 31^28 18|136b19 140l13 140t20 256r87
+31p28 Button(51|77R9) 18|136b28 137r39
+34U19*Quit 34^25 18|145b19 149l13 149t17 222r73
+34p25 Win(70|68R9) 18|145b25 146r39
+37U19*References 37>30 37>51 37>71 37>96 18|154b19 161l13 161t23
+37p30 F{20|132P14} 18|154b30 157r26
+37p51 B{16|40P14} 18|154b51 158r25
+37p71 T{120|35P14} 18|154b71 159r25
+37p96 Tm{120|46P14} 18|154b96 160r26
+40U19*Init 18|166b19 283l13 283t17
+X 18 display_package.adb
+19p9 Layer0_Gc{29|63P12} 47r53 267m33 267r33 268r40
+20p9 Layer1_Gc{29|63P12} 50r53 51r48 54r53 55r53 58r53 59r53 62r53 63r53
+. 66r47 269m33 269r33 270r40
+21p9 Layer2_Gc{29|63P12} 76r63 271m33 271r33 272r40
+22p9 Layer3_Gc{29|63P12} 82r63 273m33 273r33 274r40
+23p9 Layer4_Gc{29|63P12} 70r47 78r71 84r71 275m33 275r33 276r40
+25p9 Field{20|132P14} 69r23 75r39 81r39 109r66 109r109 157m17 234r75 234r118
+26p9 Ball{16|40P14} 77r41 83r41 158m17
+27p9 Time{120|35P14} 119r22 159m17
+28p9 Timer{120|46P14} 130r17 160m17
+30K17 Void_Cb[56|834] 222r17 222r50
+31K17 Button_Cb[56|834] 252r17 252r62 256r17 256r62
+32K17 Draw_Timeout[60|444] 279r23
+33K17 Timer_Timeout[60|444] 280r24
+34K17 Score_Timeout[60|444] 281r24
+41i17 Width{38|56I9} 46m47 46r47 47r76
+41i24 Height{38|56I9} 46m54 46r54 47r83
+42r17 BP{20|22R14} 69m17 70r69 70r85
+42r21 PP{20|22R14} 75m33 76r85 76r101 78r94 78r112 81m33 82r85 82r101 84r94
+. 84r112
+73i21 i{integer} 74r29 75r63 77r37 81r63 83r37
+96p17 Buffer{19|82P9} 99r57 100r37
+107V18 UpdateScore{boolean} 107b18 107>31 111l13 111t24 281r48
+107p31 Label{59|103P9} 109r27
+116V18 UpdateTimer{boolean} 116b18 116>31 122l13 122t24 280r48
+116p31 Label{59|103P9} 120r27
+117i17 T{integer} 119m17 120r61
+127U19 Starter 127b19 127^28 131l13 131t20 252r87
+127p28 Button(51|77R9) 128r39
+167p17 Win{70|69P9} 220m37 220r37 221r39 222r34 229r64 235r64 263r33 264r38
+168p17 Buffer{19|82P9} 240m40 240r40 241r42 242r47 259r43 267r70 269r70 271r70
+. 273r70 275r70 279r100
+169p17 Hbox{58|46P9} 245m42 245r42 246r51 247r46 248r45 251r45 255r45 262r43
+170p17 Vbox{50|72P9} 225m39 225r39 259r37 260r37 261r37 262r37 263r38
+171p17 Timer{59|103P9} 228m36 228r36 231r38 260r43 280r79
+172p17 Score{59|103P9} 234m36 234r36 237r38 261r43 281r79
+173p17 Style{67|68P9} 229m17 230r49 231r45 235m17 236r49 237r45
+174p17 Button{51|78P9} 250m37 250r37 251r51 252r43 252r104 254m37 254r37
+. 255r51 256r43 256r104
+175m17 Id{60|425M9} 279m17
+176m17 Id2{60|425M9} 280m17
+177m17 Id3{60|425M9} 281m17
+179r17 RedColor{23|60R9} 194m22 194r22 196m37 196r37 272r51
+180r17 WhiteColor{23|60R9} 188m22 188r22 190m37 190r37 270r51
+181r17 BlueColor{23|60R9} 200m22 200r22 202m37 202r37 274r51
+182r17 GreenColor{23|60R9} 206m22 206r22 208m35 208r35 268r51
+183r17 BlackColor{23|60R9} 212m22 212r22 214m35 214r35 276r51
+184b13 Success{boolean} 193m40 193r40 199m40 199r40 205m40 205r40 211m40
+. 211r40 217m40 217r40
+X 19 double_buffer.ads
+78K9*Double_Buffer 18|2w6 2r37 96r26 96r65 99r31 100r17 168r27 240r17 241r17
+. 242r17 267r44 269r44 271r44 273r44 275r44 19|133e18
+82P9*Gtk_Double_Buffer(80R9) 18|96r40 96r79 168r41
+84U14*Gtk_New 18|240s31
+95V13*Get_Pixmap{26|52P12} 18|99R45
+100U14*Set_Back_Store 18|242R31
+X 20 field_package.ads
+9K9*Field_Package 17|8w6 8r37 20|134e18
+22R14*Position 18|42r26 20|26e19
+24i17*Row{integer} 18|70r88 76r104 78r115 82r104 84r115
+25i17*Col{integer} 18|70r72 76r88 78r97 82r88 84r97
+51V26 GetPlayerPosition{22R14} 18|75s45 81s45
+75V26 GetBallPosition{22R14} 18|69s29
+105V26 GetScore{integer} 18|109s72 109s115 234s81 234s124
+132P14*Field_Access(42W24) 17|37r37 18|25r17 154r37
+X 21 gdk.ads
+40K9*Gdk 17|17w6 17r45 25r42 18|3r6 3r37 4r6 4r37 6r6 6r37 19r21 20r21 21r21
+. 22r21 23r21 40r42 46r17 47r17 50r17 51r17 54r17 55r17 58r17 59r17 62r17
+. 63r17 66r17 70r17 76r33 78r41 82r33 84r41 267r17 268r17 269r17 270r17 271r17
+. 272r17 273r17 274r17 275r17 276r17 21|66e8
+45P9*Gdk_GC<38|155P9>
+47P9*Gdk_Drawable<38|155P9> 17|25r46 18|40r46
+48P12*Gdk_Window{47P9}
+54P9*Gdk_Colormap<38|155P9>
+56P9*Gdk_Visual<38|155P9>
+X 23 gdk-color.ads
+58K13*Color 18|3w10 3r41 23|323e14
+60R9*Gdk_Color 18|179r28 180r30 181r29 182r30 183r30 23|300e14
+75P12*Gdk_Colormap{21|54P9}
+98U14*Set_Rgb 18|188s13 194s13 200s13 206s13 212s13
+158U14*Alloc_Color 18|189s13 195s13 201s13 207s13 213s13
+159p7 Colormap{75P12} 18|189r26 195r26 201r26 207r26 213r26
+160r7 Color{60R9} 18|190r26 196r26 202r26 208r26 214r26
+161b7 Writeable{boolean} 18|191r26 197r26 203r26 209r26 215r26
+162b7 Best_Match{boolean} 18|192r26 198r26 204r26 210r26 216r26
+163b7 Success{boolean} 18|193r26 199r26 205r26 211r26 217r26
+X 26 gdk-drawable.ads
+50K13*Drawable 18|4w10 4r41 46r21 47r21 50r21 51r21 54r21 55r21 58r21 59r21
+. 62r21 63r21 66r21 70r21 76r37 78r45 82r37 84r45 26|289e17
+52P12*Gdk_Drawable{21|47P9}
+60U14*Get_Size 18|46s30
+87U14*Draw_Line 18|51s30
+98U14*Draw_Rectangle 18|47s30 50s30 54s30 55s30 58s30 59s30 62s30 63s30
+117U14*Draw_Arc 18|66s30 70s30 76s46 78s54 82s46 84s54
+X 29 gdk-gc.ads
+61K13*GC 18|6w10 6r41 19r25 20r25 21r25 22r25 23r25 267r21 268r21 269r21
+. 270r21 271r21 272r21 273r21 274r21 275r21 276r21 29|382e11
+63P12*Gdk_GC{21|45P9} 18|19r28 20r28 21r28 22r28 23r28
+136U14*Gdk_New 18|267s24 269s24 271s24 273s24 275s24
+188U14*Set_Foreground 18|268s24 270s24 272s24 274s24 276s24
+X 36 gdk-visual.ads
+83V13*Convert[121|20]{86|64M9} 41|63i21
+84V13*Convert[121|20]{21|56P9} 41|64i21
+X 37 gdk-window.ads
+70P12*Gdk_Window{21|48P12}
+529V13*Convert[121|20]{86|64M9} 41|63i21
+530V13*Convert[121|20]{21|47P9} 41|64i21
+X 38 glib.ads
+43K9*Glib 17|13w6 13r45 18r10 38|408e9
+56I9*Gint<74|35I9> 17|18r15 18|41r33 70r64 70r80 76r80 76r96 78r89 78r107
+. 82r80 82r96 84r89 84r107
+62M9*Guint<74|43M9>
+155P9*C_Proxy(152R9)
+X 43 glib-object.ads
+46P9*GObject(45R9)
+409V13*Convert{86|64M9} 41|63i21 42|55i21
+410V13*Convert{46P9} 41|64i21 42|56i21
+X 46 gtk.ads
+47K9*Gtk 17|11r6 11r37 12r6 12r29 14r6 14r37 15r6 15r37 16r6 16r37 28r38
+. 31r44 34r38 18|5r6 5r37 7r6 7r37 8r6 8r29 9r6 9r37 10r6 10r37 12r6 12r37
+. 14r6 14r37 30r32 30r55 31r34 31r57 32r37 32r55 33r38 34r38 95r38 127r44
+. 136r44 139r17 145r38 148r17 167r27 169r27 170r27 171r27 172r27 173r27 174r27
+. 175r27 176r35 177r35 189r40 195r40 201r40 207r40 213r40 220r17 220r42 221r17
+. 225r17 228r17 229r26 229r42 230r17 231r17 234r17 235r26 235r42 236r17 237r17
+. 245r17 246r17 247r17 248r17 248r51 250r17 251r17 254r17 255r17 259r17 260r17
+. 261r17 262r17 263r17 264r17 279r65 46|83e8
+72P9*Gtk_Notebook_Page<38|155P9>
+X 50 gtk-box.ads
+66K13*Box 18|9w10 9r41 170r31 225r21 259r21 260r21 261r21 262r21 50|321e12
+72P9*Gtk_Box(68R9) 18|170r35
+76U14*Gtk_New_Vbox 18|225s25
+78b7 Homogeneous{boolean} 18|225r45
+79i7 Spacing{38|56I9} 18|225r67
+121U14*Pack_Start 18|251R33 255R33 259R25 260R25 261R25 262R25
+124b7 Expand{boolean} 18|260r50 261r50 262r49
+169U14*Set_Spacing 18|247R33
+X 51 gtk-button.ads
+75K13*Button 17|14w10 14r41 31r48 18|7w10 7r41 31r61 127r48 136r48 174r31
+. 250r21 254r21 51|425e15
+77R9*Gtk_Button_Record<49|42R9> 17|31r55 18|31r68 127r55 136r55 51|387e69
+78P9*Gtk_Button(77R9) 18|174r38
+80U14*Gtk_New 18|250s28 254s28
+X 52 gtk-button_box.ads
+59U14*Set_Layout 18|248R33
+X 53 gtk-container.ads
+56U14*Set_Border_Width 18|246R33
+64U14*Add 18|263R28
+X 54 gtk-drawing_area.ads
+59K13*Drawing_Area 17|12w10 12r33 28r42 18|32r59 95r42 279r69 54|118e21
+61R9*Gtk_Drawing_Area_Record<69|77R9> 17|22r45 54|116e22
+63P9*Gtk_Drawing_Area(61R9) 17|28r55 18|32r72 95r55 279r82
+X 55 gtk-enums.ads
+45K13*Enums 17|15w10 15r41 18|220r46 248r55 55|634e14
+96n7*Buttonbox_Spread{94E9} 18|248r61
+399n7*Window_Toplevel{398E9} 18|220r52
+441V13*Convert{86|64M9} 41|63i21 42|55i21
+442V13*Convert{string} 41|64i21 42|56i21
+X 56 gtk-handlers.ads
+184K13*Handlers 18|10w10 10r41 30r36 31r38 56|1526e17
+834k12*Callback 18|30r45 31r47 56|1061e16
+847U17*Connect 18|222s25[30]
+852U17*Object_Connect 18|252s27[31] 256s27[31]
+951V16*To_Marshaller=954:46{62|349R12[842[18|30]]} 18|222s58[30] 252s72[31]
+. 256s72[31]
+X 58 gtk-hbutton_box.ads
+42K13*Hbutton_Box 18|8w10 8r33 169r31 245r21 246r21 247r21 248r21 251r21
+. 255r21 58|117e20
+46P9*Gtk_Hbutton_Box(44R9) 18|169r43
+48U14*Gtk_New 18|245s33
+X 59 gtk-label.ads
+100K13*Label 18|12w10 12r41 171r31 172r31 228r21 231r21 234r21 237r21 59|533e14
+103P9*Gtk_Label(102R9) 18|33r56 34r56 107r42 116r42 171r37 172r37 280r68
+. 281r68
+105U14*Gtk_New 18|228s27 234s27
+188U14*Set_Text 18|109R17 120R17
+X 60 gtk-main.ads
+47K13*Main 18|14w10 14r41 32r41 33r42 34r42 139r21 148r21 175r31 176r39 177r39
+. 60|513e13
+363U14*Gtk_Exit 18|139s26 148s26
+425M9*Timeout_Handler_Id<38|62M9> 18|175r36 176r44 177r44
+444k12*Timeout 18|32r46 33r47 34r47 60|462e15
+448V16*Add{425M9} 18|279s36[32] 280s38[33] 281s38[34]
+X 62 gtk-marshallers.ads
+349R12*Marshaller
+X 65 gtk-notebook.ads
+471V13*Convert[121|20]{86|64M9} 41|63i21
+473V13*Convert[121|20]{46|72P9} 41|64i21
+X 66 gtk-object.ads
+106P9*Gtk_Object(105R9)
+148V13*Convert{86|64M9} 42|55i21
+149V13*Convert{106P9} 42|56i21
+X 67 gtk-style.ads
+61K13*Style 18|5w10 5r41 173r31 229r30 230r21 235r30 236r21 67|861e14
+68P9*Gtk_Style(67R9) 18|173r37
+90V13*Copy{68P9} 18|229s36 235s36
+387U14*Set_Font_Description 18|230s27 236s27
+X 68 gtk-tree_model.ads
+69P9*Gtk_Tree_Path<38|155P9>
+188V13*Convert[14|20]{86|64M9} 41|63i21
+190V13*Convert[14|20]{69P9} 41|64i21
+X 69 gtk-widget.ads
+76K13*Widget 17|16w10 16r41 18|189r44 195r44 201r44 207r44 213r44 69|2435e15
+78P9*Gtk_Widget(77R9)
+121V13*Convert{86|64M9} 41|63i21 42|55i21
+122V13*Convert{78P9} 41|64i21 42|56i21
+167U14*Show_All 18|264R28
+677V13*Get_Default_Colormap{23|75P12} 18|189s51 195s51 201s51 207s51 213s51
+699U14*Set_Style 18|231R27 237R27
+702V13*Get_Style{67|68P9} 18|229R53 235R53
+1036V13*Get_Window{37|70P12} 18|267R58 269R58 271R58 273R58 275R58
+1418U14*Draw 18|100R31
+1434U14*Set_USize 18|241R31
+X 70 gtk-window.ads
+66K13*Window 17|11w10 11r41 34r42 18|30r59 145r42 167r31 220r21 221r21 229r46
+. 235r46 263r21 264r21 70|1279e15
+68R9*Gtk_Window_Record<49|42R9> 17|34r49 18|30r66 145r49 70|1215e69
+69P9*Gtk_Window(68R9) 18|167r38
+75U14*Gtk_New 18|220s28
+95U14*Set_Title 18|221R28
+X 74 i-c.ads
+35I9*int<integer>
+43M9*unsigned
+X 78 pango.ads
+35K9*Pango 18|13r6 13r37 230r56 236r56 78|39e10
+X 82 pango-font.ads
+54K15*Font 18|13w12 13r43 230r62 236r62 82|297e15
+56P9*Pango_Font_Description<38|155P9>
+75V13*From_String{56P9} 18|230s67 236s67
+X 86 system.ads
+64M9*Address
+X 120 timer_package.ads
+15K9*Timer_Package 17|10w6 10r37 120|48e18
+22V26 GetTime{integer} 18|119s27
+35P14*TimeCount_Access(17W24) 17|37r78 18|27r16 154r78
+41Y23 Start 18|130s23
+46P14*Timer_Access(37T19) 17|37r104 18|28r17 154r104
+

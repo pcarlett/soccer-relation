@@ -1,0 +1,127 @@
+V "GNAT Lib v2011"
+A -O3
+A -gnatp
+A -gnatwu
+P SS ZX
+R vnnnnnnnnvvnnnnnnnvvnvnnnnnnvnnvnnnnvnnnnnvnvnnnnnnvnnnnnnnnnnnvnnvnv4nv1nv2nnnnnv1+nn
+
+U ball_package%b	ball_package.adb	2293903e OO PK
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W system%s		system.ads		system.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+W system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
+W system.tasking.rendezvous%s  s-tasren.adb	s-tasren.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+U ball_package%s	ball_package.ads	9a080add EE OO PF PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.finalization.heap_management%s  a-fihema.adb  a-fihema.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W field_package%s	field_package.adb	field_package.ali
+W system%s		system.ads		system.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.task_info%s	s-tasinf.adb		s-tasinf.ali
+W system.tasking%s	s-taskin.adb		s-taskin.ali
+W system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+W system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+W system.tasking.stages%s  s-tassta.adb		s-tassta.ali
+
+D ada.ads		20110419093133 3ffc8e18
+D a-except.ads		20110419093131 4759ecee
+D a-finali.ads		20110419093131 b333d305
+D a-fihema.ads		20110419093131 1940728a
+D a-reatim.ads		20110419093132 63f07669
+D a-retide.ads		20110419093132 081cdaa4
+D a-stream.ads		20110419093132 2ca4ee37
+D a-tags.ads		20110419093132 7b33f560
+D a-unccon.ads		20110419093133 f9eb8f06
+D ball_package.ads	20120314205118 23fcee3b
+D ball_package.adb	20120315212723 629f086c
+D field_package.ads	20120306201725 b9f4e4e6
+D interfac.ads		20110419093135 f77d8799
+D i-c.ads		20110419093135 5421119b
+D system.ads		20110419093140 3703e6a6
+D s-atacco.ads		20110419093136 1dc856ad
+D s-exctab.ads		20110419093137 66e51330
+D s-finroo.ads		20110419093137 2dd85ce2
+D s-multip.ads		20110419093137 38ac9f73
+D s-oscons.ads		20110419172511 4e3d0927
+D s-osinte.ads		20110419093137 fcf50fe1
+D s-parame.ads		20110419093138 03aa3b01
+D s-pooglo.ads		20110419093138 542f33d0
+D s-secsta.ads		20110419093138 eea35a36
+D s-soflin.ads		20110419093138 607487c5
+D s-stache.ads		20110419093138 596fc1b4
+D s-stausa.ads		20110419093138 017a0a05
+D s-stalib.ads		20110419093138 f78bcf95
+D s-stoele.ads		20110419093138 facd7d98
+D s-stoele.adb		20110419093138 afc5dc80
+D s-stopoo.ads		20110419093138 5c51faf9
+D s-tasinf.ads		20110419093139 e120e23a
+D s-taspri.ads		20110419093139 af44aca8
+D s-taprop.ads		20110419093139 07f79e46
+D s-taskin.ads		20110419093139 b2eaee08
+D s-taprob.ads		20110419093139 502249e3
+D s-tpoben.ads		20110419093139 e8374469
+D s-tpobop.ads		20110419093139 5f548bb3
+D s-tasren.ads		20110419093139 86fa7427
+D s-tassta.ads		20110419093139 e88ef99e
+D s-traent.ads		20110419093139 5221ee41
+D s-unstyp.ads		20110419093139 6ae15c76
+X 1 ada.ads
+16K9*Ada 19e8 11|1r6 1r41
+X 5 a-reatim.ads
+39K13*Real_Time 139e18 11|1w10 1r45
+41O9*Time 11|8r30
+46O9*Time_Span 11|7r34
+53V13*Clock{41O9} 11|8s38
+55V13*"+"{41O9} 11|8s44 32s50
+85V13*Milliseconds{46O9} 11|7s47
+X 10 ball_package.ads
+11K9*Ball_Package 54l5 54e17 11|3b14 86l5 86t17
+16W24*Ball 16d30 38l13 38e17 40r36 11|39b24 84l13 84t17
+16p30 F{12|132P14} 11|61r25
+18Y23 StopMoving 11|43b23 48l21 48t31
+21Y23 Control 21>32 11|51b23 55l21 55t28
+21i32 ID{integer} 11|54r34
+23Y23 Movement 11|17s27 58b23 66l21 66t29
+25Y23 Kick 25>29 25>45 25>58 11|68b23 76l21 76t25
+25i29 D{integer} 11|72r32
+25e45 S{12|14E14} 11|73r33
+25i58 Pw{integer} 11|74r34
+28V26 GetOwner{integer} 11|79b26 82l21 82t29
+32i25 Owner{integer} 11|44r30 52r30 54r25 59r41 69r30 71r25 81r32
+33b25 Moving{boolean} 11|44r44 46r33 59r30 64r33 75r25
+34i25 Dir{integer} 11|61r49 72r25
+35i25 Power{integer} 11|62r25 62r34 63r29 74r25
+36e25 Step{12|14E14} 11|61r43 73r25
+40P14*Ball_Access(16W24) 42r51
+42T19*TaskBall 42d29 42d47 42d64 50l13 50e21 52r40 11|5b19 36l13 36t21
+42p29 F{12|132P14}
+42p47 B{40P14} 11|17r25
+42i64 S{integer} 11|7r60
+46Y23 Start 11|11b24
+48Y23 Stop 11|23b40
+52P14*TaskBall_Access(42T19)
+X 11 ball_package.adb
+7o17 Current_Period{5|46O9} 8r46 32r52
+8o17 Next_Cycle{5|41O9} 32m25 32r39 33r37
+51i32 ID{integer}
+68i29 D{integer}
+68e45 S{12|14E14}
+68i58 Pw{integer}
+X 12 field_package.ads
+9K9*Field_Package 10|8w6 9r5 12|134e18
+14E14*Move 10|25r52 36r32 11|68r52 12|14e47
+63U27 SetBallPosition 11|61s27
+132P14*Field_Access(42W24) 10|16r34 42r33
+

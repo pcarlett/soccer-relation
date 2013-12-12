@@ -1,0 +1,62 @@
+\select@language {italian}
+\contentsline {section}{\numberline {1}Introduzione}{3}{section.1}
+\contentsline {subsection}{\numberline {1.1}Tema}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Requisiti}{4}{subsection.1.2}
+\contentsline {section}{\numberline {2}Analisi}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}La Struttura di Gioco}{5}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Timer}{5}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}Campo}{5}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Arbitro}{7}{subsubsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}Manager}{7}{subsubsection.2.1.4}
+\contentsline {subsubsection}{\numberline {2.1.5}Giocatore}{7}{subsubsection.2.1.5}
+\contentsline {subsubsection}{\numberline {2.1.6}Palla}{8}{subsubsection.2.1.6}
+\contentsline {subsection}{\numberline {2.2}I Dettagli di Gioco}{8}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Movimento}{8}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Zone di Movimento}{9}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}I Giocatori}{10}{subsubsection.2.2.3}
+\contentsline {section}{\numberline {3}Applicazioni delle Logiche}{12}{section.3}
+\contentsline {subsection}{\numberline {3.1}Giocatore con Palla}{12}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Logica di Tiro}{13}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Logica di Passaggio}{14}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Logica di Avanzamento}{17}{subsubsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.4}Logica di Posizione}{17}{subsubsection.3.1.4}
+\contentsline {subsection}{\numberline {3.2}Squadra con Palla}{17}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Logica di Smarcatura}{17}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Logica di Avanzamento}{18}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Logica di Posizione}{18}{subsubsection.3.2.3}
+\contentsline {subsection}{\numberline {3.3}Avversari con Palla}{18}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Logica di Contrasto}{18}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Logica di Indietreggiamento}{19}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Logica di Posizione}{20}{subsubsection.3.3.3}
+\contentsline {subsection}{\numberline {3.4}Parata del Portiere}{20}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Logica di Contrasto}{20}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}Logica di Parata}{21}{subsubsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.3}Logica di Posizione}{22}{subsubsection.3.4.3}
+\contentsline {section}{\numberline {4}Modello}{23}{section.4}
+\contentsline {subsection}{\numberline {4.1}Timer}{24}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Campo}{24}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Arbitro}{26}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Manager}{27}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Squadra}{29}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Giocatore}{30}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}Pallone}{33}{subsection.4.7}
+\contentsline {section}{\numberline {5}Concorrenza}{35}{section.5}
+\contentsline {subsection}{\numberline {5.1}Integrit\`a dello Stato di Gioco}{35}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Unicit\`a del Possesso di Palla}{36}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Priorit\`a dei Processi}{37}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Prevenzione delle Situazioni di Stallo}{38}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}Prevenzione delle Situazioni di Starvation}{39}{subsection.5.5}
+\contentsline {section}{\numberline {6}Distribuzione}{41}{section.6}
+\contentsline {subsection}{\numberline {6.1}Progettazione del Software Distribuito}{42}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Struttura Distribuita delle Parti}{42}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Trasmissione degli Eventi}{43}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}}{43}{subsection.6.4}
+\contentsline {section}{\numberline {7}Integrazione tra le Parti - Concorrenza e Distribuzione}{44}{section.7}
+\contentsline {section}{\numberline {8}Codifica}{45}{section.8}
+\contentsline {subsection}{\numberline {8.1}Field}{45}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Referee}{48}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Manager}{49}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Player}{50}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.5}Ball}{53}{subsection.8.5}
+\contentsline {section}{\numberline {9}Conclusioni}{54}{section.9}
+\contentsline {section}{\numberline {10}Bibliografia}{55}{section.10}
