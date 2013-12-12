@@ -1279,11 +1279,17 @@ Ognuno di essi \`e a sua volta composto da una serie di task necessari al corret
 
 \subsection{Trasmissione degli Eventi}
 
-La trasmissione degli eventi avviene attraverso l'uso di oggetti di tipo Remote_Type e il passaggio degli stessi ad oggetti distribuiti sfruttando chiamate remote su package di tipo Remote_Procedure_Call. In questo modo \`e possibile mettere in comunicazione oggetti residenti su partizioni differenti in maniera del tutto trasparente rispetto al sistema. \vspace{3mm}
+La trasmissione degli eventi avviene attraverso l'uso di oggetti di tipo Remote Type e il passaggio degli stessi ad oggetti distribuiti sfruttando chiamate remote su package di tipo Remote Procedure Call. In questo modo \`e possibile mettere in comunicazione oggetti residenti su partizioni differenti in maniera del tutto trasparente rispetto al sistema. \vspace{3mm}
 
 Andiamo ad analizzare nel dettaglio come avviene la comunicazione rispetto agli attori visti nella sezione precedente:
 
-
+\begin{enumerate}
+	\item Event Generator, a seguito della creazione di un evento, richiama l'entry di Event Manager per poterne passare i parametri;
+	\item Event Manager riceve i parametri e sulla base di questi genera l'evento creando una nuova istanza del tipo generico Basic Event;
+	\item richiamando il metodo generico Create che rimanda al metodo specializzato del figlio appropriato;
+	\item ******* l'accesso dell'evento appena creato viene trasmesso alla coda attraverso 
+	\item *****
+\end{enumerate}
 
 
 
@@ -1295,8 +1301,8 @@ Andiamo ad analizzare nel dettaglio come avviene la comunicazione rispetto agli 
 
 \begin{comment}
 	
-----------------------------------------------------------
-----------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
 	
 Presentiamo qui sopra lo schema con cui \`e composto il nostro sistema 
