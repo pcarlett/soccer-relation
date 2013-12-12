@@ -50,13 +50,13 @@
 \contentsline {subsection}{\numberline {6.1}Progettazione del Software Distribuito}{42}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Struttura Distribuita delle Parti}{42}{subsection.6.2}
 \contentsline {subsection}{\numberline {6.3}Trasmissione degli Eventi}{43}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}}{43}{subsection.6.4}
-\contentsline {section}{\numberline {7}Integrazione tra le Parti - Concorrenza e Distribuzione}{44}{section.7}
-\contentsline {section}{\numberline {8}Codifica}{45}{section.8}
-\contentsline {subsection}{\numberline {8.1}Field}{45}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Referee}{48}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Manager}{49}{subsection.8.3}
-\contentsline {subsection}{\numberline {8.4}Player}{50}{subsection.8.4}
-\contentsline {subsection}{\numberline {8.5}Ball}{53}{subsection.8.5}
-\contentsline {section}{\numberline {9}Conclusioni}{54}{section.9}
-\contentsline {section}{\numberline {10}Bibliografia}{55}{section.10}
+\contentsline {subsection}{\numberline {6.4}}{44}{subsection.6.4}
+\contentsline {section}{\numberline {7}Integrazione tra le Parti - Concorrenza e Distribuzione}{45}{section.7}
+\contentsline {section}{\numberline {8}Codifica}{46}{section.8}
+\contentsline {subsection}{\numberline {8.1}Field}{46}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Referee}{49}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Manager}{50}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Player}{51}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.5}Ball}{54}{subsection.8.5}
+\contentsline {section}{\numberline {9}Conclusioni}{55}{section.9}
+\contentsline {section}{\numberline {10}Bibliografia}{56}{section.10}

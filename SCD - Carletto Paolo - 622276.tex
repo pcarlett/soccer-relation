@@ -1267,7 +1267,7 @@ Ognuno di essi \`e a sua volta composto da una serie di task necessari al corret
 	\item \textbf{Server:} genera e accoda eventi relativi allo stato di gioco:
 		\begin{itemize}
 			\item \textbf{Event Generator:} produce eventi casuali simulando la struttura di una partita reale;
-			\item \textbf{Event Manager:} si occupa di "impacchettare" le informazioni ricevute dall'Event Generator per produrre un oggetto che sia trasmissibile al gestore della coda in modalit\`a remota. Per ognuno degli eventi ricevuti che corrispondono a particolari tipologie definite, si occupa anche della produzione di statistiche di gioco attraverso la chiamata di una procedura che modifica un record apposito;
+			\item \textbf{Event Manager:} si occupa di \"impacchettare\" le informazioni ricevute dall'Event Generator per produrre un oggetto che sia trasmissibile al gestore della coda in modalit\`a remota. Per ognuno degli eventi ricevuti che corrispondono a particolari tipologie definite, si occupa anche della produzione di statistiche di gioco attraverso la chiamata di una procedura che modifica un record apposito;
 		\end{itemize}
 	\item \textbf{Queue:} attraverso 2 procedure protette \`e possibile effettuare l'inserimento (Push) in coda degli eventi prodotti e l'estrazione (Pop) degli stessi per accedere alle informazioni contenute nei pacchetti.
 	\item \textbf{Client:} permette la visualizzazione degli eventi generati dal server su molteplici display distribuiti;
@@ -1293,6 +1293,12 @@ Andiamo ad analizzare nel dettaglio come avviene la comunicazione rispetto agli 
 	\item 
 \end{enumerate}
 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=500px]{images/dist-sequence.pdf}
+	\end{center}
+\caption{Sequenze del sistema distribuito.}
+\end{figure}
 
 
 \subsection{}
