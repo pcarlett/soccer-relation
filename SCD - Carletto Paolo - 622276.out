@@ -49,13 +49,7 @@
 \BOOKMARK [2][-]{subsection.6.1}{Progettazione del Software Distribuito}{section.6}% 49
 \BOOKMARK [2][-]{subsection.6.2}{Struttura Distribuita delle Parti}{section.6}% 50
 \BOOKMARK [2][-]{subsection.6.3}{Trasmissione degli Eventi}{section.6}% 51
-\BOOKMARK [2][-]{subsection.6.4}{}{section.6}% 52
+\BOOKMARK [2][-]{subsection.6.4}{Implementazione della Coda}{section.6}% 52
 \BOOKMARK [1][-]{section.7}{Integrazione tra le Parti - Concorrenza e Distribuzione}{}% 53
-\BOOKMARK [1][-]{section.8}{Codifica}{}% 54
-\BOOKMARK [2][-]{subsection.8.1}{Field}{section.8}% 55
-\BOOKMARK [2][-]{subsection.8.2}{Referee}{section.8}% 56
-\BOOKMARK [2][-]{subsection.8.3}{Manager}{section.8}% 57
-\BOOKMARK [2][-]{subsection.8.4}{Player}{section.8}% 58
-\BOOKMARK [2][-]{subsection.8.5}{Ball}{section.8}% 59
-\BOOKMARK [1][-]{section.9}{Conclusioni}{}% 60
-\BOOKMARK [1][-]{section.10}{Bibliografia}{}% 61
+\BOOKMARK [1][-]{section.8}{Conclusioni}{}% 54
+\BOOKMARK [1][-]{section.9}{Bibliografia}{}% 55

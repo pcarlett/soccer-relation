@@ -161,7 +161,7 @@ Il sistema software deve includere almeno:
 	\item Due distinti pannelli grafici di lettura-scrittura per permettere all'utente di influenzare l'azione altrimenti indipendente del team manager; il pannello deve visualizzare i parametri attuali per ogni giocatore; la frequenza di aggiornamento dei display saranno configurabili dall'utente;
 	\item Un pannello grafico di sola lettura per la visualizzazione di statistiche configurabili dall'utente; la frequenza di aggiornamento di questo display sar\`a configurabile dall'utente;
 	\item Il nucleo del software deve essere sviluppato in Ada. La progettazione del software deve permettere la sostituzione a piacimento degli algoritmi principali: in altre parole, il sistema software deve essere il pi\`u modulare, configurabile e scalabile possibile. Queste qualit\`a contribuiranno alla valutazione;
-	\item I pannelli grafici possono essere programmati in qualsiasi linguaggio che i partecipanti considereranno idonei allo scopo. La bellezza grafica dei pannelli sar\`a tuttavia solo un fattore secondario nella valutazione. Ci\`o che importa invece è\`e che l'interazione e il flusso di dati e di controllo tra il nucleo e il software
+	\item I pannelli grafici possono essere programmati in qualsiasi linguaggio che i partecipanti considereranno idonei allo scopo. La bellezza grafica dei pannelli sar\`a tuttavia solo un fattore secondario nella valutazione. Ci\`o che importa invece \`e che l'interazione e il flusso di dati e di controllo tra il nucleo e il software
 \end{itemize}
 ￼ ￼
 \subsection{Requisiti} 
@@ -238,7 +238,7 @@ Le dimesioni del campo dipendono dal numero dei giocatori. Indichiamo le dimensi
 \caption{Le misure standard dei campi da calcio e calcetto.}
 \end{table}
 
-Tutte le misure sopra indicate sono da considerarsi espresse in metri\footnote{Un metro è definito come la distanza percorsa dalla luce nel vuoto in un intervallo di tempo pari a 1/299.792.458 di secondo.}. \vspace{3mm}
+Tutte le misure sopra indicate sono da considerarsi espresse in metri\footnote{Un metro \`e definito come la distanza percorsa dalla luce nel vuoto in un intervallo di tempo pari a 1/299.792.458 di secondo.}. \vspace{3mm}
 
 Le dimensioni del campo da gioco sono fondamentali rispetto al numero dei giocatori in quanto determinano la dimensione del movimento ovvero quanto il giocatore possa procedere in una direzione prima di finire fuori dal bordo.
 
@@ -1012,7 +1012,7 @@ La parte pi\`u consistente del processo \`e tutta contenuta nello stato \emph{ac
 \caption{Diagramma dell'azione di gioco del giocatore.}
 \end{figure}
 
-Un'ulteriore caratteristica che diversifica il gioco \`e la possibilià di impostare per ogni singolo giocatore tempi di \emph{suspend} differenti attraverso la valorizzazione del relativo parametro. Il risultato ottenuto è così quello di avere tempo di reazione differenti legati alla dimensione del tempo di sospensione. Giocatori più reattivi possiederanno tempi di sospensione più bassi. Al contrario, giocatori più lenti avranno parametri via via più elevati fino ad un limite ragionevole. \vspace{3mm}
+Un'ulteriore caratteristica che diversifica il gioco \`e la possibili\`a di impostare per ogni singolo giocatore tempi di \emph{suspend} differenti attraverso la valorizzazione del relativo parametro. Il risultato ottenuto \`e cos\`i quello di avere tempo di reazione differenti legati alla dimensione del tempo di sospensione. Giocatori pi\`u reattivi possiederanno tempi di sospensione pi\`u bassi. Al contrario, giocatori pi\`u lenti avranno parametri via via pi\`u elevati fino ad un limite ragionevole. \vspace{3mm}
 
 Andiamo ad analizzare infine la situazione della memoria e della CPU durante il gioco nel diagramma di Garrett esposto. Ogni giocatore comincia la partita in una coda di processi pronti. Nel primo istante utile, un processo prende possesso della CPU e compie le azioni viste precedentemente fino allo scadere del tempo di utilizzo del processore o fino alla sospensione. Una volta sospeso, entra in un'altra coda, quella dei processi sospesi, e attende il termine del tempo di sospensione \emph{t}. Una volta pronto, passa nuovamente nella coda dei processi pronti per procedere con una nuova azione non appena avr\`a a disposizione la CPU.
 
@@ -1222,32 +1222,24 @@ Per effetto delle considerazioni sopra esposte possiamo affermare che situazioni
 
 \section{Distribuzione}
 
-Il concetto di distribuzione prevede che un sistema residente su di un unico calcolatore venga scomposto in parti al fine di poter essere suddiviso in una moltitudine calcolatori differenti. La distribuzione di un sistema permette di ripartire il carico di lavoro imputato ad un solo calcolatore su una serie di macchine, ognuna di esse con una funzione determinata e dei compiti precisi. \vspace{3mm}
+Il concetto di distribuzione prevede che un sistema residente su di un unico calcolatore venga scomposto in parti al fine di poter essere suddiviso in una moltitudine calcolatori differenti. La distribuzione di un sistema permette di ripartire il carico di lavoro: quello che dovrebbe essere imputato ad un solo calcolatore viene suddiviso su una serie di macchine, ognuna di esse con una funzione determinata e dei compiti precisi. \vspace{3mm}
 
 Ada 95 permette di generare in modo estremamente semplice un sistema completamente distribuito partendo dallo sviluppo di un sistema monolitico e definendo in seconda battuta le componenti distribuite attraverso l'uso di alcune direttive per determinare la tipologia di comunicazione e di oggetti nonch\`e attraverso un file di configurazione che aiuta il compilatore nella generazione dei vari eseguibili. Ognuno di essi conterr\`a al suo interno gli ``stub'' generati dal compilatore. Attraverso questi ricever\`a ed invier\`a messaggi alle varie componenti con cui \`e direttamente collegato. \vspace{3mm}
 
-Il linguaggio permette di distribuire il nostro programma secondo differenti tipologie paradigmi di distribuzione:
+Ai fini della nostra realt\`a virtuale, la soluzione scelta \`e basata su un'architettura stile client/server in quanto possiamo immaginare che tutta la partita si svolga all'interno del server e solo gli eventi principali vengono trasmessi ai client distribuiti. Gli ``stub'' si occupano di gestire la comunicazione tra macchine differenti, convertendo messaggi in ingresso ed uscita, facendo credere al software che tutto il sistema risieda su un'unico calcolatore. \vspace{3mm}
 
-\begin{itemize}
-	\item \textbf{Sistema Monolitico:} tutto il programma risiede su di un'unica macchina sulla quale vengono eseguiti tutti i processi. Questo comporta chiaramente un elevato carico per la CPU a seguito dell'elevato numero di processi che ne necessitano l'utilizzo;
-	\item \textbf{Sistema Peer-to-Peer:} il sistema \`e completamente decentralizzato. Ogni entit\`a che viene creata pu\`o potenzialmente risiedere un macchina differente. Tradotto in termini di gioco, ogni giocatore pu\`o risiedere su una macchina diversa, i manager delle squadre su altre macchine ancora e cos\`i via fino all'esaurimento dei processi, attivi e passivi, coninvolti;
-	\item \textbf{Sistema Client/Server:} \`e la tipologia tradizionale con cui vengono gestite le applicazioni che necessitano di una centralizzazione, ovvero una macchina funge da servente e gestisce il gioco. Tutte le altre macchine sono i clienti che si connettono direttamente al server al fine di conoscere lo stato di gioco, ma procedono in maniera autonoma nelle valutazioni e nella realizzazione delle azioni. Ad ogni termine di azione, viene aggiornato lo stato del server;
-\end{itemize}
-
-Ai fini della nostra realt\`a virtuale, la soluzione pi\`u pratica \`e la terza, legata all'architettura client/server in quanto possiamo immaginare di distribuire le due squadre in campo in due macchine differenti pilotate da due intelligenze artificiali o da due giocatori reali, mantenendo per\`o la gestione delle risorse condivise in un server accessibile ad entrambe. Gli ``stub'' si occupano di gestire la comunicazione tra macchine differenti, convertendo messaggio in ingresso ed uscita e facendo credere al software che tutto il sistema risieda su un'unico calcolatore. \vspace{3mm}
-
-\begin{figure}[H]
-	\begin{center}
-		\includegraphics[width=250px]{images/distributed-system.pdf}
-	\end{center}
-\caption{Diagramma del sistema distribuito.}
-\end{figure}
-
-Per quanto riguarda la realizzazione del progetto, è stato sviluppato un modello Specifico per realizzare la distribuzione del sistema. Andiamo a vedere nel dettaglio di che cosa si tratta.
+Per quanto riguarda la realizzazione del progetto, \`e stato sviluppato un modello specifico per realizzare la distribuzione del sistema. Andiamo a vedere nel dettaglio di che cosa si tratta.
 
 \subsection{Progettazione del Software Distribuito}
 
-Il software distribuito \`e composto da tre entit\`a: una entit\`a servente che si occupa di generare una serie di eventi relativi all'avanzamento dello stato di gioco, una entit\`a che si occupa di gestire una coda nella quale vengono accodati gli eventi attraverso una funzione Push specifica e infine una entit\`a cliente che si occupa di visualizzare a terminale gli eventi accodati. \vspace{3mm}
+Il software distribuito \`e composto da tre entit\`a: una entit\`a servente che si occupa di generare una serie di eventi relativi all'avanzamento dello stato di gioco, una entit\`a che si occupa di gestire una coda nella quale vengono accodati gli eventi e infine una entit\`a cliente che si occupa di visualizzare a terminale gli eventi accodati. \vspace{3mm}
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=450px]{images/distributed-system.pdf}
+	\end{center}
+\caption{Diagramma del sistema distribuito.}
+\end{figure}
 
 La comunicazione tra le parti avviene attraverso la trasmissione di eventi legati all'avanzamento dello stato di gioco. 
 
@@ -1257,7 +1249,7 @@ La struttura distribuita, come gi\`a menzionato \`e composta in linea generale d
 
 \begin{itemize}
 	\item \textbf{Server:} si occupa della generazione degli eventi sul campo di gioco;
-	\item \textbf{Queue:} gestisce l'accodamento degli eventi ricevuti all'interno di una coda e rende disponibili due metodi Push e Pop che permettono di accedere attraverso inserimento ed estrazione;
+	\item \textbf{Queue:} gestisce l'accodamento degli eventi ricevuti all'interno di una coda e rende disponibili due metodi Push e Pop che permettono di accedere attraverso operazioni di inserimento ed estrazione;
 	\item \textbf{Client:} permette la visualizzazione degli eventi generati dal server su molteplici display distribuiti;
 \end{itemize}
 
@@ -1267,9 +1259,9 @@ Ognuno di essi \`e a sua volta composto da una serie di task necessari al corret
 	\item \textbf{Server:} genera e accoda eventi relativi allo stato di gioco:
 		\begin{itemize}
 			\item \textbf{Event Generator:} produce eventi casuali simulando la struttura di una partita reale;
-			\item \textbf{Event Manager:} si occupa di \"impacchettare\" le informazioni ricevute dall'Event Generator per produrre un oggetto che sia trasmissibile al gestore della coda in modalit\`a remota. Per ognuno degli eventi ricevuti che corrispondono a particolari tipologie definite, si occupa anche della produzione di statistiche di gioco attraverso la chiamata di una procedura che modifica un record apposito;
+			\item \textbf{Event Manager:} si occupa di \"impacchettare\" le informazioni ricevute dall'Event Generator per produrre un oggetto che sia trasmissibile al gestore della coda in modalit\`a distribuita. Per alcuni degli eventi ricevuti che corrispondono a particolari tipologie definite, si occupa anche della produzione di statistiche di gioco attraverso la chiamata di una procedura che modifica un record apposito;
 		\end{itemize}
-	\item \textbf{Queue:} attraverso 2 procedure protette \`e possibile effettuare l'inserimento (Push) in coda degli eventi prodotti e l'estrazione (Pop) degli stessi per accedere alle informazioni contenute nei pacchetti.
+	\item \textbf{Queue:} attraverso due procedure protette \`e possibile effettuare l'inserimento (Push) in coda degli eventi prodotti e l'estrazione (Pop) degli stessi per accedere alle informazioni contenute nei pacchetti.
 	\item \textbf{Client:} permette la visualizzazione degli eventi generati dal server su molteplici display distribuiti;
 		\begin{itemize}
 		\item \textbf{Event Display:} accede alla coda ed effettua l'estrazione degli eventi (se disponibili) e richiama la procedura per la stampa dell'evento a video;
@@ -1286,11 +1278,12 @@ Andiamo ad analizzare nel dettaglio come avviene la comunicazione rispetto agli 
 \begin{enumerate}
 	\item Event Generator, a seguito della creazione di un evento, richiama l'entry di Event Manager per poterne passare i parametri;
 	\item Event Manager riceve i parametri e sulla base di questi genera l'evento creando una nuova istanza del tipo generico Basic Event;
-	\item richiamando il metodo generico Create che rimanda al metodo specializzato del figlio appropriato;
-	\item ******* l'accesso dell'evento appena creato viene trasmesso alla coda attraverso un'apposita procedura Push chiamata in remoto rispetto alla classe Queuer
-	\item l'operazione incrementa un contatore apposito che funziona da variabile di controllo per l'accesso alla coda protetta al fine di effettuare la Pop degli eventi contenuti
-	\item quando il display rileva la variazione della variabile lancia la Pop, anch'essa in modalit\`a remota per svuotare la coda
-	\item 
+	\item richiama il metodo generico Create che rimanda al metodo specializzato dell'evento figlio appropriato;
+	\item l'evento appena creato viene trasmesso alla coda attraverso un'apposita procedura Push chiamata in remoto sulla classe Queuer;
+	\item l'operazione incrementa un contatore apposito che funziona da variabile di controllo per l'accesso alla coda protetta per permettere di effettuare la Pop degli eventi contenuti;
+	\item quando Event Display rileva la variazione della variabile lancia la Pop, anch'essa in modalit\`a remota per svuotare la coda;
+	\item una volta ricevuto l'evento, Event Display chiama l'operazione Simulate che si occupa di attivare l'operazione di stampa specifica dell'evento;
+	\item l'istanza dell'evento, residente sul server, richiama cos\'i il metodo Print della classe Printer che si occupa di stampare a video, lato display, le informazioni contenute nell'evento;
 \end{enumerate}
 
 \begin{figure}[H]
@@ -1300,8 +1293,24 @@ Andiamo ad analizzare nel dettaglio come avviene la comunicazione rispetto agli 
 \caption{Sequenze del sistema distribuito.}
 \end{figure}
 
+\subsection{Implementazione della Coda}
 
-\subsection{}
+Uno dei requisiti di un sistema distribuito \`e preservare la consistenza dello stato di gioco nelle varie entit\`a distribuite. Per fare ci\`o \`e necessario implementare una strategia attraverso cui le varie parti attingano in maniera ordinata la sequenza di eventi necessari per poter ricostruire lo stato di gioco. La pi\`u semplice forma di salvataggio ordinato dei dati \`e una struttura basata su una coda. Questa funziona da buffer per gli eventi: il gestore degli eventi di gioco, attraverso operazioni di Push controllate e protette, inserisce nuovi eventi all'interno della coda. Il meccanismo \`e replicato in maniera analoga dall'operazione di Pop, anch'essa di tipo protetto, la quale permette di svuotare la coda prelevandone gli eventi contenuti. \vspace{3mm}
+
+Poich\`e nel modello \`e previsto che le entit\`a che accedono alla coda siano due, \`e stata implementata una struttura di tipo multi-pop queue che permette l'utilizzo di una coda soltanto, con due riferimenti specifici che tengono traccia degli eventi che vengono estratti in base all'entit\`a che richiede l'operazione.
+
+\begin{figure}[H]
+	
+	\begin{center}
+		\includegraphics[width=250px]{images/queue-struct.pdf}
+	\end{center}
+\caption{Struttura della coda.}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Push:}
+\item \textbf{Pop:}
+\end{itemize}
 
 \newpage
 
@@ -1424,43 +1433,6 @@ Trasmettere l'instero stato del sistema ad ogni richiesta di variazioni, d'altro
 
 
 
-
-\newpage
-
-\section{Codifica}
-
-\subsection{Field}
-
-\lstset{language=Verilog, tabsize=3, backgroundcolor=\color{mygrey}, basicstyle=\small, commentstyle=\color{BrickRed}}
-\lstinputlisting{code/Field_Package.ads} 
-
-\newpage
-
-\subsection{Referee}
-
-\lstset{language=Verilog, tabsize=3, backgroundcolor=\color{mygrey}, basicstyle=\small, commentstyle=\color{BrickRed}}
-\lstinputlisting{code/Referee_Package.ads} 
-
-\newpage
-
-\subsection{Manager}
-
-\lstset{language=Verilog, tabsize=3, backgroundcolor=\color{mygrey}, basicstyle=\small, commentstyle=\color{BrickRed}}
-\lstinputlisting{code/Manager_Package.ads}
-
-\newpage
-
-\subsection{Player}
-
-\lstset{language=Verilog, tabsize=3, backgroundcolor=\color{mygrey}, basicstyle=\small, commentstyle=\color{BrickRed}}
-\lstinputlisting{code/Player_Package.ads}
-
-\newpage
-
-\subsection{Ball}
-
-\lstset{language=Verilog, tabsize=3, backgroundcolor=\color{mygrey}, basicstyle=\small, commentstyle=\color{BrickRed}}
-\lstinputlisting{code/Ball_Package.ads}
 
 \newpage
 
