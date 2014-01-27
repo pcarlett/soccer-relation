@@ -48,8 +48,9 @@
 \BOOKMARK [1][-]{section.6}{Distribuzione}{}% 48
 \BOOKMARK [2][-]{subsection.6.1}{Progettazione del Software Distribuito}{section.6}% 49
 \BOOKMARK [2][-]{subsection.6.2}{Struttura Distribuita delle Parti}{section.6}% 50
-\BOOKMARK [2][-]{subsection.6.3}{Trasmissione degli Eventi}{section.6}% 51
-\BOOKMARK [2][-]{subsection.6.4}{Implementazione della Coda}{section.6}% 52
-\BOOKMARK [1][-]{section.7}{Integrazione tra le Parti - Concorrenza e Distribuzione}{}% 53
-\BOOKMARK [1][-]{section.8}{Conclusioni}{}% 54
-\BOOKMARK [1][-]{section.9}{Bibliografia}{}% 55
+\BOOKMARK [2][-]{subsection.6.3}{Struttura degli Eventi}{section.6}% 51
+\BOOKMARK [2][-]{subsection.6.4}{Trasmissione degli Eventi}{section.6}% 52
+\BOOKMARK [2][-]{subsection.6.5}{Implementazione della Coda}{section.6}% 53
+\BOOKMARK [1][-]{section.7}{Integrazione tra le Parti - Concorrenza e Distribuzione}{}% 54
+\BOOKMARK [1][-]{section.8}{Conclusioni}{}% 55
+\BOOKMARK [1][-]{section.9}{Bibliografia}{}% 56

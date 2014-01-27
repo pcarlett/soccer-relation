@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.1.26)  26 JAN 2014 22:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.1.26)  27 JAN 2014 22:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -343,6 +343,96 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 51.
 
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
@@ -359,28 +449,36 @@ LaTeX Warning: Unused global option(s):
 (./SCD - Carletto Paolo - 622276.aux)
 \openout1 = `"SCD - Carletto Paolo - 622276.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 103.
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 103.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 132.
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 132.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/babel-greek/lgrcmr.fd
 File: lgrcmr.fd 2008/06/17 v2.3 Greek Computer Modern
 )
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 132.
+
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 132.
 
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -416,7 +514,7 @@ Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring ON on input line 103.
+Package hyperref Info: Link coloring ON on input line 132.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -426,27 +524,27 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count135
 )
-LaTeX Info: Redefining \ref on input line 103.
-LaTeX Info: Redefining \pageref on input line 103.
-LaTeX Info: Redefining \nameref on input line 103.
+LaTeX Info: Redefining \ref on input line 132.
+LaTeX Info: Redefining \pageref on input line 132.
+LaTeX Info: Redefining \nameref on input line 132.
 
 (./SCD - Carletto Paolo - 622276.out) (./SCD - Carletto Paolo - 622276.out)
 \@outlinefile=\write3
 \openout3 = `"SCD - Carletto Paolo - 622276.out"'.
 
 
-<images/soccerball.png, id=225, 274.626pt x 274.626pt>
+<images/soccerball.png, id=229, 274.626pt x 274.626pt>
 File: images/soccerball.png Graphic file (type png)
 
 <use images/soccerball.png>
-Package pdftex.def Info: images/soccerball.png used on input line 119.
+Package pdftex.def Info: images/soccerball.png used on input line 148.
 (pdftex.def)             Requested size: 155.02pt x 155.0173pt.
 
-<images/unipd-logo.png, id=226, 943.525pt x 949.5475pt>
+<images/unipd-logo.png, id=230, 943.525pt x 949.5475pt>
 File: images/unipd-logo.png Graphic file (type png)
 
 <use images/unipd-logo.png>
-Package pdftex.def Info: images/unipd-logo.png used on input line 132.
+Package pdftex.def Info: images/unipd-logo.png used on input line 161.
 (pdftex.def)             Requested size: 80.3003pt x 80.80464pt.
  [1
 
@@ -472,14 +570,6 @@ l.49 ...umberline {6}Distribuzione}{41}{section.6}
 \openout4 = `"SCD - Carletto Paolo - 622276.toc"'.
 
  [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 149.
-
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 149.
 Missing character: There is no ï in font cmr10!
 Missing character: There is no ¿ in font cmr10!
 Missing character: There is no ¼ in font cmr10!
@@ -487,318 +577,324 @@ Missing character: There is no ï in font cmr10!
 Missing character: There is no ¿ in font cmr10!
 Missing character: There is no ¼ in font cmr10!
  [3] [4]
-<images/field.pdf, id=314, 372.39125pt x 276.03125pt>
+<images/field.pdf, id=319, 372.39125pt x 276.03125pt>
 File: images/field.pdf Graphic file (type pdf)
  <use images/field.pdf>
-Package pdftex.def Info: images/field.pdf used on input line 247.
+Package pdftex.def Info: images/field.pdf used on input line 276.
 (pdftex.def)             Requested size: 301.1261pt x 223.21342pt.
 
-[5] <images/field-web.pdf, id=326, 371.3875pt x 276.03125pt>
+[5] <images/field-web.pdf, id=332, 371.3875pt x 276.03125pt>
 File: images/field-web.pdf Graphic file (type pdf)
 
 <use images/field-web.pdf>
-Package pdftex.def Info: images/field-web.pdf used on input line 256.
+Package pdftex.def Info: images/field-web.pdf used on input line 285.
 (pdftex.def)             Requested size: 301.1261pt x 223.81573pt.
  [6 <./images/field.pdf> <./images/field-web.pdf>]
-<images/player1.pdf, id=374, 37.13875pt x 37.13875pt>
+<images/player1.pdf, id=380, 37.13875pt x 37.13875pt>
 File: images/player1.pdf Graphic file (type pdf)
  <use images/player1.pdf>
-Package pdftex.def Info: images/player1.pdf used on input line 295.
+Package pdftex.def Info: images/player1.pdf used on input line 324.
 (pdftex.def)             Requested size: 40.15015pt x 40.15175pt.
 
-<images/player2.pdf, id=375, 37.13875pt x 37.13875pt>
+<images/player2.pdf, id=381, 37.13875pt x 37.13875pt>
 File: images/player2.pdf Graphic file (type pdf)
  <use images/player2.pdf>
-Package pdftex.def Info: images/player2.pdf used on input line 296.
+Package pdftex.def Info: images/player2.pdf used on input line 325.
 (pdftex.def)             Requested size: 40.15015pt x 40.15175pt.
 
 [7 <./images/player1.pdf> <./images/player2.pdf>]
-<images/ball.pdf, id=402, 37.13875pt x 37.13875pt>
+<images/ball.pdf, id=408, 37.13875pt x 37.13875pt>
 File: images/ball.pdf Graphic file (type pdf)
  <use images/ball.pdf>
-Package pdftex.def Info: images/ball.pdf used on input line 310.
+Package pdftex.def Info: images/ball.pdf used on input line 339.
 (pdftex.def)             Requested size: 40.15015pt x 40.15175pt.
 
-<images/ball-player1.pdf, id=403, 39.14626pt x 39.14626pt>
+<images/ball-player1.pdf, id=409, 39.14626pt x 39.14626pt>
 File: images/ball-player1.pdf Graphic file (type pdf)
 
 <use images/ball-player1.pdf>
-Package pdftex.def Info: images/ball-player1.pdf used on input line 319.
+Package pdftex.def Info: images/ball-player1.pdf used on input line 348.
 (pdftex.def)             Requested size: 40.15015pt x 40.15143pt.
 
-<images/ball-player2.pdf, id=404, 39.14626pt x 39.14626pt>
+<images/ball-player2.pdf, id=410, 39.14626pt x 39.14626pt>
 File: images/ball-player2.pdf Graphic file (type pdf)
 
 <use images/ball-player2.pdf>
-Package pdftex.def Info: images/ball-player2.pdf used on input line 320.
+Package pdftex.def Info: images/ball-player2.pdf used on input line 349.
 (pdftex.def)             Requested size: 40.15015pt x 40.15143pt.
 
-<images/movement.pdf, id=405, 193.72375pt x 193.72375pt>
+<images/movement.pdf, id=411, 193.72375pt x 193.72375pt>
 File: images/movement.pdf Graphic file (type pdf)
 
 <use images/movement.pdf>
-Package pdftex.def Info: images/movement.pdf used on input line 344.
+Package pdftex.def Info: images/movement.pdf used on input line 373.
 (pdftex.def)             Requested size: 160.60059pt x 160.60147pt.
  [8 <./images/ball.pdf> <./images/ball-player1.pdf> <./images/ball-player2.pdf>
 ]
-<images/defense.pdf, id=441, 370.38374pt x 273.02pt>
+<images/defense.pdf, id=447, 370.38374pt x 273.02pt>
 File: images/defense.pdf Graphic file (type pdf)
  <use images/defense.pdf>
-Package pdftex.def Info: images/defense.pdf used on input line 360.
+Package pdftex.def Info: images/defense.pdf used on input line 389.
 (pdftex.def)             Requested size: 301.1261pt x 221.96985pt.
 
-<images/middle.pdf, id=442, 370.38374pt x 273.02pt>
+<images/middle.pdf, id=448, 370.38374pt x 273.02pt>
 File: images/middle.pdf Graphic file (type pdf)
  <use images/middle.pdf>
-Package pdftex.def Info: images/middle.pdf used on input line 369.
+Package pdftex.def Info: images/middle.pdf used on input line 398.
 (pdftex.def)             Requested size: 301.1261pt x 221.96985pt.
 
 [9 <./images/movement.pdf> <./images/defense.pdf>]
-<images/attack.pdf, id=489, 370.38374pt x 273.02pt>
+<images/attack.pdf, id=495, 370.38374pt x 273.02pt>
 File: images/attack.pdf Graphic file (type pdf)
  <use images/attack.pdf>
-Package pdftex.def Info: images/attack.pdf used on input line 378.
+Package pdftex.def Info: images/attack.pdf used on input line 407.
 (pdftex.def)             Requested size: 301.1261pt x 221.96985pt.
 
 [10 <./images/middle.pdf> <./images/attack.pdf>] [11]
-<images/vision.pdf, id=550, 173.64874pt x 171.64125pt>
+<images/vision.pdf, id=556, 173.64874pt x 171.64125pt>
 File: images/vision.pdf Graphic file (type pdf)
  <use images/vision.pdf>
-Package pdftex.def Info: images/vision.pdf used on input line 440.
+Package pdftex.def Info: images/vision.pdf used on input line 469.
 (pdftex.def)             Requested size: 160.60059pt x 158.74992pt.
 
 [12 <./images/vision.pdf>]
-<images/vision1.pdf, id=571, 188.705pt x 186.6975pt>
+<images/vision1.pdf, id=577, 188.705pt x 186.6975pt>
 File: images/vision1.pdf Graphic file (type pdf)
  <use images/vision1.pdf>
-Package pdftex.def Info: images/vision1.pdf used on input line 475.
+Package pdftex.def Info: images/vision1.pdf used on input line 504.
 (pdftex.def)             Requested size: 160.60059pt x 158.89302pt.
 
 [13 <./images/vision1.pdf>] [14]
-<images/vision2.pdf, id=598, 181.67876pt x 210.7875pt>
+<images/vision2.pdf, id=604, 181.67876pt x 210.7875pt>
 File: images/vision2.pdf Graphic file (type pdf)
 
 <use images/vision2.pdf>
-Package pdftex.def Info: images/vision2.pdf used on input line 545.
+Package pdftex.def Info: images/vision2.pdf used on input line 574.
 (pdftex.def)             Requested size: 160.60059pt x 186.33626pt.
 
-<images/vision3.pdf, id=599, 174.6525pt x 171.64125pt>
+<images/vision3.pdf, id=605, 174.6525pt x 171.64125pt>
 File: images/vision3.pdf Graphic file (type pdf)
 
 <use images/vision3.pdf>
-Package pdftex.def Info: images/vision3.pdf used on input line 554.
+Package pdftex.def Info: images/vision3.pdf used on input line 583.
 (pdftex.def)             Requested size: 160.60059pt x 157.84113pt.
  [15 <./images/vision2.pdf>] [16 <./images/vision3.pdf>] <images/vision4.pdf, i
-d=666, 173.64874pt x 171.64125pt>
+d=672, 173.64874pt x 171.64125pt>
 File: images/vision4.pdf Graphic file (type pdf)
 
 <use images/vision4.pdf>
-Package pdftex.def Info: images/vision4.pdf used on input line 594.
+Package pdftex.def Info: images/vision4.pdf used on input line 623.
 (pdftex.def)             Requested size: 160.60059pt x 158.74992pt.
  [17 <./images/vision4.pdf>]
-<images/unmark.pdf, id=681, 108.405pt x 109.40875pt>
+<images/unmark.pdf, id=687, 108.405pt x 109.40875pt>
 File: images/unmark.pdf Graphic file (type pdf)
  <use images/unmark.pdf>
-Package pdftex.def Info: images/unmark.pdf used on input line 620.
+Package pdftex.def Info: images/unmark.pdf used on input line 649.
 (pdftex.def)             Requested size: 100.37537pt x 101.31pt.
 
-<images/contrast.pdf, id=684, 102.3825pt x 101.37875pt>
+<images/contrast.pdf, id=690, 102.3825pt x 101.37875pt>
 File: images/contrast.pdf Graphic file (type pdf)
 
 <use images/contrast.pdf>
-Package pdftex.def Info: images/contrast.pdf used on input line 644.
+Package pdftex.def Info: images/contrast.pdf used on input line 673.
 (pdftex.def)             Requested size: 100.37537pt x 99.3969pt.
  [18 <./images/unmark.pdf>]
-
-LaTeX Warning: Reference `contrasto' on page 19 undefined on input line 655.
-
-<images/return.pdf, id=708, 174.6525pt x 171.64125pt>
+<images/return.pdf, id=715, 174.6525pt x 171.64125pt>
 File: images/return.pdf Graphic file (type pdf)
  <use images/return.pdf>
-Package pdftex.def Info: images/return.pdf used on input line 663.
+Package pdftex.def Info: images/return.pdf used on input line 692.
 (pdftex.def)             Requested size: 160.60059pt x 157.84113pt.
 
 [19 <./images/contrast.pdf> <./images/return.pdf>]
-<images/keeper.pdf, id=738, 135.50626pt x 171.64125pt>
+<images/keeper.pdf, id=745, 135.50626pt x 171.64125pt>
 File: images/keeper.pdf Graphic file (type pdf)
  <use images/keeper.pdf>
-Package pdftex.def Info: images/keeper.pdf used on input line 680.
+Package pdftex.def Info: images/keeper.pdf used on input line 709.
 (pdftex.def)             Requested size: 130.48798pt x 165.28966pt.
 
-<images/keep-contrast.pdf, id=739, 135.50626pt x 171.64125pt>
+<images/keep-contrast.pdf, id=746, 135.50626pt x 171.64125pt>
 File: images/keep-contrast.pdf Graphic file (type pdf)
 
 <use images/keep-contrast.pdf>
-Package pdftex.def Info: images/keep-contrast.pdf used on input line 693.
+Package pdftex.def Info: images/keep-contrast.pdf used on input line 723.
 (pdftex.def)             Requested size: 130.48798pt x 165.28966pt.
  [20 <./images/keeper.pdf>]
-<images/save.pdf, id=755, 135.50626pt x 171.64125pt>
+<images/save.pdf, id=763, 135.50626pt x 171.64125pt>
 File: images/save.pdf Graphic file (type pdf)
  <use images/save.pdf>
-Package pdftex.def Info: images/save.pdf used on input line 709.
+Package pdftex.def Info: images/save.pdf used on input line 739.
 (pdftex.def)             Requested size: 130.48798pt x 165.28966pt.
 
 [21 <./images/keep-contrast.pdf> <./images/save.pdf>] [22]
-<images/relations-class-schema.pdf, id=795, 483.8075pt x 213.79875pt>
+<images/relations-class-schema.pdf, id=802, 483.8075pt x 213.79875pt>
 File: images/relations-class-schema.pdf Graphic file (type pdf)
 
 <use images/relations-class-schema.pdf>
 Package pdftex.def Info: images/relations-class-schema.pdf used on input line 7
-53.
+83.
 (pdftex.def)             Requested size: 401.50146pt x 177.43333pt.
 
-<images/timer-class.pdf, id=796, 428.60126pt x 175.65625pt>
+<images/timer-class.pdf, id=803, 428.60126pt x 175.65625pt>
 File: images/timer-class.pdf Graphic file (type pdf)
 
 <use images/timer-class.pdf>
-Package pdftex.def Info: images/timer-class.pdf used on input line 768.
+Package pdftex.def Info: images/timer-class.pdf used on input line 798.
 (pdftex.def)             Requested size: 351.31378pt x 143.98276pt.
  [23 <./images/relations-class-schema.pdf>]
-<images/field-class.pdf, id=846, 300.12125pt x 153.57375pt>
+<images/field-class.pdf, id=853, 300.12125pt x 153.57375pt>
 File: images/field-class.pdf Graphic file (type pdf)
 
 <use images/field-class.pdf>
-Package pdftex.def Info: images/field-class.pdf used on input line 801.
+Package pdftex.def Info: images/field-class.pdf used on input line 831.
 (pdftex.def)             Requested size: 220.8258pt x 113.0007pt.
  [24 <./images/timer-class.pdf>] [25 <./images/field-class.pdf>] <images/refere
-e-sequence.pdf, id=965, 486.81876pt x 290.08376pt>
+e-sequence.pdf, id=972, 486.81876pt x 290.08376pt>
 File: images/referee-sequence.pdf Graphic file (type pdf)
 
 <use images/referee-sequence.pdf>
-Package pdftex.def Info: images/referee-sequence.pdf used on input line 876.
+Package pdftex.def Info: images/referee-sequence.pdf used on input line 906.
 (pdftex.def)             Requested size: 401.50146pt x 239.2468pt.
  [26] [27 <./images/referee-sequence.pdf>]
-<images/manager-class.pdf, id=1031, 608.2725pt x 186.6975pt>
+<images/manager-class.pdf, id=1038, 608.2725pt x 186.6975pt>
 File: images/manager-class.pdf Graphic file (type pdf)
 
 <use images/manager-class.pdf>
-Package pdftex.def Info: images/manager-class.pdf used on input line 909.
+Package pdftex.def Info: images/manager-class.pdf used on input line 939.
 (pdftex.def)             Requested size: 441.65161pt x 135.55875pt.
 
-<images/manager-sequence.pdf, id=1032, 529.98pt x 309.155pt>
+<images/manager-sequence.pdf, id=1039, 529.98pt x 309.155pt>
 File: images/manager-sequence.pdf Graphic file (type pdf)
 
 <use images/manager-sequence.pdf>
-Package pdftex.def Info: images/manager-sequence.pdf used on input line 931.
+Package pdftex.def Info: images/manager-sequence.pdf used on input line 961.
 (pdftex.def)             Requested size: 401.50146pt x 234.21017pt.
  [28 <./images/manager-class.pdf>]
-<images/team-class.pdf, id=1111, 428.60126pt x 175.65625pt>
+<images/team-class.pdf, id=1118, 428.60126pt x 175.65625pt>
 File: images/team-class.pdf Graphic file (type pdf)
 
 <use images/team-class.pdf>
-Package pdftex.def Info: images/team-class.pdf used on input line 956.
+Package pdftex.def Info: images/team-class.pdf used on input line 986.
 (pdftex.def)             Requested size: 341.27625pt x 139.8685pt.
  [29 <./images/manager-sequence.pdf>] [30 <./images/team-class.pdf>]
-<images/sequence-player.pdf, id=1254, 383.4325pt x 255.95625pt>
+<images/sequence-player.pdf, id=1261, 383.4325pt x 255.95625pt>
 File: images/sequence-player.pdf Graphic file (type pdf)
 
 <use images/sequence-player.pdf>
-Package pdftex.def Info: images/sequence-player.pdf used on input line 992.
+Package pdftex.def Info: images/sequence-player.pdf used on input line 1022.
 (pdftex.def)             Requested size: 301.1261pt x 201.02373pt.
 
-<images/player-state.pdf, id=1255, 603.25375pt x 120.45pt>
+<images/player-state.pdf, id=1262, 603.25375pt x 120.45pt>
 File: images/player-state.pdf Graphic file (type pdf)
 
 <use images/player-state.pdf>
-Package pdftex.def Info: images/player-state.pdf used on input line 1001.
+Package pdftex.def Info: images/player-state.pdf used on input line 1031.
 (pdftex.def)             Requested size: 401.50146pt x 80.16623pt.
 
-<images/player-action.pdf, id=1256, 592.2125pt x 283.0575pt>
+<images/player-action.pdf, id=1263, 592.2125pt x 283.0575pt>
 File: images/player-action.pdf Graphic file (type pdf)
 
 <use images/player-action.pdf>
-Package pdftex.def Info: images/player-action.pdf used on input line 1010.
+Package pdftex.def Info: images/player-action.pdf used on input line 1040.
 (pdftex.def)             Requested size: 401.50146pt x 191.91074pt.
  [31 <./images/sequence-player.pdf> <./images/player-state.pdf>] <images/player
--schema.pdf, id=1357, 409.53pt x 279.0425pt>
+-schema.pdf, id=1364, 409.53pt x 279.0425pt>
 File: images/player-schema.pdf Graphic file (type pdf)
 
 <use images/player-schema.pdf>
-Package pdftex.def Info: images/player-schema.pdf used on input line 1021.
+Package pdftex.def Info: images/player-schema.pdf used on input line 1051.
 (pdftex.def)             Requested size: 301.1261pt x 205.18956pt.
  [32 <./images/player-action.pdf>]
-<images/ball-movement.pdf, id=1431, 607.26875pt x 263.98625pt>
+<images/ball-movement.pdf, id=1438, 607.26875pt x 263.98625pt>
 File: images/ball-movement.pdf Graphic file (type pdf)
 
 <use images/ball-movement.pdf>
-Package pdftex.def Info: images/ball-movement.pdf used on input line 1041.
+Package pdftex.def Info: images/ball-movement.pdf used on input line 1071.
 (pdftex.def)             Requested size: 441.65161pt x 191.99538pt.
  [33 <./images/player-schema.pdf>] [34 <./images/ball-movement.pdf>] [35]
-<images/concurrent-game-state.pdf, id=1529, 578.16pt x 245.91875pt>
+<images/concurrent-game-state.pdf, id=1536, 578.16pt x 245.91875pt>
 File: images/concurrent-game-state.pdf Graphic file (type pdf)
 
 <use images/concurrent-game-state.pdf>
-Package pdftex.def Info: images/concurrent-game-state.pdf used on input line 10
-99.
+Package pdftex.def Info: images/concurrent-game-state.pdf used on input line 11
+29.
 (pdftex.def)             Requested size: 441.65161pt x 187.85329pt.
  [36 <./images/concurrent-game-state.pdf>] [37] [38] [39] [40]
-<images/distributed-system.pdf, id=1613, 1109.14375pt x 356.33125pt>
+<images/distributed-system.pdf, id=1620, 1109.14375pt x 356.33125pt>
 File: images/distributed-system.pdf Graphic file (type pdf)
 
 <use images/distributed-system.pdf>
-Package pdftex.def Info: images/distributed-system.pdf used on input line 1239.
+Package pdftex.def Info: images/distributed-system.pdf used on input line 1269.
 
 (pdftex.def)             Requested size: 451.68915pt x 145.11263pt.
  [41 <./images/distributed-system.pdf>]
-[42] <images/dist-sequence.pdf, id=1671, 793.96625pt x 306.14375pt>
+<images/event-struct.pdf, id=1667, 617.30624pt x 183.68625pt>
+File: images/event-struct.pdf Graphic file (type pdf)
+
+<use images/event-struct.pdf>
+Package pdftex.def Info: images/event-struct.pdf used on input line 1308.
+(pdftex.def)             Requested size: 301.1261pt x 89.60623pt.
+ [42 <./images/event-struct.pdf>] [43]
+<images/dist-sequence.pdf, id=1764, 793.96625pt x 306.14375pt>
 File: images/dist-sequence.pdf Graphic file (type pdf)
 
 <use images/dist-sequence.pdf>
-Package pdftex.def Info: images/dist-sequence.pdf used on input line 1291.
-(pdftex.def)             Requested size: 501.87683pt x 193.52089pt.
+Package pdftex.def Info: images/dist-sequence.pdf used on input line 1428.
+(pdftex.def)             Requested size: 481.80176pt x 185.78043pt.
 
-Overfull \hbox (32.12181pt too wide) in paragraph at lines 1291--1292
+Overfull \hbox (12.04674pt too wide) in paragraph at lines 1428--1429
  [] 
  []
 
-<images/queue-struct.pdf, id=1672, 369.38pt x 208.78pt>
+[44] <images/queue-struct.pdf, id=1786, 369.38pt x 208.78pt>
 File: images/queue-struct.pdf Graphic file (type pdf)
 
 <use images/queue-struct.pdf>
-Package pdftex.def Info: images/queue-struct.pdf used on input line 1307.
+Package pdftex.def Info: images/queue-struct.pdf used on input line 1442.
 (pdftex.def)             Requested size: 250.93842pt x 141.8347pt.
- [43 <./images/dist-sequence.pdf>] [44 <./images/queue-struct.pdf>] [45] [46]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1494.
- [47]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1494.
+ [45 <./images/dist-sequence.pdf> <./images/queue-struct.pdf>] [46] [47]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1629.
+ [48]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1629.
  (./SCD - Carletto Paolo - 622276.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1494.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1494.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1629.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1629.
 
 Package rerunfilecheck Info: File `"SCD - Carletto Paolo - 622276".out' has not
  changed.
-(rerunfilecheck)             Checksum: E906820EEC6B3A0005B8BD3C94BDE7A9;3781.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1494.
+(rerunfilecheck)             Checksum: F6F852496E3CA81FF8FFCDC04AB98E0D;3853.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1629.
  ) 
 Here is how much of TeX's memory you used:
- 9650 strings out of 493315
- 146726 string characters out of 6137904
- 266560 words of memory out of 5000000
- 12745 multiletter control sequences out of 15000+600000
- 10604 words of font info for 41 fonts, out of 8000000 for 9000
+ 10276 strings out of 493315
+ 156148 string characters out of 6137904
+ 449679 words of memory out of 5000000
+ 13282 multiletter control sequences out of 15000+600000
+ 11446 words of font info for 44 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 44i,10n,58p,1120b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb>
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loc
-al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/
-texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
-live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
-ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "SCD - Carletto Paolo - 622276.pdf" (48 pages, 1049522 bytes)
+ 44i,10n,58p,1120b,1872s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loca
+l/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
+ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/20
+13/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/201
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2013/
+texmf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on "SCD - Carletto Paolo - 622276.pdf" (49 pages, 1114126 bytes)
 .
 PDF statistics:
- 1881 PDF objects out of 2073 (max. 8388607)
- 1314 compressed objects within 14 object streams
- 193 named destinations out of 1000 (max. 500000)
- 641 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2022 PDF objects out of 2073 (max. 8388607)
+ 1443 compressed objects within 15 object streams
+ 266 named destinations out of 1000 (max. 500000)
+ 654 words of extra memory for PDF output out of 10000 (max. 10000000)
 

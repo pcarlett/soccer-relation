@@ -50,6 +50,35 @@
     urlcolor=blue % set to black to prevent printing blue links
 }
 
+% Package for code samples
+\usepackage{listings}
+\usepackage{color}
+\usepackage{textcomp}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\lstset{
+	backgroundcolor=\color{lbcolor},
+	tabsize=4,
+	rulecolor=,
+	language=Ada,
+    basicstyle=\scriptsize,
+    upquote=true,
+    aboveskip={1.5\baselineskip},
+    columns=fixed,
+    showstringspaces=false,
+    extendedchars=true,
+    breaklines=true,
+    prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=single,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    identifierstyle=\ttfamily,
+    keywordstyle=\color[rgb]{0,0,1},
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{0.627,0.126,0.941},
+}
+
 \definecolor{mygrey}{gray}{.96} % Light Grey
 \lstset{ 
 	language=[ISO]C++,              % choose the language of the code ("language=Verilog" is popular as well)
@@ -685,6 +714,7 @@ L'unico giocatore eccezionale nel campo di gioco \`e il portiere. Questo partico
 Vediamo nel dettaglio le logiche che ne regolano i movimenti e la posizione.
 
 \subsubsection{Logica di Contrasto}
+\label{contrasto}
 
 La logica primaria che permette il movimento del portiere \`e il contrasto con il giocatore avversario. Limitatamente all'area di gioco entro cui il portiere ha la possibilit\`a di muoversi, il portiere cerca il contatto fisico con l'avversario che controlla il pallone. In questo modo pu\`o tentare uno scontro fisico e prendere il controllo del pallone evitando che l'attaccante possa segnare una rete.
 
@@ -1269,6 +1299,113 @@ Ognuno di essi \`e a sua volta composto da una serie di task necessari al corret
 		\end{itemize}
 \end{itemize}
 
+\subsection{Struttura degli Eventi}
+
+La struttura delle classi relative agli eventi \`e stata costruita seguendo un pattern basato su una classe generica Basic Event da cui derivano tre classi figlie specializzate, ognuna con l'implementazione dei propri metodi:
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=300px]{images/event-struct.pdf}
+	\end{center}
+\caption{Strutturazione degli eventi nel modello.}
+\end{figure}
+
+Nella figura sopra possiamo l'albero di derivazione delle classi in cui sono presentate la classe base astratta e le classi figlie specializzate. Il principio alla base della struttura \`e la possibilit\`a di sfruttare il polimorfismo nativo delle classi figlie che possono essere passate indifferentemente a tutti i metodi che richiedono un parametro di tipo Basic Event. In questa maniera non abbiamo necessit\`a di preoccuparci di quale sia il tipo di evento con cui abbiamo a che fare, in quanto il loro padre \`e una classe astratta comune. Andiamo a vedere nel dettaglio come sono composte le classi direttamente nel codice:
+
+\begin{itemize}
+	\item \textbf{Basic Event:} la classe astratta \`e di tipo Remote Type e questo garantisce che sia accessibile in maniera distribuita da tutte le entit\`a che hanno necessit\`a di richiamarla. Il metodo astratto Create \`e necessario per la creazione dell'evento e per la restituzione di un puntatore ad esso. Il metodo Simulate, anch'esso astratto, serve per lanciare l'azione legata all'evento. Essendo astratti non hanno per\`o un'implementazione concreta ma solo una funzione di implementazione per i figli della classe padre.
+	
+	\begin{lstlisting}[language=Ada]
+	// Basic_Event.ads
+	package Basic_Event is
+    
+		pragma Remote_Types;
+		
+		type Event is abstract tagged limited private;
+		type Event_Ptr is access all Event'Class;
+
+		pragma Asynchronous (Event_Ptr);
+
+		function Create return Event_Ptr is abstract;
+	    procedure Simulate(Id: Integer; E: Event) is abstract;
+	
+	private
+	    type Event is abstract tagged limited null record;
+	end Basic_Event;
+	\end{lstlisting}
+	
+	\begin{itemize}
+		\item \textbf{Summary Event:} \`e la pi\`u semplice implementazione della classe Basic Event e prevede un tipo record composto da un solo elemento Actions, oltre all'implementazione dei due metodi astratti Create per la creazione dell'evento e Simulate per l'invio alla classe di stampa del contenuto dell'evento generato.
+		
+		\begin{lstlisting}[language=Ada]
+		// Basic_Event.Summary.ads
+		package Basic_Event.Summary is
+    
+			type Summary_Event is new Event with private; 
+		    type Summary_Ptr is access all Summary_Event'Class;
+	
+		    function Create(A: Actions) return Event_Ptr; 
+		    procedure Simulate(Id: in Integer; E: in Summary_Event);
+		
+		private
+		    type Summary_Event is new Event with
+		        record 
+			        A : Actions;
+		        end record;
+		end Basic_Event.Summary;
+		\end{lstlisting}
+		
+	\end{itemize}
+	\begin{itemize}
+		\item \textbf{Partial Event:} rappresenta in evento similare in 
+		\begin{lstlisting}[language=Ada]
+		// Basic_Event.Partial.ads
+		package Basic_Event.Partial is
+    
+		    type Partial_Event is new Event with private;
+	
+			function Create(ID: Integer; A: Actions) return Event_Ptr; 
+		    procedure Simulate(Id: in Integer; E: in Partial_Event);
+			-- procedure Transfer (E: access Partial_Event; E2: access Partial_Event);
+
+		private
+		    type Partial_Ptr is access all Partial_Event; 
+		    type Partial_Event is new Event with
+		        record
+		            ID: Integer;
+		            A: Actions;
+		        end record;
+		end Basic_Event.Partial;
+		\end{lstlisting}
+	\end{itemize}
+	\begin{itemize}
+		\item \textbf{Complete Event:}
+		\begin{lstlisting}[language=Ada]
+		// Basic_Event.Complete.ads
+		package Basic_Event.Complete is
+    
+		    type Complete_Event is new Event with private;
+	
+		    function Create(ID: Integer; R: Integer; C: Integer; O: Integer) return Event_Ptr; 
+		    procedure Simulate(Id: in Integer; E: in Complete_Event);
+
+		private
+		    type Complete_Ptr is access all Complete_Event; 
+		    type Complete_Event is new Event with
+		        record
+		            ID: Integer;
+		            Row: Integer;
+		            Col: Integer;
+					Own: Integer;
+		        end record;
+		end Basic_Event.Complete;
+		\end{lstlisting}	
+	\end{itemize}
+	
+\end{itemize}
+
+
+
 \subsection{Trasmissione degli Eventi}
 
 La trasmissione degli eventi avviene attraverso l'uso di oggetti di tipo Remote Type e il passaggio degli stessi ad oggetti distribuiti sfruttando chiamate remote su package di tipo Remote Procedure Call. In questo modo \`e possibile mettere in comunicazione oggetti residenti su partizioni differenti in maniera del tutto trasparente rispetto al sistema. \vspace{3mm}
@@ -1288,7 +1425,7 @@ Andiamo ad analizzare nel dettaglio come avviene la comunicazione rispetto agli 
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=500px]{images/dist-sequence.pdf}
+		\includegraphics[width=480px]{images/dist-sequence.pdf}
 	\end{center}
 \caption{Sequenze del sistema distribuito.}
 \end{figure}

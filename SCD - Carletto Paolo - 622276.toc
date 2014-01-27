@@ -49,8 +49,9 @@
 \contentsline {section}{\numberline {6}Distribuzione}{41}{section.6}
 \contentsline {subsection}{\numberline {6.1}Progettazione del Software Distribuito}{41}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Struttura Distribuita delle Parti}{41}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Trasmissione degli Eventi}{42}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}Implementazione della Coda}{43}{subsection.6.4}
-\contentsline {section}{\numberline {7}Integrazione tra le Parti - Concorrenza e Distribuzione}{45}{section.7}
-\contentsline {section}{\numberline {8}Conclusioni}{46}{section.8}
-\contentsline {section}{\numberline {9}Bibliografia}{47}{section.9}
+\contentsline {subsection}{\numberline {6.3}Struttura degli Eventi}{42}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}Trasmissione degli Eventi}{44}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.5}Implementazione della Coda}{45}{subsection.6.5}
+\contentsline {section}{\numberline {7}Integrazione tra le Parti - Concorrenza e Distribuzione}{46}{section.7}
+\contentsline {section}{\numberline {8}Conclusioni}{47}{section.8}
+\contentsline {section}{\numberline {9}Bibliografia}{48}{section.9}
