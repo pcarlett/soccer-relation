@@ -52,6 +52,7 @@
 \contentsline {subsection}{\numberline {6.3}Struttura degli Eventi}{42}{subsection.6.3}
 \contentsline {subsection}{\numberline {6.4}Trasmissione degli Eventi}{44}{subsection.6.4}
 \contentsline {subsection}{\numberline {6.5}Implementazione della Coda}{45}{subsection.6.5}
-\contentsline {section}{\numberline {7}Integrazione tra le Parti - Concorrenza e Distribuzione}{46}{section.7}
-\contentsline {section}{\numberline {8}Conclusioni}{47}{section.8}
-\contentsline {section}{\numberline {9}Bibliografia}{48}{section.9}
+\contentsline {subsection}{\numberline {6.6}Richiesta delle Statistiche di Gioco}{47}{subsection.6.6}
+\contentsline {section}{\numberline {7}Integrazione tra le Parti - Concorrenza e Distribuzione}{48}{section.7}
+\contentsline {section}{\numberline {8}Conclusioni}{49}{section.8}
+\contentsline {section}{\numberline {9}Bibliografia}{50}{section.9}

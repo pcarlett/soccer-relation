@@ -1305,7 +1305,7 @@ La struttura delle classi relative agli eventi \`e stata costruita seguendo un p
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=300px]{images/event-struct.pdf}
+		\includegraphics[width=450px]{images/event-struct.pdf}
 	\end{center}
 \caption{Strutturazione degli eventi nel modello.}
 \end{figure}
@@ -1357,7 +1357,8 @@ Nella figura sopra possiamo l'albero di derivazione delle classi in cui sono pre
 		
 	\end{itemize}
 	\begin{itemize}
-		\item \textbf{Partial Event:} rappresenta in evento similare in 
+		\item \textbf{Partial Event:} rappresenta in evento similare nella struttura e nell'implementazione al fratello Summary Event. L'unica differenza consiste nel tipo record protetto e nei metodi che lavorano su di esso. L'evento parziale riporta nello specifico l'ID del giocatore che compie l'azione oltre all'azione compiuta.
+		
 		\begin{lstlisting}[language=Ada]
 		// Basic_Event.Partial.ads
 		package Basic_Event.Partial is
@@ -1366,7 +1367,6 @@ Nella figura sopra possiamo l'albero di derivazione delle classi in cui sono pre
 	
 			function Create(ID: Integer; A: Actions) return Event_Ptr; 
 		    procedure Simulate(Id: in Integer; E: in Partial_Event);
-			-- procedure Transfer (E: access Partial_Event; E2: access Partial_Event);
 
 		private
 		    type Partial_Ptr is access all Partial_Event; 
@@ -1379,14 +1379,15 @@ Nella figura sopra possiamo l'albero di derivazione delle classi in cui sono pre
 		\end{lstlisting}
 	\end{itemize}
 	\begin{itemize}
-		\item \textbf{Complete Event:}
+		\item \textbf{Complete Event:} anch'esso, in quanto fratello di Summary e Partial, ha la stessa struttura e implementazione. Il record protetto \`e differente dagli altri due e contiene l'ID del giocatore oltre alla sua posizione realizzata attraverso due valori interi che rappresentano riga e colonna su cui il giocatore si trova.
+		
 		\begin{lstlisting}[language=Ada]
 		// Basic_Event.Complete.ads
 		package Basic_Event.Complete is
     
 		    type Complete_Event is new Event with private;
 	
-		    function Create(ID: Integer; R: Integer; C: Integer; O: Integer) return Event_Ptr; 
+		    function Create(ID: Integer; R: Integer; C: Integer) return Event_Ptr; 
 		    procedure Simulate(Id: in Integer; E: in Complete_Event);
 
 		private
@@ -1396,7 +1397,6 @@ Nella figura sopra possiamo l'albero di derivazione delle classi in cui sono pre
 		            ID: Integer;
 		            Row: Integer;
 		            Col: Integer;
-					Own: Integer;
 		        end record;
 		end Basic_Event.Complete;
 		\end{lstlisting}	
@@ -1404,23 +1404,22 @@ Nella figura sopra possiamo l'albero di derivazione delle classi in cui sono pre
 	
 \end{itemize}
 
-
-
 \subsection{Trasmissione degli Eventi}
 
-La trasmissione degli eventi avviene attraverso l'uso di oggetti di tipo Remote Type e il passaggio degli stessi ad oggetti distribuiti sfruttando chiamate remote su package di tipo Remote Procedure Call. In questo modo \`e possibile mettere in comunicazione oggetti residenti su partizioni differenti in maniera del tutto trasparente rispetto al sistema. \vspace{3mm}
+La trasmissione degli eventi avviene attraverso la creazione di oggetti di tipo Remote Type (RT) e trasmettendo i loro puntatori ad oggetti distribuiti attraverso chiamate remote su package di tipo Remote Procedure Call (RCI). In questo modo \`e possibile mettere in comunicazione oggetti residenti su partizioni differenti in maniera del tutto trasparente rispetto al sistema. \vspace{3mm}
 
 Andiamo ad analizzare nel dettaglio come avviene la comunicazione rispetto agli attori visti nella sezione precedente:
 
 \begin{enumerate}
 	\item Event Generator, a seguito della creazione di un evento, richiama l'entry di Event Manager per poterne passare i parametri;
-	\item Event Manager riceve i parametri e sulla base di questi genera l'evento creando una nuova istanza del tipo generico Basic Event;
-	\item richiama il metodo generico Create che rimanda al metodo specializzato dell'evento figlio appropriato;
-	\item l'evento appena creato viene trasmesso alla coda attraverso un'apposita procedura Push chiamata in remoto sulla classe Queuer;
-	\item l'operazione incrementa un contatore apposito che funziona da variabile di controllo per l'accesso alla coda protetta per permettere di effettuare la Pop degli eventi contenuti;
-	\item quando Event Display rileva la variazione della variabile lancia la Pop, anch'essa in modalit\`a remota per svuotare la coda;
-	\item una volta ricevuto l'evento, Event Display chiama l'operazione Simulate che si occupa di attivare l'operazione di stampa specifica dell'evento;
-	\item l'istanza dell'evento, residente sul server, richiama cos\'i il metodo Print della classe Printer che si occupa di stampare a video, lato display, le informazioni contenute nell'evento;
+	\item Event Manager riceve i parametri e sulla base di questi genera l'evento creando una nuova istanza del tipo generico Basic Event (RT);
+	\item il metodo generico Create rimanda al metodo specializzato dell'evento figlio appropriato che \`e stato sovrascritto (attraverso overriding);
+	\item il tipo Access dell'evento appena creato viene trasmesso alla coda attraverso un'apposita procedura Push chiamata in remoto sulla classe Queuer (RCI);
+	\item l'operazione imposta a True il valore di una flag apposita che funziona da variabile di controllo per l'accesso alla coda protetta al fine di permettere la Pop degli eventi contenuti;
+	\item quando Event Display rileva la variazione della flag lancia la Pop, anch'essa da remoto (RCI) per svuotare la coda;
+	\item una volta ricevuto il puntatore all'evento, Event Display richiama l'operazione Simulate, locale rispetto alla partizione in cui \`e residente l'istanza dell'oggetto Basic Event, la quale si occupa di attivare la sequenza di stampa specifica dell'evento;
+	\item l'istanza dell'evento, residente sul server di gioco, richiama cos\`i il metodo Print di tipo (RCI) della classe Printer che si occupa di stampare a video, lato display, le informazioni contenute nell'evento;
+	\item saltuariamente il cliente richiama il metodo Get\_Stats proprio del package Stats di tipo remoto (RCI) che ritorna la sequenza delle variabili relative alle statistiche di gioco che vengono presentate a video lato cliente;
 \end{enumerate}
 
 \begin{figure}[H]
@@ -1434,24 +1433,102 @@ Andiamo ad analizzare nel dettaglio come avviene la comunicazione rispetto agli 
 
 Uno dei requisiti di un sistema distribuito \`e preservare la consistenza dello stato di gioco nelle varie entit\`a distribuite. Per fare ci\`o \`e necessario implementare una strategia attraverso cui le varie parti attingano in maniera ordinata la sequenza di eventi necessari per poter ricostruire lo stato di gioco. La pi\`u semplice forma di salvataggio ordinato dei dati \`e una struttura basata su una coda. Questa funziona da buffer per gli eventi: il gestore degli eventi di gioco, attraverso operazioni di Push controllate e protette, inserisce nuovi eventi all'interno della coda. Il meccanismo \`e replicato in maniera analoga dall'operazione di Pop, anch'essa di tipo protetto, la quale permette di svuotare la coda prelevandone gli eventi contenuti. \vspace{3mm}
 
-Poich\`e nel modello \`e previsto che le entit\`a che accedono alla coda siano due, \`e stata implementata una struttura di tipo multi-pop queue che permette l'utilizzo di una coda soltanto, con due riferimenti specifici che tengono traccia degli eventi che vengono estratti in base all'entit\`a che richiede l'operazione.
+Poich\`e nel modello \`e previsto che le entit\`a che accedono alla coda siano due, \`e stata implementata una struttura di tipo multi-pop queue che permette l'utilizzo di una coda soltanto, con due riferimenti specifici che tengono traccia degli eventi che vengono estratti in base all'entit\`a che richiede l'operazione. Analizziamo la struttura del codice relativo alle operazioni fondamentali Push e Pop sulla coda:
+
+\begin{itemize}
+	\item \textbf{Queue:} il principio alla base della struttura della multi-pop queue \`e l'utilizzo di molteplici iteratori, uno per ogni oggetto che pu\`o richiamare l'operazione Protected\_Pop. Il set delle variabili \`e configurato per due accessi differenti, ma potenzialmente pu\`o essere esteso ad un numero illimitato di attori. Le variabili duplicate sono Head, Tail e Length che servono a tenere traccia dell'ultimo evento prelevato (Head), dell'ultimo evento prelevabile (Tail) e del numero di eventi tra i due iteratori (Length). Duplicandoli non diventa pi\`u necessario gestire due code formalmente identiche, ma \`e sufficiente usarne una comune e tenere traccia degli accessi da parte delle due istanze dei display.
+	
+		\begin{lstlisting}[language=Ada]
+		package Queue is
+			pragma Remote_Call_Interface;
+			procedure Push (E_Ptr: in Basic_Event.Event_Ptr);
+		    procedure Pop (Id: in Integer; E_Ptr: out Basic_Event.Event_Ptr);
+			pragma Asynchronous (Push);
+			private
+			    Queue_Size : constant := 1000;
+			    subtype Queue_Range is Positive range 1 .. Queue_Size;
+			    Data : array (Queue_Range) of Basic_Event.Event_Ptr;
+				Tail : Queue_Range := 1;
+				-- Parameters for 1th Queue
+			    Length1 : Natural range 0 .. Queue_Size := 0;
+			    Head1, Tail1 : Queue_Range := 1;
+				-- Parameters for 2nd Queue
+			    Length2 : Natural range 0 .. Queue_Size := 0;
+			    Head2, Tail2 : Queue_Range := 1;
+		end Queue;
+		\end{lstlisting}	
+	
+	\item \textbf{Protected\_Push:} quest'operazione non ha particolari differenze rispetto alla Push tradizionale. L'unica accortezza \`e da tenere nel momento in cui un nuovo evento viene accodato: \`e necessario mantenere consistente lo stato degli iteratori incrementando di una unit\`a i valori di entrambi i Tail cos\`i come quelli di entrambi i Length in modo da farli puntare all'ultimo evento inserito ed incrementare entrambe le distanze tra i corrispettivi Head e Tail.
+	
+		\begin{lstlisting}[language=Ada]
+		entry Protected_Push (E_Ptr: in Basic_Event.Event_Ptr) 
+			when Length1 < Queue_Size and Length2 < Queue_Size is
+		begin
+	        Data(Tail) := E_Ptr;
+	        Tail := Tail mod Queue_Size + 1;
+	        Tail1 := Tail1 mod Queue_Size + 1;
+	        Tail2 := Tail2 mod Queue_Size + 1;
+	        Length1 := Length1 + 1;
+	        Length2 := Length2 + 1;
+		end Protected_Push;
+		\end{lstlisting}	
+
+	\item \textbf{Protected\_Pop:} l'operazione di Protected\_Pop funziona in maniera similare ma discrimina sulla base di quale display lancia la procedura: un valore intero identifica l'attore e lancia la propria sequenza di comandi che si occupa di estrarre e restituire il tipo Access dell'evento, incrementare il valore di Head corretto e ridurre di una unit\`a il valore di Length appropriato per mantenere ancora consistente la coda. La situazione per l'altro display non cambia e il numero di eventi che gli rimangono da estrarre non varia.
+	
+		\begin{lstlisting}[language=Ada]
+		entry Protected_Pop (Id: in Integer; E_Ptr: out Basic_Event.Event_Ptr) 
+			when Length1 > 0 or Length2 > 0 is
+		begin
+			case Id is
+				when 1 => 
+					E_Ptr := Data(Head1);
+					Put_Line ("E_Que: event popped out from queue.");
+			        Head1 := Head1 mod Queue_Size + 1;
+			        Length1 := Length1 - 1;
+				when 2 =>
+					E_Ptr := Data(Head2);
+					Put_Line ("E_Que: event popped out from queue.");
+			        Head2 := Head2 mod Queue_Size + 1;
+			        Length2 := Length2 - 1;
+				when others =>
+					Put_Line ("E_Que: error in popping from queue.");
+			end case;
+		end Protected_Pop;
+		\end{lstlisting}	
+\end{itemize}
+
+Nella figura sottostante possiamo vedere la coda degli eventi con i duplici puntatori Head, Tail e Length. Nell'esempio pratico: 
 
 \begin{figure}[H]
-	
 	\begin{center}
 		\includegraphics[width=250px]{images/queue-struct.pdf}
 	\end{center}
-\caption{Struttura della coda.}
+	\caption{Struttura della coda.}
 \end{figure}
 
-\begin{itemize}
-\item \textbf{Push:}
-\item \textbf{Pop:}
-\end{itemize}
+\begin{enumerate}
+	\item Display1 ha ricevuto gli eventi E1 ed E2, deve ricevere E3 (iteratore Head1), E4, E5 ed E6 (iteratore Tail1) per un totale di 4 elementi (pari al valore di Length1 = 4);
+	\item Display2 invece ha ricevuto E1, E2 ed E3, deve ricevere E4 (iteratore Head2), E5 ed E6 (iteratore Tail2) per un totale di 3 elementi (valore di Length2 = 3);
+\end{enumerate}
+
+\subsection{Richiesta delle Statistiche di Gioco}
+
+Chiudiamo l'analisi del sistema distribuito con l'ultimo meccanismo disponibile: la richiesta di statistiche da parte del client al sistema di gioco. A differenza di tutte le trasmissioni viste finora in cui il server inoltra in modo attivo i dati al client (attraverso l'uso della coda) e quest'ultimo riceve e gestisce quanto ricevuto in modo passivo, questa connessione permette al display di interagire direttamente con il server effettuando una richiesta in modo attivo. \vspace{3mm}
+
+In base alle necessit\`a (che nel modello \`e configurato come una richiesta ogni 5 eventi ricevuti) viene richiamata una procedura di tipo Remote Procedure Call direttamente sulla classe Stats contenente le statistiche e residente sulla partizione di gioco. Questa risponde a sua volta richiamando un metodo RCI del package Printer che si occupa della stampa sul display delle informazioni statistiche ricevute.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=400px]{images/stats-sequence.pdf}
+	\end{center}
+\caption{Sequenza della richiesta ed invio delle statistiche.}
+\end{figure}
 
 \newpage
 
 \section{Integrazione tra le Parti - Concorrenza e Distribuzione}
+
+
 
 \begin{comment}
 	
