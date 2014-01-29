@@ -1252,17 +1252,17 @@ Per effetto delle considerazioni sopra esposte possiamo affermare che situazioni
 
 \section{Distribuzione}
 
-Il concetto di distribuzione prevede che un sistema residente su di un unico calcolatore venga scomposto in parti al fine di poter essere suddiviso in una moltitudine calcolatori differenti. La distribuzione di un sistema permette di ripartire il carico di lavoro: quello che dovrebbe essere imputato ad un solo calcolatore viene suddiviso su una serie di macchine, ognuna di esse con una funzione determinata e dei compiti precisi. \vspace{3mm}
+Il concetto di distribuzione prevede che un sistema residente su di un unico calcolatore venga scomposto in parti al fine di poter essere suddiviso in una moltitudine calcolatori differenti. La distribuzione di un sistema permette di ripartire il carico di lavoro: quello che dovrebbe essere imputato ad un solo calcolatore viene suddiviso su una serie di macchine, ognuna di esse con una funzione determinata e dei compiti precisi. Il modo in cui viene implementata la distribuzione \`e completamente trasparente al sistema poich\`e \`e direttamente progettata all'interno del linguaggio stesso. \vspace{3mm}
 
 Ada 95 permette di generare in modo estremamente semplice un sistema completamente distribuito partendo dallo sviluppo di un sistema monolitico e definendo in seconda battuta le componenti distribuite attraverso l'uso di alcune direttive per determinare la tipologia di comunicazione e di oggetti nonch\`e attraverso un file di configurazione che aiuta il compilatore nella generazione dei vari eseguibili. Ognuno di essi conterr\`a al suo interno gli ``stub'' generati dal compilatore. Attraverso questi ricever\`a ed invier\`a messaggi alle varie componenti con cui \`e direttamente collegato. \vspace{3mm}
 
-Ai fini della nostra realt\`a virtuale, la soluzione scelta \`e basata su un'architettura stile client/server in quanto possiamo immaginare che tutta la partita si svolga all'interno del server e solo gli eventi principali vengono trasmessi ai client distribuiti. Gli ``stub'' si occupano di gestire la comunicazione tra macchine differenti, convertendo messaggi in ingresso ed uscita, facendo credere al software che tutto il sistema risieda su un'unico calcolatore. \vspace{3mm}
+Ai fini della nostra realt\`a virtuale, la soluzione scelta \`e basata su un'architettura stile client/server distribuita nella quale possiamo immaginare che tutta la partita si svolga all'interno del server e solo gli eventi principali vengano trasmessi ai client distribuiti. Gli ``stub'' si occupano di gestire la comunicazione tra le partizioni, convertendo messaggi in ingresso ed uscita e facendo credere al software che tutto il sistema risieda su un'unico calcolatore. \vspace{3mm}
 
-Per quanto riguarda la realizzazione del progetto, \`e stato sviluppato un modello specifico per realizzare la distribuzione del sistema. Andiamo a vedere nel dettaglio di che cosa si tratta.
+Per quanto riguarda la realizzazione del progetto, \`e stato sviluppato un modello specifico per mettere in pratica la possibilit\`a di distribuire il sistema. Vediamo nel dettaglio di che cosa si tratta.
 
-\subsection{Progettazione del Software Distribuito}
+\subsection{Progettazione e Struttura Distribuita del Software}
 
-Il software distribuito \`e composto da tre entit\`a: una entit\`a servente che si occupa di generare una serie di eventi relativi all'avanzamento dello stato di gioco, una entit\`a che si occupa di gestire una coda nella quale vengono accodati gli eventi e infine una entit\`a cliente che si occupa di visualizzare a terminale gli eventi accodati. \vspace{3mm}
+Il software distribuito \`e composto da tre entit\`a fondamentali: una entit\`a servente che si occupa di generare una serie di eventi relativi all'avanzamento dello stato di gioco, una entit\`a che si occupa di gestire una coda nella quale vengono accodati gli eventi e infine una entit\`a cliente che si occupa di visualizzare nei terminali coinvolti gli eventi accodati. \vspace{3mm}
 
 \begin{figure}[H]
 	\begin{center}
@@ -1271,28 +1271,27 @@ Il software distribuito \`e composto da tre entit\`a: una entit\`a servente che 
 \caption{Diagramma del sistema distribuito.}
 \end{figure}
 
-La comunicazione tra le parti avviene attraverso la trasmissione di eventi legati all'avanzamento dello stato di gioco. 
-
-\subsection{Struttura Distribuita delle Parti}
+La comunicazione tra le parti avviene attraverso la trasmissione di eventi legati all'avanzamento dello stato di gioco. Trasmettere gli eventi non \`e propriamente la definizione pi\`u adatta ma ci occuperemo nelle parti successive di ridefinire nel dettaglio l'effetto trasmissione. \vspace{3mm}
 
 La struttura distribuita, come gi\`a menzionato \`e composta in linea generale da tre elementi funzionali:
 
 \begin{itemize}
 	\item \textbf{Server:} si occupa della generazione degli eventi sul campo di gioco;
-	\item \textbf{Queue:} gestisce l'accodamento degli eventi ricevuti all'interno di una coda e rende disponibili due metodi Push e Pop che permettono di accedere attraverso operazioni di inserimento ed estrazione;
-	\item \textbf{Client:} permette la visualizzazione degli eventi generati dal server su molteplici display distribuiti;
+	\item \textbf{Queue:} gestisce l'accodamento degli eventi ricevuti all'interno di una coda e rende disponibili due metodi Push e Pop per potervi accedere attraverso operazioni di inserimento ed estrazione;
+	\item \textbf{Client:} permette la visualizzazione degli eventi generati dal sistema di gioco su molteplici display distribuiti;
 \end{itemize}
 
-Ognuno di essi \`e a sua volta composto da una serie di task necessari al corretto funzionamento della struttura. Andiamo ad analizzare nel dettaglio la composizione delle parti:
+Ognuno di queste strutture \`e a sua volta composto da una serie di task necessari al corretto funzionamento del meccanismo. Andiamo ad analizzare nel dettaglio la composizione delle parti:
 
 \begin{itemize}
-	\item \textbf{Server:} genera e accoda eventi relativi allo stato di gioco:
+	\item \textbf{Server:} genera e accoda eventi relativi allo stato di gioco, registrandone le statistiche:
 		\begin{itemize}
 			\item \textbf{Event Generator:} produce eventi casuali simulando la struttura di una partita reale;
-			\item \textbf{Event Manager:} si occupa di \"impacchettare\" le informazioni ricevute dall'Event Generator per produrre un oggetto che sia trasmissibile al gestore della coda in modalit\`a distribuita. Per alcuni degli eventi ricevuti che corrispondono a particolari tipologie definite, si occupa anche della produzione di statistiche di gioco attraverso la chiamata di una procedura che modifica un record apposito;
+			\item \textbf{Event Manager:} si occupa di \"impacchettare\" le informazioni ricevute dall'Event Generator per produrre un oggetto che sia trasmissibile al gestore della coda in modalit\`a distribuita. Per alcuni degli eventi ricevuti che corrispondono a particolari tipologie definite, si occupa anche della produzione di statistiche di gioco attraverso la chiamata di una procedura che modifica un record apposito contenuto in Stats;
+			\item \textbf{Stats:} rappresenta il registro delle statistiche di gioco;
 		\end{itemize}
-	\item \textbf{Queue:} attraverso due procedure protette \`e possibile effettuare l'inserimento (Push) in coda degli eventi prodotti e l'estrazione (Pop) degli stessi per accedere alle informazioni contenute nei pacchetti.
-	\item \textbf{Client:} permette la visualizzazione degli eventi generati dal server su molteplici display distribuiti;
+	\item \textbf{Queue:} attraverso due procedure protette \`e possibile effettuare l'inserimento (Push) in coda degli eventi prodotti e l'estrazione (Pop) degli stessi per accedere alle informazioni contenute nei pacchetti;
+	\item \textbf{Client:} permette la visualizzazione degli eventi generati dal server sul display. Possono esistere moltepli istanze di client, ognuna delle quali con il proprio Event Display e Printer;
 		\begin{itemize}
 		\item \textbf{Event Display:} accede alla coda ed effettua l'estrazione degli eventi (se disponibili) e richiama la procedura per la stampa dell'evento a video;
 		\item \textbf{Printer:} riceve i valori contenuti nell'evento e li manda a video attraverso i metodi canonici di stampa;
@@ -1301,22 +1300,21 @@ Ognuno di essi \`e a sua volta composto da una serie di task necessari al corret
 
 \subsection{Struttura degli Eventi}
 
-La struttura delle classi relative agli eventi \`e stata costruita seguendo un pattern basato su una classe generica Basic Event da cui derivano tre classi figlie specializzate, ognuna con l'implementazione dei propri metodi:
+La struttura delle classi relative agli eventi \`e stata costruita seguendo un pattern basato su una classe generica Basic Event da cui derivano tre classi figlie specializzate, ognuna con l'implementazione dei propri metodi.
 
 \begin{figure}[H]
 	\begin{center}
-		\includegraphics[width=450px]{images/event-struct.pdf}
+		\includegraphics[width=350px]{images/event-struct.pdf}
 	\end{center}
 \caption{Strutturazione degli eventi nel modello.}
 \end{figure}
 
-Nella figura sopra possiamo l'albero di derivazione delle classi in cui sono presentate la classe base astratta e le classi figlie specializzate. Il principio alla base della struttura \`e la possibilit\`a di sfruttare il polimorfismo nativo delle classi figlie che possono essere passate indifferentemente a tutti i metodi che richiedono un parametro di tipo Basic Event. In questa maniera non abbiamo necessit\`a di preoccuparci di quale sia il tipo di evento con cui abbiamo a che fare, in quanto il loro padre \`e una classe astratta comune. Andiamo a vedere nel dettaglio come sono composte le classi direttamente nel codice:
+Nella figura sopra possiamo vedere l'albero di derivazione delle classi in cui sono presentate la classe base astratta e le classi figlie specializzate. Il principio alla base della struttura \`e la possibilit\`a di sfruttare il polimorfismo nativo delle classi figlie che possono essere passate indifferentemente a tutti i metodi che richiedono un parametro di tipo Basic Event. In questa maniera non abbiamo necessit\`a di preoccuparci di quale sia il tipo di evento con cui abbiamo a che fare, in quanto il loro padre \`e una classe astratta comune. Andiamo ad analizzare nel dettaglio la codifica delle classi con alcuni estratti del codice:
 
 \begin{itemize}
-	\item \textbf{Basic Event:} la classe astratta \`e di tipo Remote Type e questo garantisce che sia accessibile in maniera distribuita da tutte le entit\`a che hanno necessit\`a di richiamarla. Il metodo astratto Create \`e necessario per la creazione dell'evento e per la restituzione di un puntatore ad esso. Il metodo Simulate, anch'esso astratto, serve per lanciare l'azione legata all'evento. Essendo astratti non hanno per\`o un'implementazione concreta ma solo una funzione di implementazione per i figli della classe padre.
+	\item \textbf{Basic Event:} la classe \`e astratta e di tipo Remote Type. Questo garantisce che sia accessibile in maniera distribuita da tutte le parti del software che hanno necessit\`a di richiamarla. Il metodo astratto Create \`e necessario per la creazione dell'evento e per la restituzione del suo puntatore. Il metodo Simulate, anch'esso astratto, serve per lanciare un'azione specifica legata all'evento particolare. Poich\`e astratti non hanno un'implementazione concreta ma solo una funzione di interfaccia per i figli di Basic Event.
 	
 	\begin{lstlisting}[language=Ada]
-	// Basic_Event.ads
 	package Basic_Event is
     
 		pragma Remote_Types;
@@ -1335,10 +1333,9 @@ Nella figura sopra possiamo l'albero di derivazione delle classi in cui sono pre
 	\end{lstlisting}
 	
 	\begin{itemize}
-		\item \textbf{Summary Event:} \`e la pi\`u semplice implementazione della classe Basic Event e prevede un tipo record composto da un solo elemento Actions, oltre all'implementazione dei due metodi astratti Create per la creazione dell'evento e Simulate per l'invio alla classe di stampa del contenuto dell'evento generato.
+		\item \textbf{Summary Event:} \`e la pi\`u semplice implementazione della classe Basic Event e prevede un tipo record composto da un solo elemento Actions, oltre all'implementazione concreta dei due metodi astratti: Create necessario per la creazione dell'evento e Simulate per l'invio alla classe di stampa del contenuto dell'evento generato.
 		
 		\begin{lstlisting}[language=Ada]
-		// Basic_Event.Summary.ads
 		package Basic_Event.Summary is
     
 			type Summary_Event is new Event with private; 
@@ -1356,11 +1353,11 @@ Nella figura sopra possiamo l'albero di derivazione delle classi in cui sono pre
 		\end{lstlisting}
 		
 	\end{itemize}
+	
 	\begin{itemize}
-		\item \textbf{Partial Event:} rappresenta in evento similare nella struttura e nell'implementazione al fratello Summary Event. L'unica differenza consiste nel tipo record protetto e nei metodi che lavorano su di esso. L'evento parziale riporta nello specifico l'ID del giocatore che compie l'azione oltre all'azione compiuta.
+		\item \textbf{Partial Event:} rappresenta in evento similare nella struttura e nell'implementazione a Summary Event di cui \`e fratello. L'unica differenza consiste nel tipo record protetto e nei metodi che lavorano su di esso. L'evento parziale riporta nello specifico l'ID del giocatore che compie l'azione e la variabile Actions relativa all'azione compiuta.
 		
 		\begin{lstlisting}[language=Ada]
-		// Basic_Event.Partial.ads
 		package Basic_Event.Partial is
     
 		    type Partial_Event is new Event with private;
@@ -1378,11 +1375,11 @@ Nella figura sopra possiamo l'albero di derivazione delle classi in cui sono pre
 		end Basic_Event.Partial;
 		\end{lstlisting}
 	\end{itemize}
+	
 	\begin{itemize}
-		\item \textbf{Complete Event:} anch'esso, in quanto fratello di Summary e Partial, ha la stessa struttura e implementazione. Il record protetto \`e differente dagli altri due e contiene l'ID del giocatore oltre alla sua posizione realizzata attraverso due valori interi che rappresentano riga e colonna su cui il giocatore si trova.
+		\item \textbf{Complete Event:} anch'esso, in quanto fratello di Summary e Partial, ha la stessa struttura e implementazione. Il record protetto \`e differente dagli altri due e contiene l'ID del giocatore oltre alla sua posizione realizzata attraverso due valori interi che rappresentano l'intersezione di riga e colonna su cui il giocatore si trova.
 		
 		\begin{lstlisting}[language=Ada]
-		// Basic_Event.Complete.ads
 		package Basic_Event.Complete is
     
 		    type Complete_Event is new Event with private;
@@ -1406,21 +1403,10 @@ Nella figura sopra possiamo l'albero di derivazione delle classi in cui sono pre
 
 \subsection{Trasmissione degli Eventi}
 
-La trasmissione degli eventi avviene attraverso la creazione di oggetti di tipo Remote Type (RT) e trasmettendo i loro puntatori ad oggetti distribuiti attraverso chiamate remote su package di tipo Remote Procedure Call (RCI). In questo modo \`e possibile mettere in comunicazione oggetti residenti su partizioni differenti in maniera del tutto trasparente rispetto al sistema. \vspace{3mm}
+Dopo aver visto la composizione degli eventi andiamone ad analizzare la trasmissione. Avviene attraverso la creazione di oggetti definiti dalla direttiva \textit
+{``pragma Remote Type''} (RT) e inviando i loro puntatori (access type) ad oggetti distribuiti attraverso chiamate remote su package realizzati attraverso la direttiva \textit{``pragma Remote Procedure Call''} (RCI). In questo modo, come gi\`a detto, \`e possibile mettere in comunicazione oggetti residenti su partizioni differenti in maniera del tutto trasparente rispetto al sistema. \vspace{3mm}
 
-Andiamo ad analizzare nel dettaglio come avviene la comunicazione rispetto agli attori visti nella sezione precedente:
-
-\begin{enumerate}
-	\item Event Generator, a seguito della creazione di un evento, richiama l'entry di Event Manager per poterne passare i parametri;
-	\item Event Manager riceve i parametri e sulla base di questi genera l'evento creando una nuova istanza del tipo generico Basic Event (RT);
-	\item il metodo generico Create rimanda al metodo specializzato dell'evento figlio appropriato che \`e stato sovrascritto (attraverso overriding);
-	\item il tipo Access dell'evento appena creato viene trasmesso alla coda attraverso un'apposita procedura Push chiamata in remoto sulla classe Queuer (RCI);
-	\item l'operazione imposta a True il valore di una flag apposita che funziona da variabile di controllo per l'accesso alla coda protetta al fine di permettere la Pop degli eventi contenuti;
-	\item quando Event Display rileva la variazione della flag lancia la Pop, anch'essa da remoto (RCI) per svuotare la coda;
-	\item una volta ricevuto il puntatore all'evento, Event Display richiama l'operazione Simulate, locale rispetto alla partizione in cui \`e residente l'istanza dell'oggetto Basic Event, la quale si occupa di attivare la sequenza di stampa specifica dell'evento;
-	\item l'istanza dell'evento, residente sul server di gioco, richiama cos\`i il metodo Print di tipo (RCI) della classe Printer che si occupa di stampare a video, lato display, le informazioni contenute nell'evento;
-	\item saltuariamente il cliente richiama il metodo Get\_Stats proprio del package Stats di tipo remoto (RCI) che ritorna la sequenza delle variabili relative alle statistiche di gioco che vengono presentate a video lato cliente;
-\end{enumerate}
+Andiamo ad analizzare nel dettaglio come avviene la sequenza di comunicazione rispetto agli attori visti nelle sezioni precedenti e rappresentata nell'immagine sottostante:
 
 \begin{figure}[H]
 	\begin{center}
@@ -1429,14 +1415,26 @@ Andiamo ad analizzare nel dettaglio come avviene la comunicazione rispetto agli 
 \caption{Sequenze del sistema distribuito.}
 \end{figure}
 
+\begin{enumerate}
+	\item \textbf{Event Generator}, a seguito della creazione di un evento, richiama l'entry di \textbf{Event Manager} per poterne passare i parametri;
+	\item \textbf{Event Manager} riceve i parametri e sulla base di questi genera l'evento creando una nuova istanza del tipo generico \textbf{Basic Event} (RT);
+	\item il metodo generico \emph{Create} rimanda al metodo specializzato dell'evento figlio appropriato che \`e stato sovrascritto (attraverso overriding);
+	\item l'access type dell'evento appena creato viene trasmesso alla coda attraverso un'apposita procedura \emph{Push} chiamata in remoto sulla classe \textbf{Queuer} (RCI);
+	\item l'operazione imposta a \emph{True} il valore di una flag apposita che funziona da variabile di controllo per l'accesso alla coda protetta al fine di permettere la \emph{Pop} degli eventi contenuti;
+	\item quando \textbf{Event Display} rileva la variazione della flag lancia la \emph{Pop}, anch'essa da remoto (RCI) per svuotare la coda;
+	\item una volta ricevuto il puntatore all'evento, \textbf{Event Display} richiama l'operazione \emph{Simulate}, locale rispetto alla partizione in cui \`e residente l'istanza dell'oggetto \textbf{Basic Event}, la quale si occupa di attivare la sequenza di stampa specifica dell'evento;
+	\item l'istanza dell'evento, residente sul server di gioco, richiama cos\`i il metodo \emph{Print} di tipo (RCI) della classe \textbf{Printer} che si occupa di stampare a video, lato display, le informazioni contenute nell'evento;
+	\item saltuariamente il cliente richiama il metodo \emph{Get\_Stats} proprio del package \textbf{Stats} di tipo remoto (RCI) che ritorna la sequenza delle variabili relative alle statistiche di gioco che vengono presentate a video lato cliente;
+\end{enumerate}
+
 \subsection{Implementazione della Coda}
 
 Uno dei requisiti di un sistema distribuito \`e preservare la consistenza dello stato di gioco nelle varie entit\`a distribuite. Per fare ci\`o \`e necessario implementare una strategia attraverso cui le varie parti attingano in maniera ordinata la sequenza di eventi necessari per poter ricostruire lo stato di gioco. La pi\`u semplice forma di salvataggio ordinato dei dati \`e una struttura basata su una coda. Questa funziona da buffer per gli eventi: il gestore degli eventi di gioco, attraverso operazioni di Push controllate e protette, inserisce nuovi eventi all'interno della coda. Il meccanismo \`e replicato in maniera analoga dall'operazione di Pop, anch'essa di tipo protetto, la quale permette di svuotare la coda prelevandone gli eventi contenuti. \vspace{3mm}
 
-Poich\`e nel modello \`e previsto che le entit\`a che accedono alla coda siano due, \`e stata implementata una struttura di tipo multi-pop queue che permette l'utilizzo di una coda soltanto, con due riferimenti specifici che tengono traccia degli eventi che vengono estratti in base all'entit\`a che richiede l'operazione. Analizziamo la struttura del codice relativo alle operazioni fondamentali Push e Pop sulla coda:
+Poich\`e nel modello \`e previsto che le entit\`a che accedono alla coda siano due, \`e stata implementata una struttura di tipo multi-pop queue che permette l'utilizzo di una coda soltanto, con due riferimenti specifici che tengono traccia degli eventi estratti in base all'entit\`a che richiede l'operazione. Analizziamo la struttura del codice relativo alle operazioni fondamentali Push e Pop sulla coda:
 
 \begin{itemize}
-	\item \textbf{Queue:} il principio alla base della struttura della multi-pop queue \`e l'utilizzo di molteplici iteratori, uno per ogni oggetto che pu\`o richiamare l'operazione Protected\_Pop. Il set delle variabili \`e configurato per due accessi differenti, ma potenzialmente pu\`o essere esteso ad un numero illimitato di attori. Le variabili duplicate sono Head, Tail e Length che servono a tenere traccia dell'ultimo evento prelevato (Head), dell'ultimo evento prelevabile (Tail) e del numero di eventi tra i due iteratori (Length). Duplicandoli non diventa pi\`u necessario gestire due code formalmente identiche, ma \`e sufficiente usarne una comune e tenere traccia degli accessi da parte delle due istanze dei display.
+	\item \textbf{Queue:} il principio alla base della struttura della multi-pop queue \`e l'utilizzo di molteplici iteratori, uno per ogni oggetto che pu\`o richiamare l'operazione Protected\_Pop. Il set delle variabili \`e configurato per due accessi differenti, ma potenzialmente pu\`o essere esteso ad un numero illimitato di attori. Le variabili duplicate sono Head, Tail e Length che servono a tenere traccia del primo evento prelevabile (Head), dell'ultimo evento prelevabile (Tail) e del numero di eventi tra i due iteratori (Length). Duplicandoli non diventa pi\`u necessario gestire due code formalmente identiche e con propri iteratori, ma \`e sufficiente usarne una in comune e tenere traccia degli accessi da parte delle due istanze di display.
 	
 		\begin{lstlisting}[language=Ada]
 		package Queue is
@@ -1458,7 +1456,7 @@ Poich\`e nel modello \`e previsto che le entit\`a che accedono alla coda siano d
 		end Queue;
 		\end{lstlisting}	
 	
-	\item \textbf{Protected\_Push:} quest'operazione non ha particolari differenze rispetto alla Push tradizionale. L'unica accortezza \`e da tenere nel momento in cui un nuovo evento viene accodato: \`e necessario mantenere consistente lo stato degli iteratori incrementando di una unit\`a i valori di entrambi i Tail cos\`i come quelli di entrambi i Length in modo da farli puntare all'ultimo evento inserito ed incrementare entrambe le distanze tra i corrispettivi Head e Tail.
+	\item \textbf{Protected\_Push:} quest'operazione non ha particolari differenze rispetto alla Push tradizionale. L'unica accortezza da tenere \`e nel momento in cui un nuovo evento viene accodato: \`e necessario mantenere consistente lo stato degli iteratori incrementando di una unit\`a i valori di entrambi i Tail cos\`i come quelli di entrambi i Length in modo da farli puntare all'ultimo evento inserito ed incrementare entrambe le distanze tra i corrispettivi Head e Tail.
 	
 		\begin{lstlisting}[language=Ada]
 		entry Protected_Push (E_Ptr: in Basic_Event.Event_Ptr) 
@@ -1473,7 +1471,7 @@ Poich\`e nel modello \`e previsto che le entit\`a che accedono alla coda siano d
 		end Protected_Push;
 		\end{lstlisting}	
 
-	\item \textbf{Protected\_Pop:} l'operazione di Protected\_Pop funziona in maniera similare ma discrimina sulla base di quale display lancia la procedura: un valore intero identifica l'attore e lancia la propria sequenza di comandi che si occupa di estrarre e restituire il tipo Access dell'evento, incrementare il valore di Head corretto e ridurre di una unit\`a il valore di Length appropriato per mantenere ancora consistente la coda. La situazione per l'altro display non cambia e il numero di eventi che gli rimangono da estrarre non varia.
+	\item \textbf{Protected\_Pop:} l'operazione di Protected\_Pop funziona in maniera similare ma discrimina sulla base di quale istanza di display lancia la procedura: un valore intero identifica l'attore e lancia la sua specifica sequenza di comandi. Questa si occupa di estrarre e restituire il tipo access dell'evento, incrementare il valore di Head corretto e ridurre di una unit\`a il valore di Length appropriato per mantenere ancora consistenti gli iteratori della coda. La situazione per l'altro display non \`e soggetta a variazioni e il numero di eventi che rimangono da estrarre a quest'ultimo non varia.
 	
 		\begin{lstlisting}[language=Ada]
 		entry Protected_Pop (Id: in Integer; E_Ptr: out Basic_Event.Event_Ptr) 
@@ -1507,15 +1505,16 @@ Nella figura sottostante possiamo vedere la coda degli eventi con i duplici punt
 \end{figure}
 
 \begin{enumerate}
+	\item La situazione nella coda \`e la seguente: gli eventi presenti sono E1, E2, E3, E4, E5 ed E6, mentre gli eventi E7 ed E8 non sono ancora stati generati; 
 	\item Display1 ha ricevuto gli eventi E1 ed E2, deve ricevere E3 (iteratore Head1), E4, E5 ed E6 (iteratore Tail1) per un totale di 4 elementi (pari al valore di Length1 = 4);
 	\item Display2 invece ha ricevuto E1, E2 ed E3, deve ricevere E4 (iteratore Head2), E5 ed E6 (iteratore Tail2) per un totale di 3 elementi (valore di Length2 = 3);
 \end{enumerate}
 
 \subsection{Richiesta delle Statistiche di Gioco}
 
-Chiudiamo l'analisi del sistema distribuito con l'ultimo meccanismo disponibile: la richiesta di statistiche da parte del client al sistema di gioco. A differenza di tutte le trasmissioni viste finora in cui il server inoltra in modo attivo i dati al client (attraverso l'uso della coda) e quest'ultimo riceve e gestisce quanto ricevuto in modo passivo, questa connessione permette al display di interagire direttamente con il server effettuando una richiesta in modo attivo. \vspace{3mm}
+Chiudiamo l'analisi del sistema distribuito con l'ultimo meccanismo disponibile: la richiesta di statistiche da parte del client al sistema di gioco. A differenza di tutte le trasmissioni viste finora in cui il server inoltra in modo attivo i dati al client (attraverso l'uso della coda) e quest'ultimo riceve e gestisce quanto ricevuto in modo passivo, questa connessione permette al display di interagire direttamente con il server effettuando una richiesta in modo attivo. La comunicazione tra server e client non \`e pi\`u monodirezionale ma diventa bidirezionale permettendo la trasmissione delle informazioni in entrambi i versi. \vspace{3mm}
 
-In base alle necessit\`a (che nel modello \`e configurato come una richiesta ogni 5 eventi ricevuti) viene richiamata una procedura di tipo Remote Procedure Call direttamente sulla classe Stats contenente le statistiche e residente sulla partizione di gioco. Questa risponde a sua volta richiamando un metodo RCI del package Printer che si occupa della stampa sul display delle informazioni statistiche ricevute.
+In base alle necessit\`a (che nel modello \`e configurato come una richiesta ogni 5 eventi ricevuti) viene richiamata una procedura definita attraverso la direttiva \emph{``pragma Remote Procedure Call''} direttamente sulla classe Stats contenente le statistiche e residente sulla partizione di gioco. Questa risponde a sua volta richiamando un metodo RCI del package Printer che si occupa della stampa sul display delle informazioni statistiche ricevute.
 
 \begin{figure}[H]
 	\begin{center}

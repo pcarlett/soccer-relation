@@ -26,7 +26,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2014-01-28 22:01:15 +0000</string>
+	<string>2014-01-29 19:12:58 +0000</string>
 	<key>Modifier</key>
 	<string>Paolo Carletto</string>
 	<key>NotesVisible</key>
@@ -43713,7 +43713,7 @@ Event\
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{279.71999837458134, 332.99999678134918}, {180, 26}}</string>
+							<string>{{164.96999998390675, 331.19999259710312}, {350.81999105215073, 26}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FitText</key>
@@ -43743,11 +43743,6 @@ Event\
 									<key>Draws</key>
 									<string>NO</string>
 								</dict>
-								<key>stroke</key>
-								<dict>
-									<key>Pattern</key>
-									<integer>1</integer>
-								</dict>
 							</dict>
 							<key>Text</key>
 							<dict>
@@ -43767,7 +43762,7 @@ Event\
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{279.71999837458134, 358.99999678134918}, {180, 26}}</string>
+							<string>{{164.96999998390675, 357.19999259710312}, {350.81999105215073, 52}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FitText</key>
@@ -43797,10 +43792,64 @@ Event\
 									<key>Draws</key>
 									<string>NO</string>
 								</dict>
-								<key>stroke</key>
+							</dict>
+							<key>Text</key>
+							<dict>
+								<key>Align</key>
+								<integer>0</integer>
+								<key>Text</key>
+								<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
+
+\f0\b\fs22 \cf0 type 
+\b0 Partial_Event
+\b  is new 
+\b0 Event
+\b  with record\
+
+\b0     ID: Integer;\
+    A: Actions;\
+
+\b end record;}</string>
+								<key>VerticalPad</key>
+								<integer>0</integer>
+							</dict>
+							<key>TextPlacement</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>Bounds</key>
+							<string>{{164.96999998390675, 409.19999259710312}, {350.81999105215073, 26}}</string>
+							<key>Class</key>
+							<string>ShapedGraphic</string>
+							<key>FitText</key>
+							<string>Vertical</string>
+							<key>Flow</key>
+							<string>Resize</string>
+							<key>FontInfo</key>
+							<dict>
+								<key>Font</key>
+								<string>Helvetica-Bold</string>
+								<key>Size</key>
+								<real>11</real>
+							</dict>
+							<key>ID</key>
+							<integer>472</integer>
+							<key>Shape</key>
+							<string>Rectangle</string>
+							<key>Style</key>
+							<dict>
+								<key>fill</key>
 								<dict>
-									<key>Pattern</key>
-									<integer>1</integer>
+									<key>GradientCenter</key>
+									<string>{-0.29411799, -0.26470599}</string>
+								</dict>
+								<key>shadow</key>
+								<dict>
+									<key>Draws</key>
+									<string>NO</string>
 								</dict>
 							</dict>
 							<key>Text</key>
@@ -43813,15 +43862,17 @@ Event\
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
-\f0\b\fs22 \cf0 function
-\b0  Create 
-\b return
-\b0  Event;\
-
-\b procedure
-\b0  Simulate(E: 
+\f0\b\fs22 \cf0 function 
+\b0 Create(ID: Integer; A: Actions) 
+\b return 
+\b0 Event_Ptr; 
+\b \
+procedure 
+\b0 Simulate(Id: 
 \b in
-\b0  Event);}</string>
+\b0  Integer; E: 
+\b in
+\b0  Partial_Event);}</string>
 								<key>VerticalPad</key>
 								<integer>0</integer>
 							</dict>
@@ -43833,6 +43884,7 @@ Event\
 					<array>
 						<integer>469</integer>
 						<integer>470</integer>
+						<integer>472</integer>
 						<array/>
 					</array>
 					<key>GroupConnect</key>
@@ -43862,11 +43914,11 @@ Event\
 					<key>OrthogonalBarPoint</key>
 					<string>{0, 0}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>9.6000000000000227</real>
+					<real>8.8799988090991917</real>
 					<key>Points</key>
 					<array>
-						<string>{434.57425739771367, 289.99999678134918}</string>
-						<string>{521.31074687447347, 332.99999678134918}</string>
+						<string>{389.55707849273472, 154.99999798834324}</string>
+						<string>{452.44321546606227, 196.55999560654163}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -43897,7 +43949,7 @@ Event\
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{484.18825837458132, 332.99999678134918}, {180, 26}}</string>
+							<string>{{365.71999153494835, 196.55999560654163}, {350.81999105215073, 26}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FitText</key>
@@ -43927,11 +43979,6 @@ Event\
 									<key>Draws</key>
 									<string>NO</string>
 								</dict>
-								<key>stroke</key>
-								<dict>
-									<key>Pattern</key>
-									<integer>1</integer>
-								</dict>
 							</dict>
 							<key>Text</key>
 							<dict>
@@ -43951,7 +43998,7 @@ Event\
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{484.18825837458132, 358.99999678134918}, {180, 26}}</string>
+							<string>{{365.71999153494835, 222.55999560654163}, {350.81999105215073, 65}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FitText</key>
@@ -43981,10 +44028,65 @@ Event\
 									<key>Draws</key>
 									<string>NO</string>
 								</dict>
-								<key>stroke</key>
+							</dict>
+							<key>Text</key>
+							<dict>
+								<key>Align</key>
+								<integer>0</integer>
+								<key>Text</key>
+								<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
+
+\f0\b\fs22 \cf0 type 
+\b0 Complete_Event
+\b  is new 
+\b0 Event
+\b  with record\
+
+\b0             ID: Integer;\
+            Row: Integer;\
+            Col: Integer;\
+
+\b         end record;}</string>
+								<key>VerticalPad</key>
+								<integer>0</integer>
+							</dict>
+							<key>TextPlacement</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>Bounds</key>
+							<string>{{365.71999153494835, 287.55999560654163}, {350.81999105215073, 26}}</string>
+							<key>Class</key>
+							<string>ShapedGraphic</string>
+							<key>FitText</key>
+							<string>Vertical</string>
+							<key>Flow</key>
+							<string>Resize</string>
+							<key>FontInfo</key>
+							<dict>
+								<key>Font</key>
+								<string>Helvetica-Bold</string>
+								<key>Size</key>
+								<real>12</real>
+							</dict>
+							<key>ID</key>
+							<integer>473</integer>
+							<key>Shape</key>
+							<string>Rectangle</string>
+							<key>Style</key>
+							<dict>
+								<key>fill</key>
 								<dict>
-									<key>Pattern</key>
-									<integer>1</integer>
+									<key>GradientCenter</key>
+									<string>{-0.29411799, -0.26470599}</string>
+								</dict>
+								<key>shadow</key>
+								<dict>
+									<key>Draws</key>
+									<string>NO</string>
 								</dict>
 							</dict>
 							<key>Text</key>
@@ -43998,14 +44100,16 @@ Event\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
 \f0\b\fs22 \cf0 function
-\b0  Create 
+\b0  Create(ID: Integer; R: Integer; C: Integer) 
 \b return
-\b0  Event;\
+\b0  Event_Ptr;\
 
 \b procedure
-\b0  Simulate(E: 
+\b0  Simulate(Id: 
 \b in
-\b0  Event);}</string>
+\b0  Integer; E: 
+\b in
+\b0  Complete_Event);}</string>
 								<key>VerticalPad</key>
 								<integer>0</integer>
 							</dict>
@@ -44017,6 +44121,7 @@ Event\
 					<array>
 						<integer>463</integer>
 						<integer>464</integer>
+						<integer>473</integer>
 						<array/>
 					</array>
 					<key>GroupConnect</key>
@@ -44049,8 +44154,8 @@ Event\
 					<real>-1</real>
 					<key>Points</key>
 					<array>
-						<string>{369.24243356893572, 289.99999678134918}</string>
-						<string>{369.53989459531238, 332.99999678134918}</string>
+						<string>{340.38000559057224, 154.99999798834324}</string>
+						<string>{340.38000559057224, 331.19999259710312}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -44096,11 +44201,11 @@ Event\
 					<key>OrthogonalBarPoint</key>
 					<string>{0, 0}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>9.6000000000000227</real>
+					<real>17.87999860793353</real>
 					<key>Points</key>
 					<array>
-						<string>{303.69220435306147, 289.99999678134918}</string>
-						<string>{217.26166980151211, 332.99999678134918}</string>
+						<string>{299.44852453653311, 154.99999798834324}</string>
+						<string>{224.4368846220726, 214.55999520421031}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -44131,7 +44236,7 @@ Event\
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{72.719998374581337, 332.99999678134918}, {180, 26}}</string>
+							<string>{{17.999999597668648, 214.55999520421028}, {298.07999333739281, 26}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FitText</key>
@@ -44161,11 +44266,6 @@ Event\
 									<key>Draws</key>
 									<string>NO</string>
 								</dict>
-								<key>stroke</key>
-								<dict>
-									<key>Pattern</key>
-									<integer>1</integer>
-								</dict>
 							</dict>
 							<key>Text</key>
 							<dict>
@@ -44185,7 +44285,7 @@ Event\
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{72.719998374581337, 358.99999678134918}, {180, 26}}</string>
+							<string>{{17.999999597668648, 240.55999520421028}, {298.07999333739281, 39}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FitText</key>
@@ -44215,10 +44315,63 @@ Event\
 									<key>Draws</key>
 									<string>NO</string>
 								</dict>
-								<key>stroke</key>
+							</dict>
+							<key>Text</key>
+							<dict>
+								<key>Align</key>
+								<integer>0</integer>
+								<key>Text</key>
+								<string>{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
+
+\f0\b\fs22 \cf0 type 
+\b0 Summary_Event
+\b  is new 
+\b0 Event
+\b  with record \
+    
+\b0 A : Actions;
+\b \
+end record;}</string>
+								<key>VerticalPad</key>
+								<integer>0</integer>
+							</dict>
+							<key>TextPlacement</key>
+							<integer>0</integer>
+						</dict>
+						<dict>
+							<key>Bounds</key>
+							<string>{{17.999999597668648, 279.55999520421028}, {298.07999333739281, 26}}</string>
+							<key>Class</key>
+							<string>ShapedGraphic</string>
+							<key>FitText</key>
+							<string>Vertical</string>
+							<key>Flow</key>
+							<string>Resize</string>
+							<key>FontInfo</key>
+							<dict>
+								<key>Font</key>
+								<string>Helvetica-Bold</string>
+								<key>Size</key>
+								<real>12</real>
+							</dict>
+							<key>ID</key>
+							<integer>471</integer>
+							<key>Shape</key>
+							<string>Rectangle</string>
+							<key>Style</key>
+							<dict>
+								<key>fill</key>
 								<dict>
-									<key>Pattern</key>
-									<integer>1</integer>
+									<key>GradientCenter</key>
+									<string>{-0.29411799, -0.26470599}</string>
+								</dict>
+								<key>shadow</key>
+								<dict>
+									<key>Draws</key>
+									<string>NO</string>
 								</dict>
 							</dict>
 							<key>Text</key>
@@ -44231,15 +44384,15 @@ Event\
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
-\f0\b\fs22 \cf0 function
-\b0  Create 
-\b return
-\b0  Event;\
+\f0\b\fs22 \cf0 function 
+\b0 Create(A: Actions) 
+\b return 
+\b0 Event_Ptr;\
 
-\b procedure
-\b0  Simulate(E: 
+\b procedure 
+\b0 Simulate(Id: 
 \b in
-\b0  Event);}</string>
+\b0  Integer; E: in Summary_Event);}</string>
 								<key>VerticalPad</key>
 								<integer>0</integer>
 							</dict>
@@ -44251,6 +44404,7 @@ Event\
 					<array>
 						<integer>316</integer>
 						<integer>318</integer>
+						<integer>471</integer>
 						<array/>
 					</array>
 					<key>GroupConnect</key>
@@ -44265,7 +44419,7 @@ Event\
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{229.5176083745813, 263.99999678134918}, {279, 26}}</string>
+							<string>{{200.87999550998211, 128.99999798834324}, {279, 26}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FitText</key>
@@ -44302,11 +44456,6 @@ Event\
 									<key>Draws</key>
 									<string>NO</string>
 								</dict>
-								<key>stroke</key>
-								<dict>
-									<key>Pattern</key>
-									<integer>1</integer>
-								</dict>
 							</dict>
 							<key>Text</key>
 							<dict>
@@ -44340,7 +44489,7 @@ Event\
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{229.5176083745813, 250.99999678134918}, {279, 13}}</string>
+							<string>{{200.87999550998211, 115.99999798834324}, {279, 13}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FitText</key>
@@ -44377,11 +44526,6 @@ Event\
 									<key>Draws</key>
 									<string>NO</string>
 								</dict>
-								<key>stroke</key>
-								<dict>
-									<key>Pattern</key>
-									<integer>1</integer>
-								</dict>
 							</dict>
 							<key>Text</key>
 							<dict>
@@ -44404,7 +44548,7 @@ Event\
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{229.5176083745813, 224.99999678134918}, {279, 26}}</string>
+							<string>{{200.87999550998211, 89.999997988343239}, {279, 26}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>FontInfo</key>
@@ -44440,11 +44584,6 @@ Event\
 								<dict>
 									<key>Draws</key>
 									<string>NO</string>
-								</dict>
-								<key>stroke</key>
-								<dict>
-									<key>Pattern</key>
-									<integer>1</integer>
 								</dict>
 							</dict>
 							<key>Text</key>
@@ -50739,7 +50878,7 @@ Event\
 		<key>BottomSlabHeight</key>
 		<real>239</real>
 		<key>CurrentSheet</key>
-		<integer>18</integer>
+		<integer>16</integer>
 		<key>Expanded_Canvases</key>
 		<array/>
 		<key>Frame</key>
