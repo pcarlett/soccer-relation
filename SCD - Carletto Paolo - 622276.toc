@@ -53,5 +53,11 @@
 \contentsline {subsection}{\numberline {6.4}Implementazione della Coda}{45}{subsection.6.4}
 \contentsline {subsection}{\numberline {6.5}Richiesta delle Statistiche di Gioco}{47}{subsection.6.5}
 \contentsline {section}{\numberline {7}Integrazione tra le Parti - Concorrenza e Distribuzione}{48}{section.7}
-\contentsline {section}{\numberline {8}Conclusioni}{49}{section.8}
-\contentsline {section}{\numberline {9}Bibliografia}{50}{section.9}
+\contentsline {subsection}{\numberline {7.1}Integrazione del sistema}{48}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Ridefinizione delle Parti}{48}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Strutturazione degli Eventi}{49}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Costruzione degli Eventi Lato Server}{50}{subsection.7.4}
+\contentsline {subsection}{\numberline {7.5}Ricostruzione degli Eventi Lato Client}{51}{subsection.7.5}
+\contentsline {subsubsection}{\numberline {7.5.1}Riprogettazione dell'Interfaccia Grafica}{51}{subsubsection.7.5.1}
+\contentsline {section}{\numberline {8}Conclusioni}{52}{section.8}
+\contentsline {section}{\numberline {9}Bibliografia}{53}{section.9}
