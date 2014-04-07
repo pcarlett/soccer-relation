@@ -58,5 +58,7 @@
 \BOOKMARK [2][-]{subsection.7.4}{Costruzione degli Eventi Lato Server}{section.7}% 58
 \BOOKMARK [2][-]{subsection.7.5}{Ricostruzione degli Eventi Lato Client}{section.7}% 59
 \BOOKMARK [3][-]{subsubsection.7.5.1}{Riprogettazione dell'Interfaccia Grafica}{subsection.7.5}% 60
-\BOOKMARK [1][-]{section.8}{Conclusioni}{}% 61
-\BOOKMARK [1][-]{section.9}{Bibliografia}{}% 62
+\BOOKMARK [2][-]{subsection.7.6}{Duplicit\340 dei Client di Gioco ed Accesso alle Risorse}{section.7}% 61
+\BOOKMARK [2][-]{subsection.7.7}{Modifiche dello Stato di Gioco dal Client}{section.7}% 62
+\BOOKMARK [1][-]{section.8}{Conclusioni}{}% 63
+\BOOKMARK [1][-]{section.9}{Bibliografia}{}% 64

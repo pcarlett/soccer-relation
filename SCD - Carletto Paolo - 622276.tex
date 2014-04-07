@@ -2140,7 +2140,10 @@ Ora che abbiamo risolto velocemente la generazione degli eventi lato server \`e 
 
 Allo stato attuale dell'arte, il Display \`e in grado di mostrare le posizioni dei giocatori in campo e i loro movimenti attraverso la chiamata di alcuni metodi che ritornano le informazioni contenute all'interno del vettore delle posizioni protetto dall'oggetto Field. Accededendo alla lista delle posizioni \`e possibile ridisegnare, istante per istante\footnote{con instante intendiamo un intervallo di tempo \emph{t} fissato} i vari giocatori in campo, la palla, il possessore del pallone ed eventualmente il risultato parziale fino a \emph{t}. \vspace{3mm}
 
-Per limitare il pi\`u possibile il numero di interventi necessari alla modifica sarebbe sufficiente creare un nuovo task \emph{Vector\_Manager} lato client che riceva gli eventi di tipo \emph{Complete Event} e ricostruisca il vettore originale in un oggetto protetto. Il nuovo vettore conterrebbe 23 elementi (22 per i giocatori ed 1 per la palla) che permetterebbero di ridisegnare il campo e le posizioni di giocatori e palloni sul campo senza snaturare il prodotto realizzato per la parte esclusivamente concorrente. Oltre al vettore sarebbe necessario implementare una variabile intera con range tra 1 e 22 a segnalare il giocatore che nell'istante \emph{t} detiene il possesso di palla. In questo modo l'interfaccia continuerebbe a funzionare ``as is'' con un numero di modifiche non eccessivo. Il risultato sarebbe contenuto su un secondo vettore, anch'esso in un oggetto di tipo protetto e modificabile esclusivamente da \emph{Vector\_Manager}, contenente due variabili intere \emph{Score1} e \emph{Score2} alle quali l'interfaccia avrebbe accesso in sola lettura. Gli eventi di tipo \emph{Summary Event} potrebbero semplicemente essere mostrati a video attraverso una textbox che ricostruirebbe l'andamento del gioco e chiarirebbe eventuali interruzioni o riposizionamenti dei giocatori in campo (per esempio a seguito di un goal o dell'uscita della palla dal campo). \vspace{3mm}
+Per limitare il pi\`u possibile il numero di interventi necessari alla modifica sarebbe sufficiente creare un nuovo task \emph{Vector\_Manager} lato client che riceva gli eventi di tipo \emph{Complete Event} e ricostruisca il vettore originale in un oggetto protetto. Il nuovo vettore conterrebbe 23 elementi (22 per i giocatori ed 1 per la palla) che permetterebbero di ridisegnare il campo e le posizioni di giocatori e palloni sul campo senza snaturare il prodotto realizzato per la parte esclusivamente concorrente. Oltre al vettore sarebbe necessario implementare una variabile intera con range tra 1 e 22 a segnalare il giocatore che nell'istante \emph{t} detiene il possesso di palla. In questo modo l'interfaccia continuerebbe a funzionare ``as is'' con un numero di modifiche non eccessivo. Il risultato sarebbe contenuto su un secondo vettore, anch'esso in un oggetto di tipo protetto e modificabile esclusivamente da \emph{Vector\_Manager}, contenente due variabili intere \emph{Score1} e \emph{Score2} alle quali l'interfaccia avrebbe accesso in sola lettura. Gli eventi di tipo \emph{Summary Event} potrebbero semplicemente essere mostrati a video attraverso una textbox che ricostruirebbe l'andamento del gioco e chiarirebbe eventuali interruzioni o riposizionamenti dei giocatori in campo (per esempio a seguito di un goal o dell'uscita della palla dal campo).
+
+\subsubsection{Riprogettazione dell'Interfaccia Grafica} % (fold)
+\label{ssub:riprogettazione_dell_interfaccia_grafica}
 
 L'alternativa, molto pi\'u laboriosa della precedente ma decisamente pi\`u efficace e scalabile comporterebbe la ristrutturazione dell'interfaccia grafica in una serie di layer distinti:
 
@@ -2151,36 +2154,72 @@ L'alternativa, molto pi\'u laboriosa della precedente ma decisamente pi\`u effic
 
 Attraverso questo sistema la metodologia per la gestione degli eventi di tipo \emph{Summary Event} e \emph{Partial Event} rimarrebbe pressoch\`e invariata. Verrebbe stravolta invece la strategia di ridisegnaento del campo: non sarebbe più necessario ridisegnare in toto la struttura di gioco, ogni singolo giocatore e la palla per ogni singola modifica del vettore posizionale lato client, ma sarebbe possibile lavorare direttamente sul layer del singolo giocatore interessaro lanciando il comando ``clear'' e ridisegnando il cerchio del giocatore riposizionato rispetto a quanto indicato nelle coordinate di \emph{Complete Event}. Nel contempo sarebbe possibile disegnare un cerchio nero intorno al giocatore in questione, convenzione che identifica il possesso di palla, in base al valore contenuto nella variabile \emph{Own} presente nell'evento. Lavorare in questo senso comporta una rilevante modifica di quanto fatto finora rispetto all'interfaccia, anche se il risultato ottenuto sarebbe decisamente migliore e sfrutterebbe al meglio le risorse legate agli eventi oltre a dare un senso preciso ai contenuti degli eventi stessi.
 
+% subsubsection riprogettazione_dell_interfaccia_grafica (end)
+
 % subsection ricostruzione_degli_eventi_lato_client (end)
 
+\subsection{Duplicit\`a dei Client di Gioco ed Accesso alle Risorse} % (fold)
+\label{sub:duplicit`a_dei_client_di_gioco_ed_accesso_alle_risorse}
+
+Il fatto di avere un sistema distribuito ci da la possibilt\`a di gestire una moltitudine di client, ognuno dei quali permette di visualizzare l'avanzamento del gioco in maniera indipendentemente dagli altri client collegati. Per implementare questa funzionalit\`a \`e sufficiente lavorare sulla coda degli eventi gestendo, come gi\`a fatto nel sistema esclusivamente distribuito, una coda con \emph{n} iteratori, uno per ognuno dei client collegati. \vspace{3mm}
+
+Il meccanismo \`e semplice ed efficace: ogni monitor ha un proprio task \emph{Display} specifico che accede alla coda ed effettua la pop degli eventi che non ha ancora ricevuto. Per ognuna delle pop che richiama, il task \emph{Display} modifica l'evento puntato facendo avanzare l'iteratore di una posizione. In questo modo ognuno dei client \`e in grado di modificare il monitor in maniera indipendente dagli altri monitor visualizzando l'avanzamento della partita in modo temporalmente asincrono rispetto agli altri client. Questo per\`o non comporta la visione di un gioco differente rispetto agli altri monitor coinvolti, semplicemente comporta un eventuale anticipo/ritardo rispetto agli altri. \vspace{3mm}
+
+In caso di disconnessione temporanea, lo stato di gioco viene preservato dalla coda in quanto l'iteratore rimane fermo sulla propria posizione. A seguito di ricollegamento, il task \emph{Display} effettua una serie di pop consecutive recuperando tutti gli eventi che non sono stati estratti durante il downtime. \vspace{3mm}
+
+Potenzialmente sarebbe possibile implementare, oltre ai 2 monitor di gioco principali, olteriori monitor di sola ``visualizzazione'' della partita intervenendo sul numero di iteratori, incrementandone il numero fino ad un valore ragionevole legato al numero di spettatori che vogliamo poter collegare al nostro sistema di gioco. Questi terminali non hanno la possibilit\`a, a differenza dei 2 terminali principali, di modificare lo stato di gioco (come andremo a vedere nella prossima sezione), ma potrebbero comunque visualizzare il gioco e godere dello svolgimento della partita in corso.
+
+% subsection duplicit`a_dei_client_di_gioco_ed_accesso_alle_risorse (end)
+
+\subsection{Modifiche dello Stato di Gioco dal Client} % (fold)
+\label{sub:modifiche_dello_stato_di_gioco_dal_client}
+
+Come in ogni gioco che si rispetti deve essere prevista una certa iterativit\`a con i giocatori umani che si trovano a fare i manager del gioco durante la partita. \`E possibile, come fatto finora, considerare il gioco completamente automatizzato e non permettere interventi esterni da parte delle persone che giocano con il simulatore, demandando tutte le scelte strategiche all'intelligenza artificiale dei Manager che, in condizioni determinabili, effettuano le scelte tattiche opportune e le sostituzioni necessarie per il buon esito della partita per la loro squadra. L'alternativa \`e quella di permettere al giocatore umano di effettuare modifiche alle tattiche di gioco come la variazione del modulo o lo sbilanciamento dello schieramento di gioco in attacco piuttosto che in difesa oppure di sostituire giocatori che non ritiene idonei in favore di giocatori migliori. \vspace{3mm}
+
+Per permettere l'iterazione \`e necessario prevedere un meccanismo di comunicazione basato su eventi e pilotati da un'interfaccia grafica che metta il giocatore umano in condizione di effettuare modifiche. Per fare ci\`o \`e possibile implementare un semplice pannello grafico in cui siano presenti delle combobox con i moduli di gioco pi\`u comuni (4$-$4$-$2, 3$-$4$-$3, 3$-$5$-$2, etc...), eventualmente la strategia (offensiva, normale, difensiva) e una sezione per le sostituzioni in cui sia possibile flaggare un giocatore in campo e uno in panchina per la sostituzione. \vspace{3mm}
+
+Per implementare a livello di sistema questa modifica \`e necessario ripercorrere velocemente i passi fatti finora legati alla gestione degli eventi e costruire una struttura similare ma inversa in cui gli eventi viaggino dal client al server (viceversa, quanto fatto finora prevede che gli eventi si spostino dal server al client). \`E necessario perci\`o prevedere 3 tipologie di eventi fondamentali che andiamo ad esaminare nel dettaglio:
 
 \begin{itemize}
-
-\item strutturazione degli eventi
-
-
-\item ricostruzione degli eventi lato client
-
-\begin{itemize}
-
-\item creazione di un vettore lato client
-
-\item parsing degli eventi interpretati direttamente dalla gui 
-
+	\item \textbf{Modulo:} l'evento prevede la gestione del modulo di gioco, ovvero come siano disposti i giocatori in campo attraverso l'utilizzo di una tripletta di interi che rappresentano:
+	\begin{enumerate}
+		\item \emph{Defense:} numero di giocatori in difesa;
+		\item \emph{Center:} numero di giocatori al centrocampo;
+		\item \emph{Offense:} numero di giocatori in attacco;
+	\end{enumerate}
+	\item \textbf{Strategia:} in questo caso per la codifica dell'evento viene utilizzato un tipo enumerazione che rappresenta una serie di tipologie di strategie da applicare in campo:
+	\begin{enumerate}
+		\item \textbf{Offensivo:} tutte le posizioni dei giocatori in campo vengono incrementate in valore assoluto di 4 unit\`a in direzione della porta avversaria;
+		\item \textbf{Moderatamente Offensivo:} come il precedente ma le posizioni dei giocatori sono incrementate in valore assoluto di 2 unit\`a in direzione della porta avversaria;
+		\item \textbf{Normale:} le posizioni dei giocatori non subiscono modifiche rispetto alle posizioni previste in campo dal sistema in modalit\`a predefinita;
+		\item \textbf{Moderatamente Difensivo:} anche in questo caso vengono modificate tutte le posizioni dei giocatori in campo, ma vengono arretrate di 2 unit\`a in valore assoluto in direzione della propria porta;
+		\item \textbf{Difensivo:} come il precedente, ma il valore di arretramento verso la propria porta \`e di 4 unit\`a;
+	\end{enumerate}
+	\item \textbf{Sostituzione:} quest'ultimo evento prevede l'utilizzo di 2 interi che rappresentano i due giocatori coinvolti nella sostituzione:
+	\begin{enumerate}
+		\item \emph{Out:} il numero del giocatore che deve uscire dal campo;
+		\item \emph{In:} il numero del giocatore che deve entrare in campo in sostituzione del precedente;
+	\end{enumerate}
 \end{itemize}
+
+
+
+
+
+
+
+
+% subsection modifiche_dello_stato_di_gioco_dal_client (end)
+
+\newpage
+
+\begin{itemize}
 
 \item gestione dei messaggi attraverso PartitionID per l'identificazione di destinatari dei messaggi della coda
 
-\item comunicazione delle modifiche interne attraverso il server: tutto passa per l'event manager
-
-
+\item modifica del gioco dal client al server attraverso sostituzioni e modifiche della tattica di gioco
 
 \end{itemize}
-
-\subsubsection{Riprogettazione dell'Interfaccia Grafica} % (fold)
-\label{ssub:riprogettazione_dell_interfaccia_grafica}
-
-% subsubsection riprogettazione_dell_interfaccia_grafica (end)
 
 \newpage
 
