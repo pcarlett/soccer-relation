@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.1.26)  8 APR 2014 00:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.1.26)  9 APR 2014 18:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -874,43 +874,50 @@ Package pdftex.def Info: images/stats-sequence.pdf used on input line 2024.
 File: images/integration-basic.pdf Graphic file (type pdf)
 
 <use images/integration-basic.pdf>
-Package pdftex.def Info: images/integration-basic.pdf used on input line 2065.
+Package pdftex.def Info: images/integration-basic.pdf used on input line 2066.
 (pdftex.def)             Requested size: 250.93842pt x 323.21149pt.
  [48]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¹ in font cmr10!
  [49 <./images/integration-basic.pdf>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 2131
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 2132
 .
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2131.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2132.
 
  [50]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¹ in font cmr10!
  [51]
-[52] [53] [54] [55]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2305.
+[52] <images/gui-example.pdf, id=2196, 659.46375pt x 355.3275pt>
+File: images/gui-example.pdf Graphic file (type pdf)
+
+<use images/gui-example.pdf>
+Package pdftex.def Info: images/gui-example.pdf used on input line 2208.
+(pdftex.def)             Requested size: 401.50146pt x 216.33739pt.
+ [53 <./images/gui-example.pdf>] [54] [55]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2295.
  [56]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2305.
- (./SCD - Carletto Paolo - 622276.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2305.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2305.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2295.
+
+(./SCD - Carletto Paolo - 622276.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2295.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2295.
 
 Package rerunfilecheck Info: File `"SCD - Carletto Paolo - 622276".out' has not
  changed.
 (rerunfilecheck)             Checksum: 0356DEAC88275570C2BB606349930633;4565.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2305.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2295.
  ) 
 Here is how much of TeX's memory you used:
- 10452 strings out of 493315
- 158823 string characters out of 6137904
+ 10459 strings out of 493315
+ 158993 string characters out of 6137904
  389679 words of memory out of 5000000
- 13354 multiletter control sequences out of 15000+600000
+ 13359 multiletter control sequences out of 15000+600000
  12157 words of font info for 46 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  44i,10n,58p,1432b,1276s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -935,11 +942,11 @@ ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2013/tex
 mf-dist/fonts/type1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2013/texmf
 -dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on "SCD - Carletto Paolo - 622276.pdf" (57 pages, 1225184 bytes)
+Output written on "SCD - Carletto Paolo - 622276.pdf" (57 pages, 1307365 bytes)
 .
 PDF statistics:
- 2374 PDF objects out of 2487 (max. 8388607)
- 1711 compressed objects within 18 object streams
- 360 named destinations out of 1000 (max. 500000)
- 728 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2612 PDF objects out of 2984 (max. 8388607)
+ 1850 compressed objects within 19 object streams
+ 361 named destinations out of 1000 (max. 500000)
+ 733 words of extra memory for PDF output out of 10000 (max. 10000000)
 

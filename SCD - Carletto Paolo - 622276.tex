@@ -2029,6 +2029,7 @@ del package Printer che si occupa della stampa sul display delle informazioni st
 \newpage
 
 \section{Integrazione tra le Parti - Concorrenza e Distribuzione}
+\label{sec:integrazione_tra_le_parti}
 
 Ora che abbiamo affrontato e risolto in maniera scomposta le questioni relative ad un sistema concorrente cos\`i come quelle distribuite, siamo pronti per progettare l'integrazione dei sistemi in un unico sistema che sia al contempo concorrente e distribuito. Per fare ci\`o dobbiamo identificare alcune parti fondamentali, introdurre alcune modifiche del progetto originale e inserire eventuali nuove classi che permettano l'integrazione delle parti.
 
@@ -2195,31 +2196,25 @@ Per implementare a livello di sistema questa modifica \`e necessario ripercorrer
 		\item \textbf{Moderatamente Difensivo:} anche in questo caso vengono modificate tutte le posizioni dei giocatori in campo, ma vengono arretrate di 2 unit\`a in valore assoluto in direzione della propria porta;
 		\item \textbf{Difensivo:} come il precedente, ma il valore di arretramento verso la propria porta \`e di 4 unit\`a;
 	\end{enumerate}
-	\item \textbf{Sostituzione:} quest'ultimo evento prevede l'utilizzo di 2 interi che rappresentano i due giocatori coinvolti nella sostituzione:
+	\item \textbf{Sostituzione:} quest'ultimo evento prevede l'utilizzo di 2 interi che rappresentano i due giocatori coinvolti nella sostituzione oltre a 2 tipi enumerazione per il ruolo del giocatore in campo e di quello che lo andr\`a a sostituire:
 	\begin{enumerate}
-		\item \emph{Out:} il numero del giocatore che deve uscire dal campo;
-		\item \emph{In:} il numero del giocatore che deve entrare in campo in sostituzione del precedente;
+		\item \emph{Out:} il numero del giocatore che deve uscire dal campo e il ruolo che assumeva in gioco;
+		\item \emph{In:} il numero del giocatore che deve entrare in campo in sostituzione del precedente e il ruolo che dovr\`a assumere;
 	\end{enumerate}
 \end{itemize}
 
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=400px]{images/gui-example.pdf}
+	\end{center}
+\caption{Modello implementativo della GUI lato client per le modifiche di gioco.}
+\end{figure}
 
+Nella figura possiamo vedere un modello relativo all'implementazione dell'interfaccia per l'interazione con il giocatore umano che potr\`a cosi effettuare delle scelte significative e modificare l'andamento del gioco esattamente come potrebbe fare un manager vero e proprio. \vspace{3mm}
 
-
-
-
-
+Per quanto riguarda la trasmissione dei pacchetti, il modello \`e del tutto speculare rispetto a quanto costruito per la distribuzione dei pacchetti che viaggiano dal server al client: deve essere implementata una seconda coda nel package Queuer che sar\`a accessibile dal client e sulla quale quest'ultimo andr\`a a depositare i pacchetti relativi agli eventi di modifica dello stato di gioco attraverso un meccanismo di push su una coda protetta. Un task appositamente creato lato server avr\`a il compito di presidiare la coda e, non appena rilever\`a l'inserimento di un pacchetto e pertanto lo stato ``coda non vuota'', andr\`a ad effettuare la pop dell'evento e lo trasmetter\`a all'entit\`a lato server che avr\`a il compito di modificare le condizioni di gioco al fine di rispettare la scelta del giocatore relativamente a strategia, modulo o sostituzione.
 
 % subsection modifiche_dello_stato_di_gioco_dal_client (end)
-
-\newpage
-
-\begin{itemize}
-
-\item gestione dei messaggi attraverso PartitionID per l'identificazione di destinatari dei messaggi della coda
-
-\item modifica del gioco dal client al server attraverso sostituzioni e modifiche della tattica di gioco
-
-\end{itemize}
 
 \newpage
 
@@ -2233,8 +2228,7 @@ Il modello di gioco \`e ridotto alle entit\`a base necessarie per il funzionamen
 formalmente corretti e adempiono ai loro compiti in modo semplice ed efficace. Le logiche di movimento e di gestione
 delle risorse che i giocatori applicano durante la partita sono anch'esse molto semplici ed estremamente funzionali. I
 manager dirigono il match favorendo strategie il pi\`u adatte alle situazioni in cui si pu\`o trovare lo scontro.
-L'arbitro, dal canto suo, viene richiamato da situazioni particolari e regola la partita attraverso scelte pi\`u o meno
-corrette, come in una partita reale. \vspace{3mm}
+L'arbitro, dal canto suo, si occupa della gestione del tempo e viene richiamato da situazioni particolari, regolando la partita attraverso scelte pi\`u o meno corrette, come in una partita reale. \vspace{3mm}
 
 Come per ogni progetto, sono possibili migliorie alla strutture e agli algoritmi applicati al fine di perfezionare gli
 aspetti pi\`u grossolani e meno curati o eventuali errori non rilevati, ma ad una prima analisi il sistema \`e ben
@@ -2245,23 +2239,19 @@ situazioni di \emph{race condition}. La semplicit\`a del prodotto presentato per
 facilmente tali situazioni attraverso soluzioni accademiche eleganti e logicamente corrette. \vspace{3mm}
 
 La concorrenza tra giocatori \`e risolta attraverso la scelta del linguaggio di programmazione, Ada 95, e
-all'implementazione di risorse protette che ne garantiscono mutua esclusione. Vengono risolte le pi\`u comuni situazioni
-che portano il sistema ad uno stato di blocco parziale o totale, permettendo la costanza nel flusso di gioco. Anche la
-comunicazione tra processi avviene in sicurezza, utilizzando costrutti propri del linguaggio scelto. \vspace{3mm}
+all'implementazione di risorse protette che garantiscono mutua esclusione in situazioni di \emph{race condition}. Vengono risolte le pi\`u comuni situazioni che portano il sistema ad uno stato di blocco parziale o totale, permettendo la costanza nel flusso di gioco senza interruzioni o stalli. Anche la comunicazione tra processi avviene in sicurezza, utilizzando costrutti propri del linguaggio scelto. \vspace{3mm}
 
 Non soltanto la concorrenza \`e stata oggetto di indagine. Anche la distribuzione del sistema ha comportato un lavoro
-dettagliato di analisi e ricerca delle soluzioni pi\`u adatte per permettere al sistema di funzionare anche se
-ridistribuito. La distribuzione, come la concorrenza, se non gestita in maniera appropriata rischia di portare a
-situazioni inconsistenti di gioco e alla corruzione della partita. Sono state prese in considerazione tutte le
-condizioni pi\`u comuni e sono state proposte e motivate soluzioni per risolvere i quesiti oggetto di discussione.
-\vspace{3mm}
+dettagliato di analisi e ricerca delle soluzioni pi\`u adatte per permettere al sistema di funzionare anche in modalit\`a
+ridistribuita. La distribuzione, come la concorrenza, se non gestita in maniera appropriata rischia di portare a
+situazioni inconsistenti di gioco e alla corruzione dello stato di gioco della partita. Le scelte progettuali sono state effettuate prendendo in considerazione le condizioni pi\`u comuni e sono state proposte e motivate soluzioni per risolvere i quesiti oggetto di discussione. \vspace{3mm}
 
 Per quanto riguarda la codifica del prodotto, sono state tagliate le parti meno significative della specifica al fine di
-produrre in tempi contenuti un prototipo funzionante del sistema. Il modello cos\`i realizzato prevede lo svolgimento
-regolare della partita a cui vengono applicate regole di gioco semplificate, ma che riproducono effettivamente una
-simulazione funzionante. La codifica di tutte le regole trattate avrebbe comportato un aggravio dei tempi di produzione
+produrre in tempi contenuti un prototipo funzionante del sistema concorrente. Il modello cos\`i realizzato prevede lo svolgimento regolare della partita a cui vengono applicate regole di gioco semplificate, ma che riproducono effettivamente una simulazione funzionante. La codifica di tutte le regole trattate avrebbe comportato un aggravio dei tempi di produzione
 e di debug troppo oneroso per il gruppo (che allo stato attuale delle cose \`e composto da un solo elemento). Sono stati
-mantenuti comunque gli aspetti principali dei processi, definiti ed esaminati nella relazione.
+mantenuti comunque gli aspetti principali dei processi, definiti ed esaminati nella relazione. Per quanto riguarda il modello distribuito, \`e stato realizzato un secondo prototipo con il solo scopo di dimostrare la reale funzionalit\`a delle scelte effettuate in fase di progettazione. \vspace{3mm}
+
+Purtroppo \underline{non \`e stato realizzato un prototipo contemporaneamente concorrente e distribuito} in quanto le modifiche legate all'integrazione delle parti avrebbero comportato una tempistica eccessiva rispetto alla consegna del prodotto, prolungando i tempi di codifica e test del software. Le specifiche del capitolo \ref{sec:integrazione_tra_le_parti} definiscono in modo dettagliato le metodologie da seguire per realizzare correttamente l'integrazione tra i due software per realizzare il prodotto concorrente e distribuito.
 
 \newpage
 
